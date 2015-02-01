@@ -1,0 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'SGVSuperMessagingProxy', :exclusive => true do
+  pod "SGVSuperMessagingProxy", :path => "../"
+end

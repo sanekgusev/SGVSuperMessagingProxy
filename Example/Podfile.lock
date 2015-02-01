@@ -1,0 +1,16 @@
+PODS:
+  - SGVSuperMessagingProxy (1.0.0):
+    - SGVSuperMessagingProxy/Core (= 1.0.0)
+  - SGVSuperMessagingProxy/Core (1.0.0)
+
+DEPENDENCIES:
+  - SGVSuperMessagingProxy (from `../`)
+
+EXTERNAL SOURCES:
+  SGVSuperMessagingProxy:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SGVSuperMessagingProxy: 3dc74b6f46c940bc29a9a255354a93f5d6eb407c
+
+COCOAPODS: 0.36.0.beta.1
