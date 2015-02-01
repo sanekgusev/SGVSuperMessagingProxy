@@ -11,6 +11,6 @@
 @interface NSObject (SGVSuperMessaging)
 
 - (instancetype)sgv_super;
-- (instancetype)sgv_superForAncestorClass:(Class __unsafe_unretained)ancestorClass;
+- (instancetype)sgv_superForAncestorClass:(Class __unsafe_unretained __attribute__((nonnull)))ancestorClass;
 
 @end

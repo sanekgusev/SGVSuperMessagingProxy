@@ -32,11 +32,27 @@
 }
 
 - (NSString *)name {
-    return [[self class] name];
+    return @"Fruit";
 }
 
 + (NSString *)name {
     return @"Fruit";
+}
+
+- (FruitStruct)structValue {
+    return (FruitStruct){5.0f, 5.0f, 5.0f};
+}
+
+- (CGFloat)floatValue {
+    return 5.0f;
+}
+
+- (long double)longDoubleValue {
+    return 5.0;
+}
+
+- (_Complex long double)complexLongDoubleValue {
+    return [self longDoubleValue];
 }
 
 @end

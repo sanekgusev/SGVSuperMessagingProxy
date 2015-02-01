@@ -15,14 +15,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     GoldenApple *golden = [GoldenApple new];
-    id superProxy = [golden sgv_super];
-    NSLog(@"%@", superProxy);
-    NSInteger length = [superProxy length];
+    Apple *superProxy = [golden sgv_super];
+    
     NSString *name = [superProxy name];
-    id classSuperProxy = [[GoldenApple class] sgv_super];
-    Class class = [classSuperProxy class];
-    NSString *nameFromClass = [classSuperProxy name];
-    NSLog(@"%@", classSuperProxy);
+    FruitStruct aStruct = [superProxy structValue];
+    CGFloat structValue = aStruct.value;
+    CGFloat floatValue = [superProxy floatValue];
+    long double longDoubleValue = [superProxy longDoubleValue];
+//    _Complex long double complexLongDoubleValue = [superProxy complexLongDoubleValue];
+    
+    NSLog(@"%@, %f, %f, %f, %Lf", name, aStruct.value, structValue, floatValue, longDoubleValue);
+//    id classSuperProxy = [[GoldenApple class] sgv_super];
+//    Class class = [classSuperProxy class];
+    
+//    UIImageView *iv = [UIImageView new];
+//    id proxy = [iv sgv_super];
+//    CGRect rect1 = iv.frame;
+//    CGRect rect2 = [proxy frame];
+//    NSLog(@"%@, %@", NSStringFromCGRect(rect1), NSStringFromCGRect(rect2));
+    
     return YES;
 }
 							

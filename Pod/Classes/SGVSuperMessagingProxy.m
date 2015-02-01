@@ -10,9 +10,14 @@
 #import <objc/message.h>
 #import <objc/runtime.h>
 
-typedef NS_ENUM(NSInteger, Mode) {
-    Mode_MsgSendSuper,
-    Mode_MsgSendSuper2
+typedef NS_ENUM(NSInteger, MsgSendSuperFunction) {
+    MsgSendSuperFunction_MsgSendSuper,
+    MsgSendSuperFunction_MsgSendSuper2
+};
+
+typedef NS_ENUM(NSInteger, DispatchMode) {
+    DispatchMode_Normal,
+    DispatchMode_Stret,
 };
 
 @interface SGVSuperMessagingProxy () {
@@ -54,98 +59,101 @@ typedef NS_ENUM(NSInteger, Mode) {
 + (id)proxyWithObject:(id)object
         ancestorClass:(Class __unsafe_unretained)ancestorClass {
     return [[SGVProxySubclassForProxiedObjectClass(object_getClass(object),
-                                                   Mode_MsgSendSuper) alloc] initWithObject:object
+                                                   MsgSendSuperFunction_MsgSendSuper) alloc] initWithObject:object
             ancestorClass:ancestorClass];
 }
 
 + (id)proxyWithObject:(id __attribute__((nonnull)))object {
     return [[SGVProxySubclassForProxiedObjectClass(object_getClass(object),
-                                                   Mode_MsgSendSuper2) alloc] initWithObject:object];
+                                                   MsgSendSuperFunction_MsgSendSuper2) alloc] initWithObject:object];
 }
 
 #pragma mark - Trampolines
 
-__attribute__((__naked__))
-static void SGVObjcMsgSendSuperTrampoline(void) {
-    // Ideally, one would get the ivar offset from runtime like this:
-//    ptrdiff_t superOffset = ivar_getOffset(class_getInstanceVariable(object_getClass(self),
-//                                                                     "_super"));
-    // For now, we'll stick with adding the size of isa to the original proxy
-    // instance  pointer to get to our objc_super struct
 #if defined(__arm64__)
-    asm volatile ("add x0, x0, %[value]\n\t"
-                  "b _objc_msgSendSuper\n\t"
-                  :  : [value] "I" (sizeof(Class)));
+    #define SGVNormalTrampoline(trampolineName, msgSendSuperName) \
+    __attribute__((__naked__)) \
+    static void trampolineName(void) { \
+        asm volatile ("add x0, x0, %[value]\n\t" \
+                      "b " #msgSendSuperName "\n\t" \
+                      :  : [value] "I" (sizeof(Class))); \
+    }
 #elif defined(__arm__)
-    asm volatile ("add r0, %[value]\n\t"
-                  "b _objc_msgSendSuper\n\t"
-                  :  : [value] "I" (sizeof(Class)));
+    #define SGVNormalTrampoline(trampolineName, msgSendSuperName) \
+    __attribute__((__naked__)) \
+    static void trampolineName(void) { \
+        asm volatile ("add r0, %[value]\n\t" \
+                      "b " #msgSendSuperName "\n\t" \
+                      :  : [value] "I" (sizeof(Class))); \
+    }
 #elif defined(__x86_64__)
-    asm volatile ("addq %[value], %%rdi\n\t"
-                  "jmp _objc_msgSendSuper\n\t"
-                  :  : [value] "I" (sizeof(Class)));
-#elif
-#pragma error - Unknown arhitecture
-#endif
-}
-
-#if defined(__arm__) || defined(__x86_64__)
-__attribute__((__naked__))
-static void SGVObjcMsgSendSuperStretTrampoline(void) {
-#if defined(__arm__)
-    asm volatile ("add r1, %[value]\n\t"
-                  "b _objc_msgSendSuper_stret\n\t"
-                  :  : [value] "I" (sizeof(Class)));
-#elif defined(__x86_64__)
-    asm volatile ("addq %[value], %%rsi\n\t"
-                  "jmp _objc_msgSendSuper_stret\n\t"
-                  :  : [value] "I" (sizeof(Class)));
-#endif
-}
+    #define SGVNormalTrampoline(trampolineName, msgSendSuperName) \
+    __attribute__((__naked__)) \
+    static void trampolineName(void) { \
+        asm volatile ("addq %[value], %%rdi\n\t" \
+                      "jmp " #msgSendSuperName "\n\t" \
+                      :  : [value] "I" (sizeof(Class))); \
+    }
+#elif defined(__i386__)
+    #define SGVNormalTrampoline(trampolineName, msgSendSuperName) \
+    __attribute__((__naked__)) \
+    static void trampolineName(void) { \
+        asm volatile ("popl %%ecx\n\t" \
+                      "addl %[value], %%ecx\n\t" \
+                      "pushl %%ecx\n\t" \
+                      "jmp " #msgSendSuperName "\n\t" \
+                      :  : [value] "I" (sizeof(Class))); \
+    }
+#else
+    #error - Unknown arhitecture
 #endif
 
-__attribute__((__naked__))
-static void SGVObjcMsgSendSuper2Trampoline(void) {
+SGVNormalTrampoline(SGVObjcMsgSendSuperTrampoline, _objc_msgSendSuper)
+SGVNormalTrampoline(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2)
+
 #if defined(__arm64__)
-    asm volatile ("add x0, x0, %[value]\n\t"
-                  "b _objc_msgSendSuper2\n\t"
-                  :  : [value] "I" (sizeof(Class)));
+    #define SGVStretTrampoline(trampolineName, msgSendSuperName)
 #elif defined(__arm__)
-    asm volatile ("add r0, %[value]\n\t"
-                  "b _objc_msgSendSuper2\n\t"
-                  :  : [value] "I" (sizeof(Class)));
+    #define SGVStretTrampoline(trampolineName, msgSendSuperName) \
+    __attribute__((__naked__)) \
+    static void trampolineName(void) { \
+        asm volatile ("add r1, %[value]\n\t" \
+                      "b " #msgSendSuperName "\n\t" \
+                      :  : [value] "I" (sizeof(Class))); \
+    }
 #elif defined(__x86_64__)
-    asm volatile ("addq %[value], %%rdi\n\t"
-                  "jmp _objc_msgSendSuper2\n\t"
-                  :  : [value] "I" (sizeof(Class)));
-#elif
-#pragma error - Unknown arhitecture
+    #define SGVStretTrampoline(trampolineName, msgSendSuperName) \
+    __attribute__((__naked__)) \
+    static void trampolineName(void) { \
+        asm volatile ("addq %[value], %%rsi\n\t" \
+                      "jmp " #msgSendSuperName "\n\t" \
+                      :  : [value] "I" (sizeof(Class))); \
+    }
+#elif defined (__i386__)
+    #define SGVStretTrampoline(trampolineName, msgSendSuperName) \
+    __attribute__((__naked__)) \
+    static void trampolineName(void) { \
+        asm volatile ("popl %%ecx\n\t" \
+                      "addl %[value], %%ecx\n\t" \
+                      "pushl %%ecx\n\t" \
+                      "jmp " #msgSendSuperName "\n\t" \
+                      :  : [value] "I" (sizeof(Class))); \
+    }
+#else
+    #error - Unknown arhitecture
 #endif
-}
 
-#if defined(__arm__) || defined(__x86_64__)
-__attribute__((__naked__))
-static void SGVObjcMsgSendSuper2StretTrampoline(void) {
-#if defined(__arm__)
-    asm volatile ("add r1, %[value]\n\t"
-                  "b _objc_msgSendSuper2_stret\n\t"
-                  :  : [value] "I" (sizeof(Class)));
-#elif defined(__x86_64__)
-    asm volatile ("addq %[value], %%rsi\n\t"
-                  "jmp _objc_msgSendSuper2_stret\n\t"
-                  :  : [value] "I" (sizeof(Class)));
-#endif
-}
-#endif
+SGVStretTrampoline(SGVObjcMsgSendSuperStretTrampoline, _objc_msgSendSuper_stret);
+SGVStretTrampoline(SGVObjcMsgSendSuper2StretTrampoline, _objc_msgSendSuper2_stret);
 
 #pragma mark - Resolving
 
 + (BOOL)resolveInstanceMethod:(SEL)selector {
     Class __unsafe_unretained originalClass;
-    Mode messagingMode;
-    if (!SGVGetOriginalObjectClassAndModeFromProxySubclass(self,
+    MsgSendSuperFunction superFunction;
+    if (!SGVGetOriginalObjectClassAndSuperFunctionFromProxySubclass(self,
                                                            &originalClass,
-                                                           &messagingMode)) {
+                                                           &superFunction)) {
         return NO;
     }
     Method method = class_getInstanceMethod(originalClass, selector);
@@ -153,14 +161,14 @@ static void SGVObjcMsgSendSuper2StretTrampoline(void) {
         return NO;
     }
     
-    return SGVAddTrampolineMethod(self, method, messagingMode);
+    return SGVAddTrampolineMethod(self, method, superFunction);
 }
 
 #pragma mark - Private
 
-static BOOL SGVGetOriginalObjectClassAndModeFromProxySubclass(Class __unsafe_unretained class,
-                                                              Class __unsafe_unretained *originalObjectClass,
-                                                              Mode *mode) {
+static BOOL SGVGetOriginalObjectClassAndSuperFunctionFromProxySubclass(Class __unsafe_unretained class,
+                                                                       Class __unsafe_unretained *originalObjectClass,
+                                                                       MsgSendSuperFunction *superFunction) {
     NSString *proxySubclassName = NSStringFromClass(class);
     NSArray *components = [proxySubclassName componentsSeparatedByString:@"_"];
     if ([components count] != 3) {
@@ -170,41 +178,51 @@ static BOOL SGVGetOriginalObjectClassAndModeFromProxySubclass(Class __unsafe_unr
     if (originalObjectClass) {
         *originalObjectClass = NSClassFromString(originalObjectClassName);
     }
-    NSString *modeString = components[1];
-    if (mode) {
-        *mode = (Mode)[modeString integerValue];
+    NSString *superFunctionString = components[1];
+    if (superFunction) {
+        *superFunction = (MsgSendSuperFunction)[superFunctionString integerValue];
     }
     return YES;
 }
 
 static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
                                    Method method,
-                                   Mode messagingMode) {
+                                   MsgSendSuperFunction superFunction) {
     SEL selector = method_getName(method);
     const char *typeEncoding = method_getTypeEncoding(method);
     
-    BOOL shouldUseStretDispatch = NO;
+    DispatchMode dispatchMode = DispatchMode_Normal;
     
-#if defined (__x86_64__) || defined(__arm__)
+#if defined (__arm64__)
+    dispatchMode = DispatchMode_Normal;
+#elif defined (__arm__)
+    dispatchMode = (typeEncoding[0] == _C_STRUCT_B) ? DispatchMode_Stret : DispatchMode_Normal;
+#elif defined (__x86_64__)
     NSUInteger returnTypeActualSize = 0;
     NSUInteger returnTypeAlignedSize = 0;
+    // NOTE: chokes on __Complex long double
     NSGetSizeAndAlignment(typeEncoding,
                           &returnTypeActualSize,
                           &returnTypeAlignedSize);
-    // I made this up, I have no clue (yet) when _exactly_ stret dispatch is used
-    shouldUseStretDispatch = returnTypeAlignedSize > sizeof(void *);
+    dispatchMode = (returnTypeActualSize > sizeof(void *) * 2) ? DispatchMode_Stret : DispatchMode_Normal;
+#elif defined (__i386__)
+    dispatchMode = DispatchMode_Normal;
+#else
+    #error - Unknown architecture
 #endif
     
     IMP trampolineIMP = NULL;
-    switch (messagingMode) {
-        case Mode_MsgSendSuper:
-            trampolineIMP = shouldUseStretDispatch ? SGVObjcMsgSendSuperStretTrampoline : SGVObjcMsgSendSuperTrampoline;
+    switch (dispatchMode) {
+        case DispatchMode_Normal:
+            trampolineIMP = (superFunction == MsgSendSuperFunction_MsgSendSuper) ?
+                SGVObjcMsgSendSuperTrampoline : SGVObjcMsgSendSuper2Trampoline;
             break;
-        case Mode_MsgSendSuper2:
-            trampolineIMP = shouldUseStretDispatch ? SGVObjcMsgSendSuper2StretTrampoline : SGVObjcMsgSendSuper2Trampoline;
+        case DispatchMode_Stret:
+            trampolineIMP = (superFunction == MsgSendSuperFunction_MsgSendSuper) ?
+                SGVObjcMsgSendSuperStretTrampoline : SGVObjcMsgSendSuper2StretTrampoline;
             break;
         default:
-            NSCAssert(NO, @"unknown mode");
+            NSCAssert(NO, @"invalid dispath mode");
             break;
     }
     
@@ -222,13 +240,13 @@ static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
 }
 
 static Class SGVProxySubclassForProxiedObjectClass(Class __unsafe_unretained class,
-                                                   Mode mode) {
+                                                   MsgSendSuperFunction superFunction) {
     NSCParameterAssert(class);
     if (!class) {
         return nil;
     }
     NSString *proxySubclassName = [NSStringFromClass([SGVSuperMessagingProxy class]) stringByAppendingFormat:@"_%ld_%@",
-                                   mode, NSStringFromClass(class)];
+                                   (long)superFunction, NSStringFromClass(class)];
     Class __unsafe_unretained proxySubclass = objc_allocateClassPair([SGVSuperMessagingProxy class],
                                                                      [proxySubclassName UTF8String],
                                                                      0);
@@ -271,7 +289,7 @@ static Class SGVProxySubclassForProxiedObjectClass(Class __unsafe_unretained cla
                   NSStringFromSelector(method_getName(method)));
             SGVAddTrampolineMethod(proxySubclass,
                                    method,
-                                   mode);
+                                   superFunction);
         }
         free(methods);
         

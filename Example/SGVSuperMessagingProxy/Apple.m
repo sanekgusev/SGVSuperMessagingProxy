@@ -15,4 +15,21 @@
     return [NSString stringWithFormat:@"%@ — %@", superName, @"Apple"];
 }
 
+- (NSString *)name {
+    NSString *superName = [super name];
+    return [NSString stringWithFormat:@"%@ — %@", superName, @"Apple"];
+}
+
+- (FruitStruct)structValue {
+    return (FruitStruct){10.0f, 10.0f, 10.0f};
+}
+
+- (CGFloat)floatValue {
+    return 10.0f;
+}
+
+- (long double)longDoubleValue {
+    return 10.0;
+}
+
 @end
