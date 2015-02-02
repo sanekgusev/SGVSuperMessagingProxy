@@ -98,9 +98,9 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
     #define SGVNormalTrampoline(trampolineName, msgSendSuperName) \
     __attribute__((__naked__)) \
     static void trampolineName(void) { \
-        asm volatile ("popl %%ecx\n\t" \
+        asm volatile ("movl 0x4(%%esp), %%ecx\n\t" \
                       "addl %[value], %%ecx\n\t" \
-                      "pushl %%ecx\n\t" \
+                      "movl %%ecx, 0x4(%%esp)\n\t" \
                       "jmp " #msgSendSuperName "\n\t" \
                       :  : [value] "I" (sizeof(Class))); \
     }
@@ -133,9 +133,9 @@ SGVNormalTrampoline(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2)
     #define SGVStretTrampoline(trampolineName, msgSendSuperName) \
     __attribute__((__naked__)) \
     static void trampolineName(void) { \
-        asm volatile ("popl %%ecx\n\t" \
+        asm volatile ("movl 0x8(%%esp), %%ecx\n\t" \
                       "addl %[value], %%ecx\n\t" \
-                      "pushl %%ecx\n\t" \
+                      "movl %%ecx, 0x8(%%esp)\n\t" \
                       "jmp " #msgSendSuperName "\n\t" \
                       :  : [value] "I" (sizeof(Class))); \
     }
@@ -194,19 +194,19 @@ static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
     DispatchMode dispatchMode = DispatchMode_Normal;
     
 #if defined (__arm64__)
+    // ARM64 doesn't use stret dispatch at all, yay!
     dispatchMode = DispatchMode_Normal;
 #elif defined (__arm__)
+    // On arm, stret dispatch is used whenever the re
     dispatchMode = (typeEncoding[0] == _C_STRUCT_B) ? DispatchMode_Stret : DispatchMode_Normal;
-#elif defined (__x86_64__)
+#elif defined (__x86_64__) || defined(__i386__)
     NSUInteger returnTypeActualSize = 0;
     NSUInteger returnTypeAlignedSize = 0;
     // NOTE: chokes on __Complex long double
     NSGetSizeAndAlignment(typeEncoding,
                           &returnTypeActualSize,
                           &returnTypeAlignedSize);
-    dispatchMode = (returnTypeActualSize > sizeof(void *) * 2) ? DispatchMode_Stret : DispatchMode_Normal;
-#elif defined (__i386__)
-    dispatchMode = DispatchMode_Normal;
+    dispatchMode = ((typeEncoding[0] == _C_STRUCT_B) && (returnTypeActualSize > sizeof(void *) * 2)) ? DispatchMode_Stret : DispatchMode_Normal;
 #else
     #error - Unknown architecture
 #endif
