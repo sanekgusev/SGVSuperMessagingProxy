@@ -11,16 +11,12 @@
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* SGVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* SGVAppDelegate.m */; };
-		6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F59F195388D20070C39A /* Main_iPhone.storyboard */; };
-		6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A2195388D20070C39A /* Main_iPad.storyboard */; };
-		6003F5A7195388D20070C39A /* SGVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* SGVViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		F3BDD4FF1A76CBF200B60A0E /* Fruit.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BDD4FE1A76CBF200B60A0E /* Fruit.m */; };
-		F3BDD5021A76CC1B00B60A0E /* Apple.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BDD5011A76CC1B00B60A0E /* Apple.m */; };
-		F3BDD5051A76CCFD00B60A0E /* GoldenApple.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BDD5041A76CCFD00B60A0E /* GoldenApple.m */; };
+		F35910A61A971ECC00FF287E /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = F35910A51A971ECC00FF287E /* Base.m */; };
+		F35910A91A971ED500FF287E /* Derived.m in Sources */ = {isa = PBXBuildFile; fileRef = F35910A81A971ED500FF287E /* Derived.m */; };
+		F35910AC1A971EF000FF287E /* DerivedFromDerived.m in Sources */ = {isa = PBXBuildFile; fileRef = F35910AB1A971EF000FF287E /* DerivedFromDerived.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,27 +28,21 @@
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6003F595195388D20070C39A /* SGVSuperMessagingProxy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SGVSuperMessagingProxy-Info.plist"; sourceTree = "<group>"; };
-		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6003F59B195388D20070C39A /* SGVSuperMessagingProxy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SGVSuperMessagingProxy-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* SGVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGVAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* SGVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGVAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A0195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		6003F5A3195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* SGVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGVViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* SGVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGVViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		92EE4A6673A18E8CA6203357 /* SGVSuperMessagingProxy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGVSuperMessagingProxy.podspec; path = ../SGVSuperMessagingProxy.podspec; sourceTree = "<group>"; };
 		BB7DBB17228E58F0667D4043 /* Pods-SGVSuperMessagingProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy.release.xcconfig"; sourceTree = "<group>"; };
 		D515B240AF7DC1797CF906C1 /* libPods-SGVSuperMessagingProxy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGVSuperMessagingProxy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D287F039ECF666D13EB096 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3BDD4FD1A76CBF200B60A0E /* Fruit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fruit.h; sourceTree = "<group>"; };
-		F3BDD4FE1A76CBF200B60A0E /* Fruit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fruit.m; sourceTree = "<group>"; };
-		F3BDD5001A76CC1B00B60A0E /* Apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apple.h; sourceTree = "<group>"; };
-		F3BDD5011A76CC1B00B60A0E /* Apple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apple.m; sourceTree = "<group>"; };
-		F3BDD5031A76CCFD00B60A0E /* GoldenApple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldenApple.h; sourceTree = "<group>"; };
-		F3BDD5041A76CCFD00B60A0E /* GoldenApple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldenApple.m; sourceTree = "<group>"; };
+		F35910A41A971ECC00FF287E /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		F35910A51A971ECC00FF287E /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
+		F35910A71A971ED500FF287E /* Derived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Derived.h; sourceTree = "<group>"; };
+		F35910A81A971ED500FF287E /* Derived.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Derived.m; sourceTree = "<group>"; };
+		F35910AA1A971EF000FF287E /* DerivedFromDerived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DerivedFromDerived.h; sourceTree = "<group>"; };
+		F35910AB1A971EF000FF287E /* DerivedFromDerived.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DerivedFromDerived.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,20 +95,11 @@
 		6003F593195388D20070C39A /* SGVSuperMessagingProxy */ = {
 			isa = PBXGroup;
 			children = (
+				F35910A31A971EAB00FF287E /* TestClasses */,
 				6003F59C195388D20070C39A /* SGVAppDelegate.h */,
 				6003F59D195388D20070C39A /* SGVAppDelegate.m */,
-				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
-				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
-				6003F5A5195388D20070C39A /* SGVViewController.h */,
-				6003F5A6195388D20070C39A /* SGVViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				F3BDD4FD1A76CBF200B60A0E /* Fruit.h */,
-				F3BDD4FE1A76CBF200B60A0E /* Fruit.m */,
-				F3BDD5001A76CC1B00B60A0E /* Apple.h */,
-				F3BDD5011A76CC1B00B60A0E /* Apple.m */,
-				F3BDD5031A76CCFD00B60A0E /* GoldenApple.h */,
-				F3BDD5041A76CCFD00B60A0E /* GoldenApple.m */,
 			);
 			path = SGVSuperMessagingProxy;
 			sourceTree = "<group>";
@@ -127,9 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F595195388D20070C39A /* SGVSuperMessagingProxy-Info.plist */,
-				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
-				6003F59B195388D20070C39A /* SGVSuperMessagingProxy-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,6 +130,19 @@
 				BB7DBB17228E58F0667D4043 /* Pods-SGVSuperMessagingProxy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F35910A31A971EAB00FF287E /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F35910A41A971ECC00FF287E /* Base.h */,
+				F35910A51A971ECC00FF287E /* Base.m */,
+				F35910A71A971ED500FF287E /* Derived.h */,
+				F35910A81A971ED500FF287E /* Derived.m */,
+				F35910AA1A971EF000FF287E /* DerivedFromDerived.h */,
+				F35910AB1A971EF000FF287E /* DerivedFromDerived.m */,
+			);
+			path = TestClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,10 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
-				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,43 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3BDD5021A76CC1B00B60A0E /* Apple.m in Sources */,
-				F3BDD4FF1A76CBF200B60A0E /* Fruit.m in Sources */,
 				6003F59E195388D20070C39A /* SGVAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* SGVViewController.m in Sources */,
+				F35910A61A971ECC00FF287E /* Base.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				F3BDD5051A76CCFD00B60A0E /* GoldenApple.m in Sources */,
+				F35910A91A971ED500FF287E /* Derived.m in Sources */,
+				F35910AC1A971EF000FF287E /* DerivedFromDerived.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		6003F596195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F597195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6003F59F195388D20070C39A /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5A0195388D20070C39A /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		6003F5A2195388D20070C39A /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5A3195388D20070C39A /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6003F5BD195388D20070C39A /* Debug */ = {
@@ -372,11 +333,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SGVSuperMessagingProxy/SGVSuperMessagingProxy-Prefix.pch";
 				INFOPLIST_FILE = "SGVSuperMessagingProxy/SGVSuperMessagingProxy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02331606-ef7e-45ad-a48c-206b1c559239";
+				PROVISIONING_PROFILE = "13a5a11a-d312-40cf-92ab-2b4d38f04467";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -387,11 +346,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SGVSuperMessagingProxy/SGVSuperMessagingProxy-Prefix.pch";
 				INFOPLIST_FILE = "SGVSuperMessagingProxy/SGVSuperMessagingProxy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02331606-ef7e-45ad-a48c-206b1c559239";
+				PROVISIONING_PROFILE = "13a5a11a-d312-40cf-92ab-2b4d38f04467";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

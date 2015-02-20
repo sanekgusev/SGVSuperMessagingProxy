@@ -8,60 +8,25 @@
 
 #import "SGVAppDelegate.h"
 #import "NSObject+SGVSuperMessaging.h"
-#import "GoldenApple.h"
+#import "DerivedFromDerived.h"
 
 @implementation SGVAppDelegate
 
+@synthesize window = _window;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    GoldenApple *golden = [GoldenApple new];
-    Apple *superProxy = [golden sgv_super];
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [_window makeKeyAndVisible];
     
-    NSString *name = [superProxy name];
-    FruitStruct aStruct = [superProxy structValue];
-    CGFloat structValue = aStruct.value;
-    CGFloat floatValue = [superProxy floatValue];
-    long double longDoubleValue = [superProxy longDoubleValue];
-//    _Complex long double complexLongDoubleValue = [superProxy complexLongDoubleValue];
-    
-    NSLog(@"%@, %f, %f, %f, %Lf", name, aStruct.value, structValue, floatValue, longDoubleValue);
-//    id classSuperProxy = [[GoldenApple class] sgv_super];
-//    Class class = [classSuperProxy class];
-    
-//    UIImageView *iv = [UIImageView new];
-//    id proxy = [iv sgv_super];
-//    CGRect rect1 = iv.frame;
-//    CGRect rect2 = [proxy frame];
-//    NSLog(@"%@, %@", NSStringFromCGRect(rect1), NSStringFromCGRect(rect2));
+    DerivedFromDerived *derivedFromDerived = [DerivedFromDerived new];
+    id superProxy = [derivedFromDerived sgv_superForAncestorClass:[Base class]];
+    SmallStruct smallStruct = [superProxy smallStructValue];
+    MediumStruct mediumStruct = [superProxy mediumStructValue];
+    MediumLargeStruct mediumLargeStruct = [superProxy mediumLargeStructValue];
+    LargeStruct largeStruct = [superProxy largeStructValue];
     
     return YES;
-}
-							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end

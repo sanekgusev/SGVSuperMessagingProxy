@@ -1,13 +1,13 @@
 //
-//  Apple.h
+//  Derived.h
 //  SGVSuperMessagingProxy
 //
-//  Created by Aleksandr Gusev on 1/26/15.
+//  Created by Aleksandr Gusev on 2/20/15.
 //  Copyright (c) 2015 Alexander Gusev. All rights reserved.
 //
 
-#import "Fruit.h"
+#import "Base.h"
 
-@interface Apple : Fruit
+@interface Derived : Base
 
 @end

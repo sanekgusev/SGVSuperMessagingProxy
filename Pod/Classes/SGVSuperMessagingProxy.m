@@ -20,6 +20,8 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
     DispatchMode_Stret,
 };
 
+static ptrdiff_t SGVSuperMessagingProxySuperIvarOffset = 0;
+
 @interface SGVSuperMessagingProxy () {
     struct objc_super _super;
 }
@@ -117,8 +119,13 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
 
 SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperTrampoline, _objc_msgSendSuper, SGVSelfLocation)
 SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2, SGVSelfLocation)
-SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperStretTrampoline, _objc_msgSendSuper_stret, SGVSelfLocationStret)
-SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2StretTrampoline, _objc_msgSendSuper2_stret, SGVSelfLocationStret)
+#if defined(__arm64__)
+    #define SGVObjcMsgSendSuperStretTrampoline NULL
+    #define SGVObjcMsgSendSuper2StretTrampoline NULL
+#else
+    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperStretTrampoline, _objc_msgSendSuper_stret, SGVSelfLocationStret)
+    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2StretTrampoline, _objc_msgSendSuper2_stret, SGVSelfLocationStret)
+#endif
 
 #pragma mark - Resolving
 
@@ -164,23 +171,22 @@ static DispatchMode SGVGetDispatchMode(const char * typeEncoding) {
     
 #if defined (__arm64__)
     // ARM64 doesn't use stret dispatch at all, yay!
-    dispatchMode = DispatchMode_Normal;
-#elif defined (__arm__)
-    // On arm, stret dispatch is used whenever the return type is a struct,
-    // even if the struct would fit into a register
-    dispatchMode = (typeEncoding[0] == _C_STRUCT_B) ? DispatchMode_Stret : DispatchMode_Normal;
-#elif defined (__x86_64__) || defined(__i386__)
-    // On i386 and x86-64, stret dispatch is used whenever the return type
-    // is a struct AND the size of the struct is larger than size of 2 registers
+#elif defined (__arm__) || defined (__x86_64__) || defined(__i386__)
     NSUInteger returnTypeActualSize = 0;
-    NSUInteger returnTypeAlignedSize = 0;
-    // NOTE: chokes on __Complex long double
     NSGetSizeAndAlignment(typeEncoding,
                           &returnTypeActualSize,
-                          &returnTypeAlignedSize);
-    dispatchMode = ((typeEncoding[0] == _C_STRUCT_B) && (returnTypeActualSize > sizeof(void *) * 2)) ? DispatchMode_Stret : DispatchMode_Normal;
+                          NULL);
+    #if defined (__arm__)
+        // On arm, stret dispatch is used whenever the return type
+        // does not fit into a single register
+        dispatchMode = returnTypeActualSize > sizeof(void *) ? DispatchMode_Stret : DispatchMode_Normal;
+    #elif defined (__x86_64__) || defined(__i386__)
+        // On i386 and x86-64, stret dispatch is used whenever the return type
+        // doesn't fit into two registers
+        dispatchMode = returnTypeActualSize > (sizeof(void *) * 2) ? DispatchMode_Stret : DispatchMode_Normal;
+    #endif
 #else
-#error - Unknown architecture
+    #error - Unknown architecture
 #endif
     
     return dispatchMode;
@@ -205,8 +211,14 @@ static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
             break;
         default:
             NSCAssert(NO, @"invalid dispatch mode");
-            break;
+            return NO;
     }
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        SGVSuperMessagingProxySuperIvarOffset = ivar_getOffset(class_getInstanceVariable([SGVSuperMessagingProxy class],
+                                                                                         "_super"));
+    });
     
     SEL selector = method_getName(method);
     

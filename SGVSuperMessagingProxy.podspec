@@ -3,10 +3,11 @@ Pod::Spec.new do |s|
   s.version          = "1.0.0"
   s.summary          = "An NSProxy subclass for invoking superclass method implementations."
   s.description      = <<-DESC
-                       An optional longer description of SGVSuperMessagingProxy
+                       This proxy allows one to invoke method implementations from any class in the inheritance hierarchy for any Objective-C object.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       On creation, the proxy is passed the object and optionally a class in that object's inheritance hierarchy.
+                       
+                       Any message send to a proxy will be executed as if it was invoked with a super keyword from inside that object's class declaration.
                        DESC
   s.homepage         = "https://github.com/sanekgusev/SGVSuperMessagingProxy"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
