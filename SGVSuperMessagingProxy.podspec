@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
                        Any message send to a proxy will be executed as if it was invoked with a super keyword from inside that object's class declaration.
                        DESC
   s.homepage         = "https://github.com/sanekgusev/SGVSuperMessagingProxy"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Alexander Gusev" => "sanekgusev@gmail.com" }
   s.source           = { :git => "https://github.com/sanekgusev/SGVSuperMessagingProxy.git", :tag => s.version.to_s }
