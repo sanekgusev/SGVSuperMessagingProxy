@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
     DispatchMode_Stret,
 };
 
-static ptrdiff_t SGVSuperMessagingProxySuperIvarOffset = 0;
+static ptrdiff_t volatile SGVSuperMessagingProxySuperIvarOffset = 0;
 
 @interface SGVSuperMessagingProxy () {
     struct objc_super _super;
