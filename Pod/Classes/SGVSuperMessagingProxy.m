@@ -10,6 +10,8 @@
 #import <objc/message.h>
 #import <objc/runtime.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, MsgSendSuperFunction) {
     MsgSendSuperFunction_MsgSendSuper,
     MsgSendSuperFunction_MsgSendSuper2
@@ -319,3 +321,5 @@ static Class SGVProxySubclassForProxiedObjectClass(Class __unsafe_unretained cla
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

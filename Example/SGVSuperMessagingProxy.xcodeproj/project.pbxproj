@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24D8A7ECF98ADC45C8B72787 /* libPods-SGVSuperMessagingProxy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D515B240AF7DC1797CF906C1 /* libPods-SGVSuperMessagingProxy.a */; };
+		4E19CA4A0711EE65B6C09B7D /* libPods-SGVSuperMessagingProxy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D273CB21C2EFD67597F29E9A /* libPods-SGVSuperMessagingProxy.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F79121EED4D819FAFD2546A /* Pods-SGVSuperMessagingProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy.release.xcconfig"; sourceTree = "<group>"; };
 		1AC129F6142EE0CFD66CE88A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		1E8417F9E0402153719002FB /* Pods-SGVSuperMessagingProxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy.debug.xcconfig"; sourceTree = "<group>"; };
 		55DAC46AA2376B464802AFE4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SGVSuperMessagingProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGVSuperMessagingProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,9 +34,8 @@
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		92EE4A6673A18E8CA6203357 /* SGVSuperMessagingProxy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGVSuperMessagingProxy.podspec; path = ../SGVSuperMessagingProxy.podspec; sourceTree = "<group>"; };
-		BB7DBB17228E58F0667D4043 /* Pods-SGVSuperMessagingProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy.release.xcconfig"; sourceTree = "<group>"; };
-		D515B240AF7DC1797CF906C1 /* libPods-SGVSuperMessagingProxy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGVSuperMessagingProxy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8D287F039ECF666D13EB096 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC2D391061901F9A30B04E3 /* Pods-SGVSuperMessagingProxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy.debug.xcconfig"; sourceTree = "<group>"; };
+		D273CB21C2EFD67597F29E9A /* libPods-SGVSuperMessagingProxy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGVSuperMessagingProxy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35910A41A971ECC00FF287E /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		F35910A51A971ECC00FF287E /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
 		F35910A71A971ED500FF287E /* Derived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Derived.h; sourceTree = "<group>"; };
@@ -53,13 +52,22 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				24D8A7ECF98ADC45C8B72787 /* libPods-SGVSuperMessagingProxy.a in Frameworks */,
+				4E19CA4A0711EE65B6C09B7D /* libPods-SGVSuperMessagingProxy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F67F2C09A01FFF98467363B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACC2D391061901F9A30B04E3 /* Pods-SGVSuperMessagingProxy.debug.xcconfig */,
+				0F79121EED4D819FAFD2546A /* Pods-SGVSuperMessagingProxy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +75,7 @@
 				6003F593195388D20070C39A /* SGVSuperMessagingProxy */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				D6E61694142FBF13CE52A73E /* Pods */,
+				5F67F2C09A01FFF98467363B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,8 +94,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				D515B240AF7DC1797CF906C1 /* libPods-SGVSuperMessagingProxy.a */,
-				E8D287F039ECF666D13EB096 /* libPods-Tests.a */,
+				D273CB21C2EFD67597F29E9A /* libPods-SGVSuperMessagingProxy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,15 +130,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		D6E61694142FBF13CE52A73E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1E8417F9E0402153719002FB /* Pods-SGVSuperMessagingProxy.debug.xcconfig */,
-				BB7DBB17228E58F0667D4043 /* Pods-SGVSuperMessagingProxy.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F35910A31A971EAB00FF287E /* TestClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,11 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SGVSuperMessagingProxy" */;
 			buildPhases = (
-				CC783810CBDDB7CC0BD7231D /* Check Pods Manifest.lock */,
+				4D377F8686921C3B046DA753 /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				D23E27C407852E20E3AEF1B1 /* Copy Pods Resources */,
+				ACA4875A4E94386329113DB2 /* 📦 Embed Pods Frameworks */,
+				F7C6B6145EEAA6D64C031990 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,7 +173,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SGV;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Alexander Gusev";
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "SGVSuperMessagingProxy" */;
@@ -207,14 +206,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CC783810CBDDB7CC0BD7231D /* Check Pods Manifest.lock */ = {
+		4D377F8686921C3B046DA753 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,14 +221,29 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D23E27C407852E20E3AEF1B1 /* Copy Pods Resources */ = {
+		ACA4875A4E94386329113DB2 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C6B6145EEAA6D64C031990 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +287,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -287,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -329,11 +344,12 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E8417F9E0402153719002FB /* Pods-SGVSuperMessagingProxy.debug.xcconfig */;
+			baseConfigurationReference = ACC2D391061901F9A30B04E3 /* Pods-SGVSuperMessagingProxy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "SGVSuperMessagingProxy/SGVSuperMessagingProxy-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "13a5a11a-d312-40cf-92ab-2b4d38f04467";
 				WRAPPER_EXTENSION = app;
@@ -342,11 +358,12 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB7DBB17228E58F0667D4043 /* Pods-SGVSuperMessagingProxy.release.xcconfig */;
+			baseConfigurationReference = 0F79121EED4D819FAFD2546A /* Pods-SGVSuperMessagingProxy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "SGVSuperMessagingProxy/SGVSuperMessagingProxy-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "13a5a11a-d312-40cf-92ab-2b4d38f04467";
 				WRAPPER_EXTENSION = app;

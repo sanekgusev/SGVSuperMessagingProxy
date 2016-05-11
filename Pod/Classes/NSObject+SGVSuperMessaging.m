@@ -9,6 +9,8 @@
 #import "NSObject+SGVSuperMessaging.h"
 #import "SGVSuperMessagingProxy.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSObject (SGVSuperMessaging)
 
 - (instancetype)sgv_super {
@@ -21,3 +23,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

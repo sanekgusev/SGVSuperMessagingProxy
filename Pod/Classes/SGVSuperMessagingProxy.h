@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SGVSuperMessagingProxy : NSProxy
 
 /// Uses trampolines to objc_msgSendSuper[_stret]
-+ (id)proxyWithObject:(id __attribute__((nonnull)))object
-        ancestorClass:(Class __unsafe_unretained __attribute__((nonnull)))ancestorClass;
++ (id)proxyWithObject:(id)object
+        ancestorClass:(Class __unsafe_unretained)ancestorClass;
 
 /// Uses trampolines to objc_msgSendSuper2[_stret]
-+ (id)proxyWithObject:(id __attribute__((nonnull)))object;
++ (id)proxyWithObject:(id)object;
 
 @end
+
+NS_ASSUME_NONNULL_END

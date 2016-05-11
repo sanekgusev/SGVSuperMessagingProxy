@@ -1,16 +1,18 @@
 PODS:
-  - SGVSuperMessagingProxy (1.0.0):
-    - SGVSuperMessagingProxy/Core (= 1.0.0)
-  - SGVSuperMessagingProxy/Core (1.0.0)
+  - SGVSuperMessagingProxy (1.0.1):
+    - SGVSuperMessagingProxy/Core (= 1.0.1)
+  - SGVSuperMessagingProxy/Core (1.0.1)
 
 DEPENDENCIES:
   - SGVSuperMessagingProxy (from `../`)
 
 EXTERNAL SOURCES:
   SGVSuperMessagingProxy:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  SGVSuperMessagingProxy: 3dc74b6f46c940bc29a9a255354a93f5d6eb407c
+  SGVSuperMessagingProxy: 64f542e7ab93e47c0d4d7e9c96df97c4ab240cba
 
-COCOAPODS: 0.36.0.beta.1
+PODFILE CHECKSUM: 77e8dcdda1f6b3d56327488264fee7d077744196
+
+COCOAPODS: 1.0.0

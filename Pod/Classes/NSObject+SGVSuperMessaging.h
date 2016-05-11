@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSObject (SGVSuperMessaging)
 
 - (instancetype)sgv_super;
-- (instancetype)sgv_superForAncestorClass:(Class __unsafe_unretained __attribute__((nonnull)))ancestorClass;
+- (instancetype)sgv_superForAncestorClass:(Class __unsafe_unretained)ancestorClass;
 
 @end
+
+NS_ASSUME_NONNULL_END
