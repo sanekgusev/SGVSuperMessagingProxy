@@ -22,8 +22,6 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
     DispatchMode_Stret,
 };
 
-static ptrdiff_t volatile SGVSuperMessagingProxySuperIvarOffset = 0;
-
 @interface SGVSuperMessagingProxy () {
     struct objc_super _super;
 }
@@ -83,13 +81,10 @@ static ptrdiff_t volatile SGVSuperMessagingProxySuperIvarOffset = 0;
     #define SGVSelfLocation x0
     #define SGVSelfLocationStret x1
 
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, superIvarOffset) \
+    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
     __attribute__((__naked__)) \
     static void trampolineFunction(void) { \
-        asm volatile ("adrp	x9, " #superIvarOffset "@PAGE\n\t" \
-                      "add x9, x9, " #superIvarOffset "@PAGEOFF\n\t" \
-                      "ldr x9, [x9]\n\t" \
-                      "add " #selfLocation ", " #selfLocation ", x9\n\t" \
+        asm volatile ("add " #selfLocation ", " #selfLocation ", #8\n\t" \
                       "b " #msgSendSuperFunction "\n\t" \
                       : : : "x0", "x1", "x9"); \
     }
@@ -99,12 +94,10 @@ static ptrdiff_t volatile SGVSuperMessagingProxySuperIvarOffset = 0;
     #define SGVSelfLocation r0
     #define SGVSelfLocationStret r1
 
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, superIvarOffset) \
+    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
     __attribute__((__naked__)) \
     static void trampolineFunction(void) { \
-        asm volatile ("movw r9, :lower16:(" #superIvarOffset ")\n\t" \
-                      "movw r9, :upper16:(" #superIvarOffset ")\n\t" \
-                      "add " #selfLocation ", r9\n\t" \
+        asm volatile ("add " #selfLocation ", #8\n\t" \
                       "b " #msgSendSuperFunction "\n\t" \
                       : : : "r0", "r1", "r9"); \
     }
@@ -114,11 +107,10 @@ static ptrdiff_t volatile SGVSuperMessagingProxySuperIvarOffset = 0;
     #define SGVSelfLocation %%rdi
     #define SGVSelfLocationStret %%rsi
 
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, superIvarOffset) \
+    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
     __attribute__((__naked__)) \
     static void trampolineFunction(void) { \
-        asm volatile ("movq	" #superIvarOffset "(%%rip), %%r11\n\t" \
-                      "addq %%r11, " #selfLocation "\n\t" \
+        asm volatile ("addq $8, " #selfLocation "\n\t" \
                       "jmp " #msgSendSuperFunction "\n\t" \
                       : : : "rsi", "rdi", "r11"); \
     }
@@ -128,11 +120,10 @@ static ptrdiff_t volatile SGVSuperMessagingProxySuperIvarOffset = 0;
     #define SGVSelfLocation 0x4(%%esp)
     #define SGVSelfLocationStret 0x8(%%esp)
 
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, superIvarOffset) \
+    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
     __attribute__((__naked__)) \
     static void trampolineFunction(void) { \
-        asm volatile ("movl " #superIvarOffset ", %%ecx\n\t" \
-                      "addl %%ecx, " #selfLocation "\n\t" \
+        asm volatile ("addl $8, " #selfLocation "\n\t" \
                       "jmp " #msgSendSuperFunction "\n\t" \
                         : : : "ecx", "memory"); \
     }
@@ -141,17 +132,17 @@ static ptrdiff_t volatile SGVSuperMessagingProxySuperIvarOffset = 0;
     #error - Unknown arhitecture
 #endif
 
-#define SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, superIvarOffset) \
-    _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, superIvarOffset)
+#define SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
+    _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation)
 
-SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperTrampoline, _objc_msgSendSuper, SGVSelfLocation, _SGVSuperMessagingProxySuperIvarOffset)
-SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2, SGVSelfLocation, _SGVSuperMessagingProxySuperIvarOffset)
+SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperTrampoline, _objc_msgSendSuper, SGVSelfLocation)
+SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2, SGVSelfLocation)
 #if defined(__arm64__)
     #define SGVObjcMsgSendSuperStretTrampoline NULL
     #define SGVObjcMsgSendSuper2StretTrampoline NULL
 #else
-    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperStretTrampoline, _objc_msgSendSuper_stret, SGVSelfLocationStret, _SGVSuperMessagingProxySuperIvarOffset)
-    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2StretTrampoline, _objc_msgSendSuper2_stret, SGVSelfLocationStret, _SGVSuperMessagingProxySuperIvarOffset)
+    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperStretTrampoline, _objc_msgSendSuper_stret, SGVSelfLocationStret)
+    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2StretTrampoline, _objc_msgSendSuper2_stret, SGVSelfLocationStret)
 #endif
 
 #pragma mark - Resolving
@@ -241,11 +232,11 @@ static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
             return NO;
     }
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        SGVSuperMessagingProxySuperIvarOffset = ivar_getOffset(class_getInstanceVariable([SGVSuperMessagingProxy class],
-                                                                                         "_super"));
-    });
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        SGVSuperMessagingProxySuperIvarOffset = ivar_getOffset(class_getInstanceVariable([SGVSuperMessagingProxy class],
+//                                                                                         "_super"));
+//    });
     
     SEL selector = method_getName(method);
     
