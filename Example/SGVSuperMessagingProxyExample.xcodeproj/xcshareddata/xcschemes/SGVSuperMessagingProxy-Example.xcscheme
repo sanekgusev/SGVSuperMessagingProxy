@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "SGVSuperMessagingProxy.app"
-               BlueprintName = "SGVSuperMessagingProxy"
-               ReferencedContainer = "container:SGVSuperMessagingProxy.xcodeproj">
+               BuildableName = "SGVSuperMessagingProxyExample.app"
+               BlueprintName = "SGVSuperMessagingProxyExample"
+               ReferencedContainer = "container:SGVSuperMessagingProxyExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,17 @@
                BlueprintIdentifier = "6003F5AD195388D20070C39A"
                BuildableName = "Tests.xctest"
                BlueprintName = "Tests"
-               ReferencedContainer = "container:SGVSuperMessagingProxy.xcodeproj">
+               ReferencedContainer = "container:SGVSuperMessagingProxyExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BBD9CB631CEE553700B7A43E"
+               BuildableName = "SGVSuperMessagingProxyExample.xctest"
+               BlueprintName = "SGVSuperMessagingProxyTests"
+               ReferencedContainer = "container:SGVSuperMessagingProxyExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "SGVSuperMessagingProxy.app"
-            BlueprintName = "SGVSuperMessagingProxy"
-            ReferencedContainer = "container:SGVSuperMessagingProxy.xcodeproj">
+            BuildableName = "SGVSuperMessagingProxyExample.app"
+            BlueprintName = "SGVSuperMessagingProxyExample"
+            ReferencedContainer = "container:SGVSuperMessagingProxyExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "SGVSuperMessagingProxy.app"
-            BlueprintName = "SGVSuperMessagingProxy"
-            ReferencedContainer = "container:SGVSuperMessagingProxy.xcodeproj">
+            BuildableName = "SGVSuperMessagingProxyExample.app"
+            BlueprintName = "SGVSuperMessagingProxyExample"
+            ReferencedContainer = "container:SGVSuperMessagingProxyExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "SGVSuperMessagingProxy.app"
-            BlueprintName = "SGVSuperMessagingProxy"
-            ReferencedContainer = "container:SGVSuperMessagingProxy.xcodeproj">
+            BuildableName = "SGVSuperMessagingProxyExample.app"
+            BlueprintName = "SGVSuperMessagingProxyExample"
+            ReferencedContainer = "container:SGVSuperMessagingProxyExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

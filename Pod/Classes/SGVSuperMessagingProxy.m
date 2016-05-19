@@ -232,12 +232,6 @@ static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
             return NO;
     }
     
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        SGVSuperMessagingProxySuperIvarOffset = ivar_getOffset(class_getInstanceVariable([SGVSuperMessagingProxy class],
-//                                                                                         "_super"));
-//    });
-    
     SEL selector = method_getName(method);
     
     BOOL methodAdded = class_addMethod(proxySubclass,

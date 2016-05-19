@@ -1,4 +1,10 @@
-platform :ios, '7.0'
-target 'SGVSuperMessagingProxy' do
-  pod "SGVSuperMessagingProxy", :path => "../"
+platform :ios, '8.0'
+use_frameworks!
+
+target 'SGVSuperMessagingProxyExample' do
+  pod 'SGVSuperMessagingProxy', :path => "../"
+
+  target 'SGVSuperMessagingProxyTests' do
+    inherit! :search_paths
+  end
 end

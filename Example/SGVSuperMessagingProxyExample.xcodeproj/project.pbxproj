@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6A126807E9C429F8F4C13910 /* Pods_SGVSuperMessagingProxyExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CCBE050D489B5919852FD8 /* Pods_SGVSuperMessagingProxyExample.framework */; };
+		71002C1E63DFB34D3E0A010F /* Pods_SGVSuperMessagingProxyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4527C614A8846A65A3D6D9D1 /* Pods_SGVSuperMessagingProxyTests.framework */; };
+		BB84E2611CEE617900E379C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84E2571CEE617900E379C9 /* AppDelegate.swift */; };
+		BB84E2621CEE617900E379C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB84E2581CEE617900E379C9 /* Images.xcassets */; };
+		BB84E2641CEE617900E379C9 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BB84E25C1CEE617900E379C9 /* Base.m */; };
+		BB84E2651CEE617900E379C9 /* Derived.m in Sources */ = {isa = PBXBuildFile; fileRef = BB84E25E1CEE617900E379C9 /* Derived.m */; };
+		BB84E2661CEE617900E379C9 /* DerivedFromDerived.m in Sources */ = {isa = PBXBuildFile; fileRef = BB84E2601CEE617900E379C9 /* DerivedFromDerived.m */; };
+		BBD9CB731CEE557100B7A43E /* SGVSuperMessagingProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9CB701CEE555F00B7A43E /* SGVSuperMessagingProxyTests.swift */; };
+		BBD9CB7D1CEE5D9500B7A43E /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9CB771CEE598600B7A43E /* Cat.swift */; };
+		BBD9CB7E1CEE5D9900B7A43E /* NyanCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9CB791CEE5D0600B7A43E /* NyanCat.swift */; };
+		BBD9CB7F1CEE5D9E00B7A43E /* NyanNyanCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9CB7B1CEE5D2F00B7A43E /* NyanNyanCat.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBD9CB691CEE553700B7A43E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = SGVSuperMessagingProxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F79121EED4D819FAFD2546A /* Pods-SGVSuperMessagingProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy.release.xcconfig"; sourceTree = "<group>"; };
+		1AC129F6142EE0CFD66CE88A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4527C614A8846A65A3D6D9D1 /* Pods_SGVSuperMessagingProxyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGVSuperMessagingProxyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DAC46AA2376B464802AFE4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* SGVSuperMessagingProxyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGVSuperMessagingProxyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6184A7BB994801C5E8BA5463 /* Pods-SGVSuperMessagingProxyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxyExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxyExample/Pods-SGVSuperMessagingProxyExample.release.xcconfig"; sourceTree = "<group>"; };
+		92EE4A6673A18E8CA6203357 /* SGVSuperMessagingProxy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGVSuperMessagingProxy.podspec; path = ../SGVSuperMessagingProxy.podspec; sourceTree = "<group>"; };
+		ACC2D391061901F9A30B04E3 /* Pods-SGVSuperMessagingProxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxy/Pods-SGVSuperMessagingProxy.debug.xcconfig"; sourceTree = "<group>"; };
+		BB84E2571CEE617900E379C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB84E2581CEE617900E379C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BB84E2591CEE617900E379C9 /* SGVSuperMessagingProxyExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SGVSuperMessagingProxyExample-Info.plist"; sourceTree = "<group>"; };
+		BB84E25B1CEE617900E379C9 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		BB84E25C1CEE617900E379C9 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
+		BB84E25D1CEE617900E379C9 /* Derived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Derived.h; sourceTree = "<group>"; };
+		BB84E25E1CEE617900E379C9 /* Derived.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Derived.m; sourceTree = "<group>"; };
+		BB84E25F1CEE617900E379C9 /* DerivedFromDerived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DerivedFromDerived.h; sourceTree = "<group>"; };
+		BB84E2601CEE617900E379C9 /* DerivedFromDerived.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DerivedFromDerived.m; sourceTree = "<group>"; };
+		BBD9CB641CEE553700B7A43E /* SGVSuperMessagingProxyExample.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGVSuperMessagingProxyExample.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBD9CB6F1CEE555F00B7A43E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBD9CB701CEE555F00B7A43E /* SGVSuperMessagingProxyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGVSuperMessagingProxyTests.swift; sourceTree = "<group>"; };
+		BBD9CB771CEE598600B7A43E /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		BBD9CB791CEE5D0600B7A43E /* NyanCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyanCat.swift; sourceTree = "<group>"; };
+		BBD9CB7B1CEE5D2F00B7A43E /* NyanNyanCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyanNyanCat.swift; sourceTree = "<group>"; };
+		D2D023140F91816B8876365B /* Pods_SGVSuperMessagingProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGVSuperMessagingProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF006D9790997A000D43F34C /* Pods-SGVSuperMessagingProxyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxyExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxyExample/Pods-SGVSuperMessagingProxyExample.debug.xcconfig"; sourceTree = "<group>"; };
+		E13E937E3F33D585D45120A1 /* Pods-SGVSuperMessagingProxyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxyTests/Pods-SGVSuperMessagingProxyTests.release.xcconfig"; sourceTree = "<group>"; };
+		E2D939B646725A528CBC887B /* Pods-SGVSuperMessagingProxyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGVSuperMessagingProxyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGVSuperMessagingProxyTests/Pods-SGVSuperMessagingProxyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0CCBE050D489B5919852FD8 /* Pods_SGVSuperMessagingProxyExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGVSuperMessagingProxyExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				6A126807E9C429F8F4C13910 /* Pods_SGVSuperMessagingProxyExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD9CB611CEE553700B7A43E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71002C1E63DFB34D3E0A010F /* Pods_SGVSuperMessagingProxyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F67F2C09A01FFF98467363B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACC2D391061901F9A30B04E3 /* Pods-SGVSuperMessagingProxy.debug.xcconfig */,
+				0F79121EED4D819FAFD2546A /* Pods-SGVSuperMessagingProxy.release.xcconfig */,
+				E2D939B646725A528CBC887B /* Pods-SGVSuperMessagingProxyTests.debug.xcconfig */,
+				E13E937E3F33D585D45120A1 /* Pods-SGVSuperMessagingProxyTests.release.xcconfig */,
+				DF006D9790997A000D43F34C /* Pods-SGVSuperMessagingProxyExample.debug.xcconfig */,
+				6184A7BB994801C5E8BA5463 /* Pods-SGVSuperMessagingProxyExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				BB84E2561CEE617900E379C9 /* SGVSuperMessagingProxyExample */,
+				BBD9CB5F1CEE550300B7A43E /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				5F67F2C09A01FFF98467363B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* SGVSuperMessagingProxyExample.app */,
+				BBD9CB641CEE553700B7A43E /* SGVSuperMessagingProxyExample.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				D2D023140F91816B8876365B /* Pods_SGVSuperMessagingProxy.framework */,
+				4527C614A8846A65A3D6D9D1 /* Pods_SGVSuperMessagingProxyTests.framework */,
+				F0CCBE050D489B5919852FD8 /* Pods_SGVSuperMessagingProxyExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				92EE4A6673A18E8CA6203357 /* SGVSuperMessagingProxy.podspec */,
+				1AC129F6142EE0CFD66CE88A /* README.md */,
+				55DAC46AA2376B464802AFE4 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		BB84E2561CEE617900E379C9 /* SGVSuperMessagingProxyExample */ = {
+			isa = PBXGroup;
+			children = (
+				BB84E2571CEE617900E379C9 /* AppDelegate.swift */,
+				BB84E2581CEE617900E379C9 /* Images.xcassets */,
+				BB84E2591CEE617900E379C9 /* SGVSuperMessagingProxyExample-Info.plist */,
+				BB84E25A1CEE617900E379C9 /* TestClasses */,
+			);
+			path = SGVSuperMessagingProxyExample;
+			sourceTree = "<group>";
+		};
+		BB84E25A1CEE617900E379C9 /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BB84E25B1CEE617900E379C9 /* Base.h */,
+				BB84E25C1CEE617900E379C9 /* Base.m */,
+				BB84E25D1CEE617900E379C9 /* Derived.h */,
+				BB84E25E1CEE617900E379C9 /* Derived.m */,
+				BB84E25F1CEE617900E379C9 /* DerivedFromDerived.h */,
+				BB84E2601CEE617900E379C9 /* DerivedFromDerived.m */,
+			);
+			path = TestClasses;
+			sourceTree = "<group>";
+		};
+		BBD9CB5F1CEE550300B7A43E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BBD9CB6F1CEE555F00B7A43E /* Info.plist */,
+				BBD9CB701CEE555F00B7A43E /* SGVSuperMessagingProxyTests.swift */,
+				BBD9CB771CEE598600B7A43E /* Cat.swift */,
+				BBD9CB791CEE5D0600B7A43E /* NyanCat.swift */,
+				BBD9CB7B1CEE5D2F00B7A43E /* NyanNyanCat.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* SGVSuperMessagingProxyExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SGVSuperMessagingProxyExample" */;
+			buildPhases = (
+				4D377F8686921C3B046DA753 /* 📦 Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				ACA4875A4E94386329113DB2 /* 📦 Embed Pods Frameworks */,
+				F7C6B6145EEAA6D64C031990 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGVSuperMessagingProxyExample;
+			productName = SGVSuperMessagingProxy;
+			productReference = 6003F58A195388D20070C39A /* SGVSuperMessagingProxyExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBD9CB631CEE553700B7A43E /* SGVSuperMessagingProxyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD9CB6B1CEE553700B7A43E /* Build configuration list for PBXNativeTarget "SGVSuperMessagingProxyTests" */;
+			buildPhases = (
+				E634D21BD9210BBD0A84E9D0 /* 📦 Check Pods Manifest.lock */,
+				BBD9CB601CEE553700B7A43E /* Sources */,
+				BBD9CB611CEE553700B7A43E /* Frameworks */,
+				BBD9CB621CEE553700B7A43E /* Resources */,
+				CFDF1D555217749A62D776B0 /* 📦 Embed Pods Frameworks */,
+				B0BDEC2007CEEEC54CBD54F1 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBD9CB6A1CEE553700B7A43E /* PBXTargetDependency */,
+			);
+			name = SGVSuperMessagingProxyTests;
+			productName = SGVSuperMessagingProxyTests;
+			productReference = BBD9CB641CEE553700B7A43E /* SGVSuperMessagingProxyExample.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SGV;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alexander Gusev";
+				TargetAttributes = {
+					BBD9CB631CEE553700B7A43E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "SGVSuperMessagingProxyExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* SGVSuperMessagingProxyExample */,
+				BBD9CB631CEE553700B7A43E /* SGVSuperMessagingProxyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB84E2621CEE617900E379C9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD9CB621CEE553700B7A43E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D377F8686921C3B046DA753 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ACA4875A4E94386329113DB2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGVSuperMessagingProxyExample/Pods-SGVSuperMessagingProxyExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0BDEC2007CEEEC54CBD54F1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGVSuperMessagingProxyTests/Pods-SGVSuperMessagingProxyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFDF1D555217749A62D776B0 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGVSuperMessagingProxyTests/Pods-SGVSuperMessagingProxyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E634D21BD9210BBD0A84E9D0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C6B6145EEAA6D64C031990 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGVSuperMessagingProxyExample/Pods-SGVSuperMessagingProxyExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB84E2641CEE617900E379C9 /* Base.m in Sources */,
+				BB84E2661CEE617900E379C9 /* DerivedFromDerived.m in Sources */,
+				BB84E2611CEE617900E379C9 /* AppDelegate.swift in Sources */,
+				BB84E2651CEE617900E379C9 /* Derived.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD9CB601CEE553700B7A43E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD9CB7F1CEE5D9E00B7A43E /* NyanNyanCat.swift in Sources */,
+				BBD9CB7E1CEE5D9900B7A43E /* NyanCat.swift in Sources */,
+				BBD9CB7D1CEE5D9500B7A43E /* Cat.swift in Sources */,
+				BBD9CB731CEE557100B7A43E /* SGVSuperMessagingProxyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBD9CB6A1CEE553700B7A43E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* SGVSuperMessagingProxyExample */;
+			targetProxy = BBD9CB691CEE553700B7A43E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF006D9790997A000D43F34C /* Pods-SGVSuperMessagingProxyExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "SGVSuperMessagingProxyExample/SGVSuperMessagingProxyExample-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = SGVSuperMessagingProxyExample;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6184A7BB994801C5E8BA5463 /* Pods-SGVSuperMessagingProxyExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				INFOPLIST_FILE = "SGVSuperMessagingProxyExample/SGVSuperMessagingProxyExample-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = SGVSuperMessagingProxyExample;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BBD9CB6C1CEE553700B7A43E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2D939B646725A528CBC887B /* Pods-SGVSuperMessagingProxyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.SGVSuperMessagingProxyTests;
+				PRODUCT_NAME = SGVSuperMessagingProxyExample;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SGVSuperMessagingProxyExample.app/SGVSuperMessagingProxyExample";
+			};
+			name = Debug;
+		};
+		BBD9CB6D1CEE553700B7A43E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13E937E3F33D585D45120A1 /* Pods-SGVSuperMessagingProxyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.SGVSuperMessagingProxyTests;
+				PRODUCT_NAME = SGVSuperMessagingProxyExample;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SGVSuperMessagingProxyExample.app/SGVSuperMessagingProxyExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "SGVSuperMessagingProxyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SGVSuperMessagingProxyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBD9CB6B1CEE553700B7A43E /* Build configuration list for PBXNativeTarget "SGVSuperMessagingProxyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBD9CB6C1CEE553700B7A43E /* Debug */,
+				BBD9CB6D1CEE553700B7A43E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}
