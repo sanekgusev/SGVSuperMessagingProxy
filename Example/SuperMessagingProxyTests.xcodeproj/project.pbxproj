@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		73707C5B93184901F33D155F /* Pods_SuperMessagingProxyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652FD93BFCB2A7710AD9E7A /* Pods_SuperMessagingProxyTests.framework */; };
-		BBF0D7A41CEFA26500871E67 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D79A1CEFA26500871E67 /* Base.m */; };
-		BBF0D7A51CEFA26500871E67 /* Derived.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D79C1CEFA26500871E67 /* Derived.m */; };
-		BBF0D7A61CEFA26500871E67 /* DerivedFromDerived.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D79E1CEFA26500871E67 /* DerivedFromDerived.m */; };
 		BBF0D7A71CEFA26500871E67 /* SuperMessagingProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D79F1CEFA26500871E67 /* SuperMessagingProxyTests.swift */; };
 		BBF0D7A81CEFA26500871E67 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7A11CEFA26500871E67 /* Cat.swift */; };
 		BBF0D7A91CEFA26500871E67 /* NyanCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7A21CEFA26500871E67 /* NyanCat.swift */; };
 		BBF0D7AA1CEFA26500871E67 /* NyanNyanCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7A31CEFA26500871E67 /* NyanNyanCat.swift */; };
 		BBF0D7AC1CEFB5DE00871E67 /* SGVSuperMessagingProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7AB1CEFB5DE00871E67 /* SGVSuperMessagingProxyTests.m */; };
+		BBF0D7AF1CEFB88000871E67 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7AE1CEFB88000871E67 /* Cat.m */; };
+		BBF0D7B21CEFBD1200871E67 /* NyanCat.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7B11CEFBD1200871E67 /* NyanCat.m */; };
+		BBF0D7B51CEFBDBF00871E67 /* NyanNyanCat.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7B41CEFBDBF00871E67 /* NyanNyanCat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,17 +27,17 @@
 		BB07E1E71CEF9B3C000F1535 /* SuperMessagingProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperMessagingProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD9CB6F1CEE555F00B7A43E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF0D7971CEFA26500871E67 /* SuperMessagingProxyTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperMessagingProxyTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		BBF0D7991CEFA26500871E67 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
-		BBF0D79A1CEFA26500871E67 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
-		BBF0D79B1CEFA26500871E67 /* Derived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Derived.h; sourceTree = "<group>"; };
-		BBF0D79C1CEFA26500871E67 /* Derived.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Derived.m; sourceTree = "<group>"; };
-		BBF0D79D1CEFA26500871E67 /* DerivedFromDerived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DerivedFromDerived.h; sourceTree = "<group>"; };
-		BBF0D79E1CEFA26500871E67 /* DerivedFromDerived.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DerivedFromDerived.m; sourceTree = "<group>"; };
 		BBF0D79F1CEFA26500871E67 /* SuperMessagingProxyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperMessagingProxyTests.swift; sourceTree = "<group>"; };
 		BBF0D7A11CEFA26500871E67 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		BBF0D7A21CEFA26500871E67 /* NyanCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyanCat.swift; sourceTree = "<group>"; };
 		BBF0D7A31CEFA26500871E67 /* NyanNyanCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyanNyanCat.swift; sourceTree = "<group>"; };
 		BBF0D7AB1CEFB5DE00871E67 /* SGVSuperMessagingProxyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGVSuperMessagingProxyTests.m; sourceTree = "<group>"; };
+		BBF0D7AD1CEFB88000871E67 /* Cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
+		BBF0D7AE1CEFB88000871E67 /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
+		BBF0D7B01CEFBD1200871E67 /* NyanCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NyanCat.h; sourceTree = "<group>"; };
+		BBF0D7B11CEFBD1200871E67 /* NyanCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NyanCat.m; sourceTree = "<group>"; };
+		BBF0D7B31CEFBDBF00871E67 /* NyanNyanCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NyanNyanCat.h; sourceTree = "<group>"; };
+		BBF0D7B41CEFBDBF00871E67 /* NyanNyanCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NyanNyanCat.m; sourceTree = "<group>"; };
 		D652FD93BFCB2A7710AD9E7A /* Pods_SuperMessagingProxyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperMessagingProxyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B8D7C7DF595CB8C77BD06A /* Pods-SuperMessagingProxyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperMessagingProxyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperMessagingProxyTests/Pods-SuperMessagingProxyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,12 +117,12 @@
 		BBF0D7981CEFA26500871E67 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				BBF0D7991CEFA26500871E67 /* Base.h */,
-				BBF0D79A1CEFA26500871E67 /* Base.m */,
-				BBF0D79B1CEFA26500871E67 /* Derived.h */,
-				BBF0D79C1CEFA26500871E67 /* Derived.m */,
-				BBF0D79D1CEFA26500871E67 /* DerivedFromDerived.h */,
-				BBF0D79E1CEFA26500871E67 /* DerivedFromDerived.m */,
+				BBF0D7AD1CEFB88000871E67 /* Cat.h */,
+				BBF0D7AE1CEFB88000871E67 /* Cat.m */,
+				BBF0D7B01CEFBD1200871E67 /* NyanCat.h */,
+				BBF0D7B11CEFBD1200871E67 /* NyanCat.m */,
+				BBF0D7B31CEFBDBF00871E67 /* NyanNyanCat.h */,
+				BBF0D7B41CEFBDBF00871E67 /* NyanNyanCat.m */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
@@ -258,13 +258,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF0D7A91CEFA26500871E67 /* NyanCat.swift in Sources */,
-				BBF0D7A41CEFA26500871E67 /* Base.m in Sources */,
 				BBF0D7AC1CEFB5DE00871E67 /* SGVSuperMessagingProxyTests.m in Sources */,
-				BBF0D7A61CEFA26500871E67 /* DerivedFromDerived.m in Sources */,
+				BBF0D7AF1CEFB88000871E67 /* Cat.m in Sources */,
+				BBF0D7B21CEFBD1200871E67 /* NyanCat.m in Sources */,
 				BBF0D7A81CEFA26500871E67 /* Cat.swift in Sources */,
-				BBF0D7A51CEFA26500871E67 /* Derived.m in Sources */,
 				BBF0D7A71CEFA26500871E67 /* SuperMessagingProxyTests.swift in Sources */,
 				BBF0D7AA1CEFA26500871E67 /* NyanNyanCat.swift in Sources */,
+				BBF0D7B51CEFBDBF00871E67 /* NyanNyanCat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

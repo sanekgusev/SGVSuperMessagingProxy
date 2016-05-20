@@ -9,7 +9,14 @@
 @import XCTest;
 @import SGVSuperMessagingProxy;
 
+#import "NyanNyanCat.h"
+#import <objc/runtime.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SGVSuperMessagingProxyTests : XCTestCase
+
+@property (nonatomic, strong) NyanNyanCat *nyanNyanCat;
 
 @end
 
@@ -17,24 +24,66 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.nyanNyanCat = [NyanNyanCat new];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+- (void)testSuccessfulProxyCreationFromValidClass {
+    XCTAssertNotNil([self.nyanNyanCat sgv_super]);
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testFailedProxyCreationFromRootClass {
+    XCTAssertNil([[NSObject new] sgv_super]);
+    XCTAssertNil([SGVSuperMessagingProxy proxyWithObject:[NSProxy alloc]]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testFailedProxyCreationFromNotAnAncestorClass {
+    XCTAssertNil([self.nyanNyanCat sgv_superForAncestorClass:[NyanNyanCat class]]);
+}
+
+- (void)testImmediateSuperclass {
+    NyanNyanCat *proxy = [self.nyanNyanCat sgv_super];
+    if (proxy == nil) {
+        XCTFail();
+        return;
+    }
+    XCTAssertEqualObjects([proxy says], [[NyanCat new] says]);
+    XCTAssertEqualObjects(proxy.exclamation, [NyanCat new].exclamation);
+    XCTAssertEqual(proxy.awesomenessLevel, [NyanCat new].awesomenessLevel);
+    XCTAssert(strcmp(proxy.descriptor.name, [NyanCat new].descriptor.name) == 0);
+}
+
+- (void)testNonImmediateSuperclass {
+    NyanNyanCat *proxy = [self.nyanNyanCat sgv_superForAncestorClass:[Cat class]];
+    if (proxy == nil) {
+        XCTFail();
+        return;
+    }
+    XCTAssertEqualObjects([proxy says], [[Cat new] says]);
+    XCTAssertEqualObjects(proxy.exclamation, [Cat new].exclamation);
+    XCTAssertEqual(proxy.awesomenessLevel, [Cat new].awesomenessLevel);
+    XCTAssert(strcmp(proxy.descriptor.name, [Cat new].descriptor.name) == 0);
+}
+
+- (void)testClassMethodsOfImmediateSuperclass {
+    Class proxy = [NyanNyanCat sgv_super];
+    if (proxy == nil) {
+        XCTFail();
+        return;
+    }
+    XCTAssertEqualObjects([proxy says], [NyanCat says]);
+    XCTAssertEqual([proxy awesomenessLevel], [NyanCat awesomenessLevel]);
+}
+
+- (void)testClassMethodsOfNonImmediateSuperclass {
+    Class proxy = [NyanNyanCat sgv_superForAncestorClass:object_getClass([Cat class])];
+    if (proxy == nil) {
+        XCTFail();
+        return;
+    }
+    XCTAssertEqualObjects([proxy says], [Cat says]);
+    XCTAssertEqual([proxy awesomenessLevel], [Cat awesomenessLevel]);
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

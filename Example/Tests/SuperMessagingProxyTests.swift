@@ -31,6 +31,10 @@ class SuperMessagingProxyTests: XCTestCase {
         XCTAssertNil(NSObject().superProxy)
     }
     
+    func testFailedProxyCreationFromNotAnAncestorClass() {
+        XCTAssertNil(nyanNyanCat.superProxy(forAncestor: NyanNyanCat.self))
+    }
+    
     func testImmediateSuperclass() {
         guard let proxy = nyanNyanCat.superProxy else {
             XCTFail()
