@@ -32,20 +32,17 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
 
 #pragma mark - Public
 
-+ (id)proxyWithObject:(id)object
-        ancestorClass:(Class __unsafe_unretained)ancestorClass {
++ (_Nullable id)proxyWithObject:(id)object
+                  ancestorClass:(Class)ancestorClass {
     NSCParameterAssert(object);
     NSCParameterAssert(ancestorClass);
-    if (!object || !ancestorClass) {
-        return nil;
-    }
-    NSCAssert([object isKindOfClass:ancestorClass], @"object must inherit from ancestorClass");
-    if (![object isKindOfClass:ancestorClass]) {
+    if (object == nil || ancestorClass == nil) {
         return nil;
     }
     Class classOfObject = object_getClass(object);
-    NSCAssert(classOfObject != ancestorClass, @"ancestorClass should not be equal to object's class");
-    if (classOfObject == ancestorClass) {
+    BOOL isStrictSubclass = SGVClassIsStrictSubclassOfClass(classOfObject, ancestorClass);
+    NSCAssert(isStrictSubclass, @"object must inherit from ancestorClass");
+    if (!isStrictSubclass) {
         return nil;
     }
     SGVSuperMessagingProxy *proxy = [SGVProxySubclassForProxiedObjectClass(classOfObject,
@@ -55,12 +52,18 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
     return proxy;
 }
 
-+ (id)proxyWithObject:(id)object {
++ (_Nullable id)proxyWithObject:(id)object {
     NSCParameterAssert(object);
-    if (!object) {
+    if (object == nil) {
         return nil;
     }
     Class classOfObject = object_getClass(object);
+    BOOL isRootClass = class_getSuperclass(classOfObject) == nil;
+    NSCAssert(!isRootClass, @"object is an instance of a root class");
+    if (isRootClass) {
+        return nil;
+    }
+    
     SGVSuperMessagingProxy *proxy = [SGVProxySubclassForProxiedObjectClass(classOfObject,
                                                                            MsgSendSuperFunction_MsgSendSuper2) alloc];
     proxy->_super.receiver = object;
@@ -135,8 +138,9 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
 #define SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
     _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation)
 
-SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperTrampoline, _objc_msgSendSuper, SGVSelfLocation)
-SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2, SGVSelfLocation)
+    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperTrampoline, _objc_msgSendSuper, SGVSelfLocation)
+    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2, SGVSelfLocation)
+
 #if defined(__arm64__)
     #define SGVObjcMsgSendSuperStretTrampoline NULL
     #define SGVObjcMsgSendSuper2StretTrampoline NULL
@@ -148,11 +152,11 @@ SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2,
 #pragma mark - Resolving
 
 + (BOOL)resolveInstanceMethod:(SEL)selector {
-    Class __unsafe_unretained originalClass;
+    Class originalClass;
     MsgSendSuperFunction superFunction;
     if (!SGVGetOriginalObjectClassAndSuperFunctionFromProxySubclass(self,
-                                                           &originalClass,
-                                                           &superFunction)) {
+                                                                    &originalClass,
+                                                                    &superFunction)) {
         return NO;
     }
     Method method = class_getInstanceMethod(originalClass, selector);
@@ -165,8 +169,20 @@ SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2,
 
 #pragma mark - Private
 
-static BOOL SGVGetOriginalObjectClassAndSuperFunctionFromProxySubclass(Class __unsafe_unretained class,
-                                                                       Class __unsafe_unretained *originalObjectClass,
+static BOOL SGVClassIsStrictSubclassOfClass(Class class,
+                                            Class possibleSuperclass) {
+    Class superclass = class_getSuperclass(class);
+    while (superclass != nil) {
+        if (superclass == possibleSuperclass) {
+            return YES;
+        }
+        superclass = class_getSuperclass(superclass);
+    }
+    return NO;
+}
+
+static BOOL SGVGetOriginalObjectClassAndSuperFunctionFromProxySubclass(Class class,
+                                                                       Class *originalObjectClass,
                                                                        MsgSendSuperFunction *superFunction) {
     NSString *proxySubclassName = NSStringFromClass(class);
     NSArray *components = [proxySubclassName componentsSeparatedByString:@"_"];
@@ -210,7 +226,7 @@ static DispatchMode SGVGetDispatchMode(const char * typeEncoding) {
     return dispatchMode;
 }
 
-static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
+static BOOL SGVAddTrampolineMethod(Class proxySubclass,
                                    Method method,
                                    MsgSendSuperFunction superFunction) {
     const char *typeEncoding = method_getTypeEncoding(method);
@@ -247,19 +263,18 @@ static BOOL SGVAddTrampolineMethod(Class __unsafe_unretained proxySubclass,
     return methodAdded;
 }
 
-static Class SGVProxySubclassForProxiedObjectClass(Class __unsafe_unretained class,
+static Class SGVProxySubclassForProxiedObjectClass(Class class,
                                                    MsgSendSuperFunction superFunction) {
     NSCParameterAssert(class);
-    if (!class) {
+    if (class == nil) {
         return nil;
     }
     NSString *proxySubclassName = [NSStringFromClass([SGVSuperMessagingProxy class]) stringByAppendingFormat:@"_%ld_%@",
                                    (long)superFunction, NSStringFromClass(class)];
-    Class __unsafe_unretained proxySubclass = objc_allocateClassPair([SGVSuperMessagingProxy class],
+    Class proxySubclass = objc_allocateClassPair([SGVSuperMessagingProxy class],
                                                                      [proxySubclassName UTF8String],
                                                                      0);
     if (proxySubclass) {
-        
         
         // For a thin proxy, NSProxy has quite a lot of stuff implemented,
         // which we obviously don't want.

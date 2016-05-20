@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSObject (SGVSuperMessaging)
 
-- (instancetype)sgv_super {
+- (_Nullable instancetype)sgv_super {
     return [SGVSuperMessagingProxy proxyWithObject:self];
 }
 
-- (instancetype)sgv_superForAncestorClass:(Class __unsafe_unretained)ancestorClass {
+- (_Nullable instancetype)sgv_superForAncestorClass:(Class)ancestorClass {
     return [SGVSuperMessagingProxy proxyWithObject:self
                                      ancestorClass:ancestorClass];
 }

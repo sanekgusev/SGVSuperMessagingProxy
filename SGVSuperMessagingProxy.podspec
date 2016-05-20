@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SGVSuperMessagingProxy"
-  s.version          = "1.0.2"
+  s.version          = "2.0.0"
   s.cocoapods_version = '>= 1.0.0'
   s.summary          = "An NSProxy subclass for invoking superclass method implementations."
   s.description      = <<-DESC
@@ -21,9 +21,20 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '1.0'
   s.tvos.deployment_target = '9.0'
 
-  s.source_files = 'Pod/Classes/NSObject+SGVSuperMessaging.{h,m}'
+  s.subspec 'Objective-C' do |ss|
+    ss.source_files = 'Pod/Classes/NSObject+SGVSuperMessaging.{h,m}'
+    ss.dependency 'SGVSuperMessagingProxy/Proxy'
+  end
 
-  s.subspec 'Core' do |ss|
+  s.subspec 'Swift' do |ss|
+    ss.osx.deployment_target = '10.9'
+    ss.source_files = 'Pod/Classes/SuperMessageable.swift'
+    ss.dependency 'SGVSuperMessagingProxy/Proxy'
+  end
+
+  s.subspec 'Proxy' do |ss|
   	ss.source_files = 'Pod/Classes/SGVSuperMessagingProxy.{h,m}'
   end
+
+  s.default_subspec = 'Swift'
 end
