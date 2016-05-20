@@ -26,7 +26,6 @@
 		92EE4A6673A18E8CA6203357 /* SGVSuperMessagingProxy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGVSuperMessagingProxy.podspec; path = ../SGVSuperMessagingProxy.podspec; sourceTree = "<group>"; };
 		BB07E1E71CEF9B3C000F1535 /* SuperMessagingProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperMessagingProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD9CB6F1CEE555F00B7A43E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBF0D7971CEFA26500871E67 /* SuperMessagingProxyTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperMessagingProxyTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		BBF0D79F1CEFA26500871E67 /* SuperMessagingProxyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperMessagingProxyTests.swift; sourceTree = "<group>"; };
 		BBF0D7A11CEFA26500871E67 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		BBF0D7A21CEFA26500871E67 /* NyanCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyanCat.swift; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 				BBF0D79F1CEFA26500871E67 /* SuperMessagingProxyTests.swift */,
 				BBF0D7AB1CEFB5DE00871E67 /* SGVSuperMessagingProxyTests.m */,
 				BBD9CB6F1CEE555F00B7A43E /* Info.plist */,
-				BBF0D7971CEFA26500871E67 /* SuperMessagingProxyTests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -363,7 +361,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanekgusev.SuperMessagingProxyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SuperMessagingProxyTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -388,7 +385,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanekgusev.SuperMessagingProxyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SuperMessagingProxyTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
