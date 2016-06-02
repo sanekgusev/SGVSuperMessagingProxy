@@ -17,9 +17,13 @@ class NyanNyanCat: NyanCat {
         return "Nyan! Nyan! Nyan!!!"
     }
     
+    dynamic func test() -> String {
+        return "Test"
+    }
+    
     private var _awesomenessLevel: Int = Int.max
     
-    override var awesomenessLevel: Int {
+    dynamic override var awesomenessLevel: Int {
         get {
             return _awesomenessLevel
         }

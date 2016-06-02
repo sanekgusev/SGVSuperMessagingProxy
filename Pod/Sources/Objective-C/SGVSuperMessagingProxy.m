@@ -7,6 +7,7 @@
 //
 
 #import "SGVSuperMessagingProxy.h"
+#import "ObjcTrampolines.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
 
@@ -76,78 +77,6 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
 + (BOOL)accessInstanceVariablesDirectly {
     return NO;
 }
-
-#pragma mark - Trampolines
-
-#if defined(__arm64__)
-
-    #define SGVSelfLocation x0
-    #define SGVSelfLocationStret x1
-
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
-    __attribute__((__naked__)) \
-    static void trampolineFunction(void) { \
-        asm volatile ("add " #selfLocation ", " #selfLocation ", #8\n\t" \
-                      "b " #msgSendSuperFunction "\n\t" \
-                      : : : "x0", "x1", "x9"); \
-    }
-
-#elif defined(__arm__)
-
-    #define SGVSelfLocation r0
-    #define SGVSelfLocationStret r1
-
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
-    __attribute__((__naked__)) \
-    static void trampolineFunction(void) { \
-        asm volatile ("add " #selfLocation ", #8\n\t" \
-                      "b " #msgSendSuperFunction "\n\t" \
-                      : : : "r0", "r1", "r9"); \
-    }
-
-#elif defined(__x86_64__)
-
-    #define SGVSelfLocation %%rdi
-    #define SGVSelfLocationStret %%rsi
-
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
-    __attribute__((__naked__)) \
-    static void trampolineFunction(void) { \
-        asm volatile ("addq $8, " #selfLocation "\n\t" \
-                      "jmp " #msgSendSuperFunction "\n\t" \
-                      : : : "rsi", "rdi", "r11"); \
-    }
-
-#elif defined(__i386__)
-
-    #define SGVSelfLocation 0x4(%%esp)
-    #define SGVSelfLocationStret 0x8(%%esp)
-
-    #define _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
-    __attribute__((__naked__)) \
-    static void trampolineFunction(void) { \
-        asm volatile ("addl $8, " #selfLocation "\n\t" \
-                      "jmp " #msgSendSuperFunction "\n\t" \
-                        : : : "ecx", "memory"); \
-    }
-
-#else
-    #error - Unknown arhitecture
-#endif
-
-#define SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation) \
-    _SGVDeclareTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation)
-
-    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperTrampoline, _objc_msgSendSuper, SGVSelfLocation)
-    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2Trampoline, _objc_msgSendSuper2, SGVSelfLocation)
-
-#if defined(__arm64__)
-    #define SGVObjcMsgSendSuperStretTrampoline NULL
-    #define SGVObjcMsgSendSuper2StretTrampoline NULL
-#else
-    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperStretTrampoline, _objc_msgSendSuper_stret, SGVSelfLocationStret)
-    SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2StretTrampoline, _objc_msgSendSuper2_stret, SGVSelfLocationStret)
-#endif
 
 #pragma mark - Resolving
 
@@ -237,11 +166,11 @@ static BOOL SGVAddTrampolineMethod(Class proxySubclass,
     switch (dispatchMode) {
         case DispatchMode_Normal:
             trampolineIMP = (superFunction == MsgSendSuperFunction_MsgSendSuper) ?
-                SGVObjcMsgSendSuperTrampoline : SGVObjcMsgSendSuper2Trampoline;
+                SGVObjcMsgSendSuperTrampolineObjc : SGVObjcMsgSendSuper2TrampolineObjc;
             break;
         case DispatchMode_Stret:
             trampolineIMP = (superFunction == MsgSendSuperFunction_MsgSendSuper) ?
-                SGVObjcMsgSendSuperStretTrampoline : SGVObjcMsgSendSuper2StretTrampoline;
+                SGVObjcMsgSendSuperStretTrampolineObjc : SGVObjcMsgSendSuper2StretTrampolineObjc;
             break;
         default:
             NSCAssert(NO, @"invalid dispatch mode");

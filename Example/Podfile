@@ -1,9 +1,10 @@
 platform :osx, '10.9'
 use_frameworks!
 
-target 'SuperMessagingProxyTests' do
-
+target 'ObjcSuperMessagingProxyTests' do
   pod 'SGVSuperMessagingProxy/Objective-C', :path => "../"
-  pod 'SGVSuperMessagingProxy/Swift', :path => "../"
+end
 
+target 'SwiftSuperMessagingProxyTests' do
+  pod 'SGVSuperMessagingProxy/Swift', :path => "../"
 end

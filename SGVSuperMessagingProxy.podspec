@@ -22,18 +22,23 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
 
   s.subspec 'Objective-C' do |ss|
-    ss.source_files = 'Pod/Classes/NSObject+SGVSuperMessaging.{h,m}'
-    ss.dependency 'SGVSuperMessagingProxy/Proxy'
+    ss.source_files = 'Pod/Sources/Objective-C/**/*.{h,c,m}'
+    ss.private_header_files = 'Pod/Sources/Objective-C/ObjcTrampolines.h'
+    ss.dependency 'SGVSuperMessagingProxy/Common'
   end
 
   s.subspec 'Swift' do |ss|
+    ss.source_files = 'Pod/Sources/Swift/**/*.{h,c,swift}'
+    ss.private_header_files = 'Pod/Sources/Swift/SwiftTrampolines.h'
+    ss.dependency 'SGVSuperMessagingProxy/Common'
     ss.osx.deployment_target = '10.9'
-    ss.source_files = 'Pod/Classes/SuperMessageable.swift'
-    ss.dependency 'SGVSuperMessagingProxy/Proxy'
+    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "\"#{File.join(File.dirname(__FILE__), 'Pod', 'Sources', 'Swift', 'PrivateModulemap')}\"" }
+    ss.preserve_paths = 'Pod/Sources/Swift/PrivateModulemap/module.map'
   end
 
-  s.subspec 'Proxy' do |ss|
-  	ss.source_files = 'Pod/Classes/SGVSuperMessagingProxy.{h,m}'
+  s.subspec 'Common' do |ss|
+  	ss.source_files = 'Pod/Sources/Common/TrampolineMacros.h'
+    ss.private_header_files = 'Pod/Sources/Common/TrampolineMacros.h'
   end
 
   s.default_subspec = 'Swift'

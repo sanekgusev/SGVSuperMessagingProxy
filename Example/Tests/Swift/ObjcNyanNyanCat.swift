@@ -1,24 +1,29 @@
+
 //
-//  NyanCat.swift
-//  SGVSuperMessagingProxy
+//  ObjcNyanNyanCat.swift
+//  SuperMessagingProxyTests
 //
-//  Created by Aleksandr Gusev on 19/05/16.
+//  Created by Aleksandr Gusev on 01/06/16.
 //  Copyright © 2016 Alexander Gusev. All rights reserved.
 //
 
 import Foundation
 
-class NyanCat: Cat {
+@objc
+class ObjcNyanNyanCat: ObjcNyanCat {
+    @objc
     dynamic override func says() -> String {
-        return "Nyan"
+        return "Nyan-nyan"
     }
     
+    @objc
     dynamic override var exclamation: String {
-        return "Nyan!"
+        return "Nyan! Nyan! Nyan!!!"
     }
     
-    private var _awesomenessLevel: Int = 10
+    private var _awesomenessLevel: Int = Int.max
     
+    @objc
     dynamic override var awesomenessLevel: Int {
         get {
             return _awesomenessLevel
@@ -28,12 +33,13 @@ class NyanCat: Cat {
         }
     }
     
+    @objc
     dynamic override class func says() -> String {
-        return "Nyan"
+        return "Nyan-nyan"
     }
     
+    @objc
     dynamic override class var awesomenessLevel: Int {
-        return 10
+        return Int.max
     }
 }
-

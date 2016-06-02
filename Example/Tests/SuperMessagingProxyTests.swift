@@ -16,6 +16,7 @@ extension NSObject: SuperMessageable {}
 class SuperMessagingProxyTests: XCTestCase {
     
     var nyanNyanCat = NyanNyanCat()
+    var objcNyanNyanCat = ObjcNyanNyanCat()
     
     override func setUp() {
         super.setUp()
@@ -53,5 +54,25 @@ class SuperMessagingProxyTests: XCTestCase {
         XCTAssertEqual(proxy.says(), Cat().says())
         XCTAssertEqual(proxy.exclamation, Cat().exclamation)
         XCTAssertEqual(proxy.awesomenessLevel, Cat().awesomenessLevel)
+    }
+    
+    func testImmediateSuperclassObjc() {
+        guard let proxy = objcNyanNyanCat.superProxy else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(proxy.says(), ObjcNyanCat().says())
+        XCTAssertEqual(proxy.exclamation, ObjcNyanCat().exclamation)
+        XCTAssertEqual(proxy.awesomenessLevel, ObjcNyanCat().awesomenessLevel)
+    }
+    
+    func testNonImmediateSuperclassObjc() {
+        guard let proxy = objcNyanNyanCat.superProxy(forAncestor: ObjcCat.self) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(proxy.says(), ObjcCat().says())
+        XCTAssertEqual(proxy.exclamation, ObjcCat().exclamation)
+        XCTAssertEqual(proxy.awesomenessLevel, ObjcCat().awesomenessLevel)
     }
 }
