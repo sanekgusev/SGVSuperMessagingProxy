@@ -24,8 +24,9 @@ private enum MsgSendSuperFunction: String {
 public final class SuperMessagingProxy {
     
     private var _super: objc_super
+    private let object: AnyObject?
     
-    public init?(object: AnyObject, ancestorClass: AnyClass) {
+    public init?(object: AnyObject, ancestorClass: AnyClass, retainsObject: Bool = true) {
         guard let classOfObject = object_getClass(object) where
             isClass(classOfObject, strictSubclassOf: ancestorClass) else {
                 return nil
@@ -34,12 +35,13 @@ public final class SuperMessagingProxy {
             return nil
         }
         _super = objc_super()
-        _super.receiver = .passRetained(object)
+        _super.receiver = .passUnretained(object)
         _super.super_class = ancestorClass
+        self.object = retainsObject ? object : nil
         object_setClass(self, proxySubclass)
     }
     
-    public init?(object: AnyObject) {
+    public init?(object: AnyObject, retainsObject: Bool = true) {
         guard let classOfObject = object_getClass(object),
             _ = class_getSuperclass(classOfObject) else {
                 return nil
@@ -50,11 +52,8 @@ public final class SuperMessagingProxy {
         _super = objc_super()
         _super.receiver = .passRetained(object)
         _super.super_class = classOfObject
+        self.object = retainsObject ? object : nil
         object_setClass(self, proxySubclass)
-    }
-    
-    deinit {
-        _super.receiver.release()
     }
     
     @objc
@@ -192,7 +191,6 @@ private func proxySubclassFor(proxiedObjectClass objectClass: AnyClass,
     (0..<Int(outCount)).forEach({ index in
         let method = methods[index]
         let selector: Selector = method_getName(method)
-        print(selector)
         if String(selector).hasPrefix("_") ||
             nonForwardedMethodNames.contains(selector) {
             return

@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
 
 @interface SGVSuperMessagingProxy () {
     struct objc_super _super;
+    id _object;
 }
 
 @end
@@ -33,16 +34,14 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
 
 #pragma mark - Public
 
-+ (_Nullable id)proxyWithObject:(id)object
-                  ancestorClass:(Class)ancestorClass {
-    NSCParameterAssert(object);
-    NSCParameterAssert(ancestorClass);
++ (_Nullable id)proxyWithObject:(id __unsafe_unretained)object
+                  ancestorClass:(Class)ancestorClass
+                  retainsObject:(BOOL)retainsObject {
     if (object == nil || ancestorClass == nil) {
         return nil;
     }
     Class classOfObject = object_getClass(object);
     BOOL isStrictSubclass = SGVClassIsStrictSubclassOfClass(classOfObject, ancestorClass);
-    NSCAssert(isStrictSubclass, @"object must inherit from ancestorClass");
     if (!isStrictSubclass) {
         return nil;
     }
@@ -50,17 +49,19 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
                                                                            MsgSendSuperFunction_MsgSendSuper) alloc];
     proxy->_super.receiver = object;
     proxy->_super.super_class = ancestorClass;
+    if (retainsObject) {
+        proxy->_object = object;
+    }
     return proxy;
 }
 
-+ (_Nullable id)proxyWithObject:(id)object {
-    NSCParameterAssert(object);
++ (_Nullable id)proxyWithObject:(id __unsafe_unretained)object
+                  retainsObject:(BOOL)retainsObject {
     if (object == nil) {
         return nil;
     }
     Class classOfObject = object_getClass(object);
     BOOL isRootClass = class_getSuperclass(classOfObject) == nil;
-    NSCAssert(!isRootClass, @"object is an instance of a root class");
     if (isRootClass) {
         return nil;
     }
@@ -69,6 +70,9 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
                                                                            MsgSendSuperFunction_MsgSendSuper2) alloc];
     proxy->_super.receiver = object;
     proxy->_super.super_class = classOfObject;
+    if (retainsObject) {
+        proxy->_object = object;
+    }
     return proxy;
 }
 

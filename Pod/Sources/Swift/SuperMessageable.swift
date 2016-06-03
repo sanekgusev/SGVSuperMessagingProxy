@@ -11,11 +11,11 @@ public protocol SuperMessageable: class { }
 
 public extension SuperMessageable {
     
-    public var superProxy: Self? {
-        return SuperMessagingProxy(object: self).map({ unsafeBitCast($0, Self.self) })
+    public var superProxy: AnyObject? {
+        return SuperMessagingProxy(object: self)
     }
     
-    public func superProxy(forAncestor ancestorClass: AnyClass) -> Self? {
-        return SuperMessagingProxy(object: self, ancestorClass: ancestorClass).map({ unsafeBitCast($0, Self.self) })
+    public func superProxy(forAncestor ancestorClass: AnyClass) -> AnyObject? {
+        return SuperMessagingProxy(object: self, ancestorClass: ancestorClass)
     }
 }

@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testFailedProxyCreationFromRootClass {
     XCTAssertNil([[NSObject new] sgv_super]);
-    XCTAssertNil([SGVSuperMessagingProxy proxyWithObject:[NSProxy alloc]]);
+    XCTAssertNil([SGVSuperMessagingProxy proxyWithObject:[NSProxy alloc] retainsObject:YES]);
 }
 
 - (void)testFailedProxyCreationFromNotAnAncestorClass {
@@ -74,8 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
     XCTAssertEqual([proxy awesomenessLevel], [NyanCat awesomenessLevel]);
 }
 
-// TODO: Figure out why this fails
-- (void)DISABLED_testClassMethodsOfNonImmediateSuperclass {
+- (void)testClassMethodsOfNonImmediateSuperclass {
     Class proxy = [NyanNyanCat sgv_superForAncestorClass:object_getClass([Cat class])];
     if (proxy == nil) {
         XCTFail();

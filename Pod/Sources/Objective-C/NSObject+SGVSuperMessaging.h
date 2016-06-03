@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (SGVSuperMessaging)
 
-- (_Nullable instancetype)sgv_super;
-- (_Nullable instancetype)sgv_superForAncestorClass:(Class)ancestorClass;
+- (nullable instancetype)sgv_super;
+- (nullable instancetype)sgv_superForAncestorClass:(Class)ancestorClass;
 
 @end
 
