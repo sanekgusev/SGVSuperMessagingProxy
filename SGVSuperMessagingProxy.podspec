@@ -16,21 +16,24 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/sanekgusev/SGVSuperMessagingProxy.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/sanekgusev'
 
-  s.ios.deployment_target = '7.0'
-  s.watchos.deployment_target = '1.0'
-  s.tvos.deployment_target = '9.0'
-
   s.subspec 'Objective-C' do |ss|
     ss.source_files = 'Pod/Sources/Objective-C/**/*.{h,c,m}'
     ss.private_header_files = 'Pod/Sources/Objective-C/ObjcTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
+    ss.ios.deployment_target = '7.0'
+    ss.osx.deployment_target = '10.8'
+    ss.watchos.deployment_target = '1.0'
+    ss.tvos.deployment_target = '9.0'
   end
 
   s.subspec 'Swift' do |ss|
     ss.source_files = 'Pod/Sources/Swift/**/*.{h,c,swift}'
     ss.private_header_files = 'Pod/Sources/Swift/SwiftTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
+    ss.ios.deployment_target = '8.0'
     ss.osx.deployment_target = '10.9'
+    ss.watchos.deployment_target = '2.0'
+    ss.tvos.deployment_target = '9.0'
     ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "${PODS_ROOT}/SGVSuperMessagingProxy/Sources/Swift/PrivateModulemap" }
     ss.preserve_paths = 'Pod/Sources/Swift/PrivateModulemap/module.map'
   end
@@ -38,7 +41,10 @@ Pod::Spec.new do |s|
   s.subspec 'Common' do |ss|
   	ss.source_files = 'Pod/Sources/Common/TrampolineMacros.h'
     ss.private_header_files = 'Pod/Sources/Common/TrampolineMacros.h'
+    ss.ios.deployment_target = '7.0'
     ss.osx.deployment_target = '10.8'
+    ss.watchos.deployment_target = '1.0'
+    ss.tvos.deployment_target = '9.0'
   end
 
   s.default_subspec = 'Swift'
