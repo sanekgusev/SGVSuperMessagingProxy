@@ -2,7 +2,7 @@
 
 # SGVSuperMessagingProxy
 
-An NSProxy/SwiftObject subclass for invoking superclass method implementations of any Objective-C object. Also works with `dynamic` methods on Swift objects.
+An `NSProxy`/`SwiftObject` subclass for invoking superclass method implementations of any Objective-C object. Also works with `dynamic` methods on Swift objects.
 
 ## What
 
@@ -102,10 +102,10 @@ For more Objective-C and Swift examples, one can quickly install and run the uni
 
 ## Supported platforms:
 
-iOS: 7.0+
-OSX: 10.8+, swift 10.9+
-watchOS: 1.0+
-tvOS: 9.0+
+- iOS: 7.0+
+- OSX: 10.8+, swift 10.9+
+- watchOS: 1.0+
+- tvOS: 9.0+
 
 ## Installation
 
