@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/sanekgusev'
 
   s.ios.deployment_target = '7.0'
-  s.osx.deployment_target = '10.8'
   s.watchos.deployment_target = '1.0'
   s.tvos.deployment_target = '9.0'
 
@@ -32,13 +31,14 @@ Pod::Spec.new do |s|
     ss.private_header_files = 'Pod/Sources/Swift/SwiftTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
     ss.osx.deployment_target = '10.9'
-    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "\"#{File.join(File.dirname(__FILE__), 'Pod', 'Sources', 'Swift', 'PrivateModulemap')}\"" }
+    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "${PODS_ROOT}/SGVSuperMessagingProxy/Sources/Swift/PrivateModulemap" }
     ss.preserve_paths = 'Pod/Sources/Swift/PrivateModulemap/module.map'
   end
 
   s.subspec 'Common' do |ss|
   	ss.source_files = 'Pod/Sources/Common/TrampolineMacros.h'
     ss.private_header_files = 'Pod/Sources/Common/TrampolineMacros.h'
+    ss.osx.deployment_target = '10.8'
   end
 
   s.default_subspec = 'Swift'
