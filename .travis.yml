@@ -3,12 +3,11 @@ osx_image: xcode7.3
 cache: cocoapods
 notifications:
   email: false
-before_install:
-- rvm --default use 2.2
+rvm: 2.3
 install:
-- gem install xcpretty
+- bundle install
 podfile: Example/Podfile
-xcode_workspace: Example/SuperMessagingProxyTests.xcworkspace
-xcode_scheme:
-  - ObjcSuperMessagingProxyTests
-  - SwiftSuperMessagingProxyTests
+script:
+- set -o pipefail
+- xcodebuild test -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme ObjcSuperMessagingProxyTests ONLY_ACTIVE_ARCH=NO | xcpretty
+- xcodebuild test -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme SwiftSuperMessagingProxyTests ONLY_ACTIVE_ARCH=NO | xcpretty
