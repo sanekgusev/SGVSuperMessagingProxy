@@ -1,3 +1,9 @@
+[![Swift](https://img.shields.io/badge/swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)  
+[![Version](https://img.shields.io/cocoapods/v/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)
+[![License](https://img.shields.io/cocoapods/l/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)
+[![Platform](https://img.shields.io/cocoapods/p/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)  
+[![CI Status](http://img.shields.io/travis/sanekgusev/Anthology.svg?style=flat)](https://travis-ci.org/sanekgusev/SGVSuperMessagingProxy)
+
 > *“Some assembly required”*
 
 # SGVSuperMessagingProxy
@@ -92,34 +98,37 @@ Points of interest:
 - funcation argument modification for all currently used platforms (arm and arm64 for iOS devices, i386 and x86-64 for various iOS Simulator flavors)
 - Swift support
 
-## Why
-
-Just because.
-
 ## Usage
 
 For more Objective-C and Swift examples, one can quickly install and run the unit tests project using `pod try SGVSuperMessagingProxy`. 
 
-## Supported platforms:
+## Supported platforms
+
+### Objective-C:
 
 - iOS: 7.0+
-- OSX: 10.8+, swift 10.9+
+- OSX: 10.8+
 - watchOS: 1.0+
+- tvOS: 9.0+
+
+### Swift:
+
+- iOS: 8.0+
+- OSX: 10.9+
+- watchOS: 2.0+
 - tvOS: 9.0+
 
 ## Installation
 
-SGVSuperMessagingProxy is available through [CocoaPods](http://cocoapods.org) and contains separate Objective-C and Swift subspect. Swift subspec is the default.  
-For Swift version of the pod add
+SGVSuperMessagingProxy is available through [CocoaPods](http://cocoapods.org) and contains separate Objective-C and Swift subspecs.
 
-    pod "SGVSuperMessagingProxy", "~> 2.0"
+For Swift-only or Swift/Objective-C projects, use the Swift subspec in your Podfile:
 
-to the Podfile.  
-For Objective-C version, add
+    pod "SGVSuperMessagingProxy/Swift", "~> 2.0"
+
+For Objective-C-only projects, use the Objective-C subspec:
 
     pod "SGVSuperMessagingProxy/Objective-C", "~> 2.0"
-
-to the Podfile.
 
 ## Author
 
