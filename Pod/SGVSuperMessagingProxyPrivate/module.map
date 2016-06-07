@@ -1,5 +1,0 @@
-module SGVSuperMessagingProxy {
-    explicit module Private {
-        header "../SwiftTrampolines.h"
-    }
-}

@@ -12,9 +12,14 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = "https://github.com/sanekgusev/SGVSuperMessagingProxy"
   s.license          = 'MIT'
-  s.author           = { "Alexander Gusev" => "sanekgusev@gmail.com" }
+  s.author           = { "Aleksandr Gusev" => "sanekgusev@gmail.com" }
   s.source           = { :git => "https://github.com/sanekgusev/SGVSuperMessagingProxy.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/sanekgusev'
+
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target = '9.0'
 
   s.subspec 'Objective-C' do |ss|
     ss.source_files = 'Pod/Sources/Objective-C/**/*.{h,c,m}'
@@ -34,7 +39,7 @@ Pod::Spec.new do |s|
     ss.osx.deployment_target = '10.9'
     ss.watchos.deployment_target = '2.0'
     ss.tvos.deployment_target = '9.0'
-    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "${PODS_ROOT}/SGVSuperMessagingProxy/Sources/Swift/PrivateModulemap" }
+    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "/Users/sanekgusev/Projects/SGVSuperMessagingProxy/Pod/Sources/Swift/PrivateModulemap" }
     ss.preserve_paths = 'Pod/Sources/Swift/PrivateModulemap/module.map'
   end
 
@@ -46,6 +51,4 @@ Pod::Spec.new do |s|
     ss.watchos.deployment_target = '1.0'
     ss.tvos.deployment_target = '9.0'
   end
-
-  s.default_subspec = 'Swift'
 end
