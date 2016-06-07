@@ -21,10 +21,21 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
 
+  s.subspec 'Common' do |ss|
+  	ss.source_files = 'Pod/Sources/Common/TrampolineMacros.h'
+    ss.private_header_files = 'Pod/Sources/Common/TrampolineMacros.h'
+
+    ss.ios.deployment_target = '7.0'
+    ss.osx.deployment_target = '10.8'
+    ss.watchos.deployment_target = '1.0'
+    ss.tvos.deployment_target = '9.0'
+  end
+
   s.subspec 'Objective-C' do |ss|
     ss.source_files = 'Pod/Sources/Objective-C/**/*.{h,c,m}'
     ss.private_header_files = 'Pod/Sources/Objective-C/ObjcTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
+
     ss.ios.deployment_target = '7.0'
     ss.osx.deployment_target = '10.8'
     ss.watchos.deployment_target = '1.0'
@@ -35,20 +46,14 @@ Pod::Spec.new do |s|
     ss.source_files = 'Pod/Sources/Swift/**/*.{h,c,swift}'
     ss.private_header_files = 'Pod/Sources/Swift/SwiftTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
+    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "${PODS_ROOT}/SGVSuperMessagingProxy/Pod/Sources/Swift/PrivateModulemap" }
+    ss.preserve_paths = 'Pod/Sources/Swift/PrivateModulemap/module.map'
+    ss.header_mappings_dir ='Pod/Sources'
+
     ss.ios.deployment_target = '8.0'
     ss.osx.deployment_target = '10.9'
     ss.watchos.deployment_target = '2.0'
     ss.tvos.deployment_target = '9.0'
-    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "/Users/sanekgusev/Projects/SGVSuperMessagingProxy/Pod/Sources/Swift/PrivateModulemap" }
-    ss.preserve_paths = 'Pod/Sources/Swift/PrivateModulemap/module.map'
   end
 
-  s.subspec 'Common' do |ss|
-  	ss.source_files = 'Pod/Sources/Common/TrampolineMacros.h'
-    ss.private_header_files = 'Pod/Sources/Common/TrampolineMacros.h'
-    ss.ios.deployment_target = '7.0'
-    ss.osx.deployment_target = '10.8'
-    ss.watchos.deployment_target = '1.0'
-    ss.tvos.deployment_target = '9.0'
-  end
 end
