@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8678E7D7DC82189739F624F9 /* Pods_ObjcSuperMessagingProxyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0820F10E65A1274D357E8FBB /* Pods_ObjcSuperMessagingProxyTests.framework */; };
+		B54A99F9143F1A2269D1C30F /* Pods_SwiftSuperMessagingProxyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089DA3F4DC9DED8F7ECB0E3C /* Pods_SwiftSuperMessagingProxyTests.framework */; };
 		BBB2A7C41D00CCD4007BC80B /* NyanCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7A21CEFA26500871E67 /* NyanCat.swift */; };
 		BBB2A7C51D00CCD4007BC80B /* ObjcCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB59D73F1CFEAE3200748031 /* ObjcCat.swift */; };
 		BBB2A7C61D00CCD4007BC80B /* ObjcNyanCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB59D7411CFEAEED00748031 /* ObjcNyanCat.swift */; };
@@ -19,7 +20,6 @@
 		BBF0D7AF1CEFB88000871E67 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7AE1CEFB88000871E67 /* Cat.m */; };
 		BBF0D7B21CEFBD1200871E67 /* NyanCat.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7B11CEFBD1200871E67 /* NyanCat.m */; };
 		BBF0D7B51CEFBDBF00871E67 /* NyanNyanCat.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0D7B41CEFBDBF00871E67 /* NyanNyanCat.m */; };
-		D477C370697468E3A42AD8FB /* Pods_SwiftSuperMessagingProxyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089DA3F4DC9DED8F7ECB0E3C /* Pods_SwiftSuperMessagingProxyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,6 @@
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		67F080D61A87F7522E3EB893 /* Pods-ObjcSuperMessagingProxyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcSuperMessagingProxyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcSuperMessagingProxyTests/Pods-ObjcSuperMessagingProxyTests.release.xcconfig"; sourceTree = "<group>"; };
 		92EE4A6673A18E8CA6203357 /* SGVSuperMessagingProxy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SGVSuperMessagingProxy.podspec; path = ../SGVSuperMessagingProxy.podspec; sourceTree = "<group>"; };
-		A06850384CE05A593C0F3F14 /* Pods-SwiftSuperMessagingProxyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperMessagingProxyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSuperMessagingProxyTests/Pods-SwiftSuperMessagingProxyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7C8B8EF1361ADCC10AABE5D /* Pods-ObjcSuperMessagingProxyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcSuperMessagingProxyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcSuperMessagingProxyTests/Pods-ObjcSuperMessagingProxyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB07E1E71CEF9B3C000F1535 /* ObjcSuperMessagingProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcSuperMessagingProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB59D73F1CFEAE3200748031 /* ObjcCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjcCat.swift; sourceTree = "<group>"; };
@@ -49,7 +48,8 @@
 		BBF0D7B11CEFBD1200871E67 /* NyanCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NyanCat.m; sourceTree = "<group>"; };
 		BBF0D7B31CEFBDBF00871E67 /* NyanNyanCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NyanNyanCat.h; sourceTree = "<group>"; };
 		BBF0D7B41CEFBDBF00871E67 /* NyanNyanCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NyanNyanCat.m; sourceTree = "<group>"; };
-		EA9474F69FCF73AC1EDDB190 /* Pods-SwiftSuperMessagingProxyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperMessagingProxyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSuperMessagingProxyTests/Pods-SwiftSuperMessagingProxyTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB28367E445358C2B7FA2122 /* Pods-SwiftSuperMessagingProxyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperMessagingProxyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSuperMessagingProxyTests/Pods-SwiftSuperMessagingProxyTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFF4EDC1817ACE5D279AF56D /* Pods-SwiftSuperMessagingProxyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperMessagingProxyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSuperMessagingProxyTests/Pods-SwiftSuperMessagingProxyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D477C370697468E3A42AD8FB /* Pods_SwiftSuperMessagingProxyTests.framework in Frameworks */,
+				B54A99F9143F1A2269D1C30F /* Pods_SwiftSuperMessagingProxyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +117,8 @@
 			children = (
 				A7C8B8EF1361ADCC10AABE5D /* Pods-ObjcSuperMessagingProxyTests.debug.xcconfig */,
 				67F080D61A87F7522E3EB893 /* Pods-ObjcSuperMessagingProxyTests.release.xcconfig */,
-				A06850384CE05A593C0F3F14 /* Pods-SwiftSuperMessagingProxyTests.debug.xcconfig */,
-				EA9474F69FCF73AC1EDDB190 /* Pods-SwiftSuperMessagingProxyTests.release.xcconfig */,
+				CFF4EDC1817ACE5D279AF56D /* Pods-SwiftSuperMessagingProxyTests.debug.xcconfig */,
+				CB28367E445358C2B7FA2122 /* Pods-SwiftSuperMessagingProxyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -168,12 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB07E1EE1CEF9B3C000F1535 /* Build configuration list for PBXNativeTarget "ObjcSuperMessagingProxyTests" */;
 			buildPhases = (
-				5FBEFE95DD0B624A145D1185 /* 📦 Check Pods Manifest.lock */,
+				5FBEFE95DD0B624A145D1185 /* [CP] Check Pods Manifest.lock */,
 				BB07E1E31CEF9B3C000F1535 /* Sources */,
 				BB07E1E41CEF9B3C000F1535 /* Frameworks */,
 				BB07E1E51CEF9B3C000F1535 /* Resources */,
-				0BB52B2C1EAE420AF94FA4F5 /* 📦 Embed Pods Frameworks */,
-				8C5D7422B6EEB530563812D8 /* 📦 Copy Pods Resources */,
+				0BB52B2C1EAE420AF94FA4F5 /* [CP] Embed Pods Frameworks */,
+				8C5D7422B6EEB530563812D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,12 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBB2A7D41D00CCD4007BC80B /* Build configuration list for PBXNativeTarget "SwiftSuperMessagingProxyTests" */;
 			buildPhases = (
-				BBB2A7C21D00CCD4007BC80B /* 📦 Check Pods Manifest.lock */,
+				BBB2A7C21D00CCD4007BC80B /* [CP] Check Pods Manifest.lock */,
 				BBB2A7C31D00CCD4007BC80B /* Sources */,
 				BBB2A7CF1D00CCD4007BC80B /* Frameworks */,
 				BBB2A7D11D00CCD4007BC80B /* Resources */,
-				BBB2A7D21D00CCD4007BC80B /* 📦 Embed Pods Frameworks */,
-				BBB2A7D31D00CCD4007BC80B /* 📦 Copy Pods Resources */,
+				BBB2A7D21D00CCD4007BC80B /* [CP] Embed Pods Frameworks */,
+				BBB2A7D31D00CCD4007BC80B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +257,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BB52B2C1EAE420AF94FA4F5 /* 📦 Embed Pods Frameworks */ = {
+		0BB52B2C1EAE420AF94FA4F5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,14 +272,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjcSuperMessagingProxyTests/Pods-ObjcSuperMessagingProxyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5FBEFE95DD0B624A145D1185 /* 📦 Check Pods Manifest.lock */ = {
+		5FBEFE95DD0B624A145D1185 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,14 +287,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8C5D7422B6EEB530563812D8 /* 📦 Copy Pods Resources */ = {
+		8C5D7422B6EEB530563812D8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,14 +302,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjcSuperMessagingProxyTests/Pods-ObjcSuperMessagingProxyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BBB2A7C21D00CCD4007BC80B /* 📦 Check Pods Manifest.lock */ = {
+		BBB2A7C21D00CCD4007BC80B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,14 +317,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BBB2A7D21D00CCD4007BC80B /* 📦 Embed Pods Frameworks */ = {
+		BBB2A7D21D00CCD4007BC80B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,14 +332,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftSuperMessagingProxyTests/Pods-SwiftSuperMessagingProxyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BBB2A7D31D00CCD4007BC80B /* 📦 Copy Pods Resources */ = {
+		BBB2A7D31D00CCD4007BC80B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +499,7 @@
 		};
 		BBB2A7D51D00CCD4007BC80B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A06850384CE05A593C0F3F14 /* Pods-SwiftSuperMessagingProxyTests.debug.xcconfig */;
+			baseConfigurationReference = CFF4EDC1817ACE5D279AF56D /* Pods-SwiftSuperMessagingProxyTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -522,7 +522,7 @@
 		};
 		BBB2A7D61D00CCD4007BC80B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA9474F69FCF73AC1EDDB190 /* Pods-SwiftSuperMessagingProxyTests.release.xcconfig */;
+			baseConfigurationReference = CB28367E445358C2B7FA2122 /* Pods-SwiftSuperMessagingProxyTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;

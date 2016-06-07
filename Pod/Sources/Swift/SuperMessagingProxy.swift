@@ -50,7 +50,7 @@ public final class SuperMessagingProxy {
             return nil
         }
         _super = objc_super()
-        _super.receiver = .passRetained(object)
+        _super.receiver = .passUnretained(object)
         _super.super_class = classOfObject
         self.object = retainsObject ? object : nil
         object_setClass(self, proxySubclass)
