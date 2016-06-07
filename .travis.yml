@@ -1,0 +1,14 @@
+language: objective-c
+osx_image: xcode7.3
+cache: cocoapods
+notifications:
+  email: false
+before_install:
+- rvm --default use 2.2
+install:
+- gem install xcpretty
+podfile: Example/Podfile
+xcode_workspace: Example/SuperMessagingProxyTests.xcworkspace
+xcode_scheme:
+  - ObjcSuperMessagingProxyTests
+  - SwiftSuperMessagingProxyTests
