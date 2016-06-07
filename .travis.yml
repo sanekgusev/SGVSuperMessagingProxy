@@ -6,8 +6,9 @@ notifications:
 rvm: 2.3
 install:
 - bundle install
-podfile: Example/Podfile
+- pod install --project-directory=Example
 script:
+- pod --version
 - set -o pipefail
 - xcodebuild test -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme ObjcSuperMessagingProxyTests ONLY_ACTIVE_ARCH=NO | xcpretty
 - xcodebuild test -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme SwiftSuperMessagingProxyTests ONLY_ACTIVE_ARCH=NO | xcpretty
