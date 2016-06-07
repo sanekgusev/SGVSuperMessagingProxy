@@ -10,7 +10,7 @@ target 'SwiftSuperMessagingProxyTests' do
 end
 
 post_install do |installer|
-  system("rm -rf Pods/SGVSuperMessagingProxy")
-  system("mkdir -p Pods/SGVSuperMessagingProxy/")
-  system("ln -s $(pwd -L)/../Pod/ Pods/SGVSuperMessagingProxy")
+  system("rm -rf Example/Pods/SGVSuperMessagingProxy")
+  system("mkdir -p Example/Pods/SGVSuperMessagingProxy/")
+  system("ln -s $(pwd -L)/Pod/ Example/Pods/SGVSuperMessagingProxy")
 end
