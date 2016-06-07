@@ -8,3 +8,9 @@ end
 target 'SwiftSuperMessagingProxyTests' do
   pod 'SGVSuperMessagingProxy/Swift', :path => "../"
 end
+
+post_install do |installer|
+  system("rm -rf Pods/SGVSuperMessagingProxy")
+  system("mkdir -p Pods/SGVSuperMessagingProxy/")
+  system("ln -s $(pwd -L)/../Pod/ Pods/SGVSuperMessagingProxy")
+end
