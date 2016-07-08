@@ -16,9 +16,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BBB2A7C11D00CCD4007BC80B"
-               BuildableName = "SwiftSuperMessagingProxyTests.xctest"
-               BlueprintName = "SwiftSuperMessagingProxyTests"
+               BlueprintIdentifier = "BBF2CE071D3000620051B2D4"
+               BuildableName = "tvOSSwiftTests.xctest"
+               BlueprintName = "tvOSSwiftTests"
                ReferencedContainer = "container:SuperMessagingProxyTests.xcodeproj">
             </BuildableReference>
          </TestableReference>

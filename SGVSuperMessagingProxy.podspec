@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SGVSuperMessagingProxy"
-  s.version          = "2.0.0"
+  s.version          = "2.1.0"
   s.cocoapods_version = '>= 1.0.0'
   s.summary          = "Invoke superclass method implementations of dynamically dispatched methods in Objective-C and Swift."
   s.description      = <<-DESC
@@ -46,9 +46,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'Pod/Sources/Swift/**/*.{h,c,swift}'
     ss.private_header_files = 'Pod/Sources/Swift/SwiftTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
-    ss.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => "${PODS_ROOT}/SGVSuperMessagingProxy/Pod/Sources/Swift/PrivateModulemap" }
-    ss.preserve_paths = 'Pod/Sources/Swift/PrivateModulemap/module.map'
-    ss.header_mappings_dir ='Pod/Sources'
 
     ss.ios.deployment_target = '8.0'
     ss.osx.deployment_target = '10.9'

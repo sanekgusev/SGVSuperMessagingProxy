@@ -1,17 +1,27 @@
-platform :osx, '10.9'
 use_frameworks!
 
-target 'ObjcSuperMessagingProxyTests' do
+abstract_target 'ObjcTests' do
   pod 'SGVSuperMessagingProxy/Objective-C', :path => "../"
+  target 'OSXObjcTests' do
+      platform :osx, '10.8'
+  end
+  target 'iOSObjcTests' do
+      platform :ios, '7.0'
+  end
+  target 'tvOSObjcTests' do
+      platform :tvos, '9.0'
+  end
 end
 
-target 'SwiftSuperMessagingProxyTests' do
-  pod 'SGVSuperMessagingProxy/Swift', :path => "../"
-end
-
-post_install do |installer|
-  podfile_dir = File.expand_path(File.dirname(__FILE__))
-  system("rm -rf '#{podfile_dir}/Pods/SGVSuperMessagingProxy'")
-  system("mkdir -p '#{podfile_dir}/Pods/SGVSuperMessagingProxy'")
-  system("ln -s '#{podfile_dir}/../Pod/' '#{podfile_dir}/Pods/SGVSuperMessagingProxy'")
+abstract_target 'SwiftTests' do
+    pod 'SGVSuperMessagingProxy/Swift', :path => "../"
+    target 'OSXSwiftTests' do
+        platform :osx, '10.9'
+    end
+    target 'iOSSwiftTests' do
+        platform :ios, '8.0'
+    end
+    target 'tvOSSwiftTests' do
+        platform :tvos, '9.0'
+    end
 end

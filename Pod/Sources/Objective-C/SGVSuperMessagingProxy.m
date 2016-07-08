@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
     if (!isStrictSubclass) {
         return nil;
     }
-    SGVSuperMessagingProxy *proxy = [SGVProxySubclassForProxiedObjectClass(classOfObject,
+    SGVSuperMessagingProxy *proxy = [SGVUniqueProxySubclassForProxiedObjectClass(classOfObject,
                                                                            MsgSendSuperFunction_MsgSendSuper) alloc];
     proxy->_super.receiver = object;
     proxy->_super.super_class = ancestorClass;
@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
         return nil;
     }
     
-    SGVSuperMessagingProxy *proxy = [SGVProxySubclassForProxiedObjectClass(classOfObject,
+    SGVSuperMessagingProxy *proxy = [SGVUniqueProxySubclassForProxiedObjectClass(classOfObject,
                                                                            MsgSendSuperFunction_MsgSendSuper2) alloc];
     proxy->_super.receiver = object;
     proxy->_super.super_class = classOfObject;
@@ -74,6 +74,15 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
         proxy->_object = object;
     }
     return proxy;
+}
+
+#pragma mark - Dealloc
+
+- (void)dealloc {
+    Class proxySubclass = object_getClass(self);
+    Class rootClass = class_getSuperclass(class_getSuperclass(proxySubclass));
+    object_setClass(self, rootClass);
+    objc_disposeClassPair(proxySubclass);
 }
 
 #pragma mark - Key-Value Observing
@@ -196,17 +205,18 @@ static BOOL SGVAddTrampolineMethod(Class proxySubclass,
     return methodAdded;
 }
 
-static Class SGVProxySubclassForProxiedObjectClass(Class class,
-                                                   MsgSendSuperFunction superFunction) {
+static Class SGVUniqueProxySubclassForProxiedObjectClass(Class class,
+                                                         MsgSendSuperFunction superFunction) {
     NSCParameterAssert(class);
     if (class == nil) {
         return nil;
     }
-    NSString *proxySubclassName = [NSStringFromClass([SGVSuperMessagingProxy class]) stringByAppendingFormat:@"_%ld_%@",
-                                   (long)superFunction, NSStringFromClass(class)];
+    NSString *UUIDString = [[NSUUID new].UUIDString stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    NSString *proxySubclassName = [NSStringFromClass([SGVSuperMessagingProxy class]) stringByAppendingFormat:@"%@_%ld_%@",
+                                   UUIDString, (long)superFunction, NSStringFromClass(class)];
     Class proxySubclass = objc_allocateClassPair([SGVSuperMessagingProxy class],
-                                                                     [proxySubclassName UTF8String],
-                                                                     0);
+                                                 [proxySubclassName UTF8String],
+                                                 0);
     if (proxySubclass) {
         
         // For a thin proxy, NSProxy has quite a lot of stuff implemented,
@@ -250,7 +260,7 @@ static Class SGVProxySubclassForProxiedObjectClass(Class class,
         objc_registerClassPair(proxySubclass);
         return proxySubclass;
     }
-    return objc_lookUpClass([proxySubclassName UTF8String]);
+    return nil;
 }
 
 @end

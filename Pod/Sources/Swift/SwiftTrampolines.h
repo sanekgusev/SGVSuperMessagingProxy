@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "../Common/TrampolineMacros.h"
+#include "TrampolineMacros.h"
 
 SGVDeclareTrampolineFuction(SGVObjcMsgSendSuperTrampolineSwift)
 SGVDeclareTrampolineFuction(SGVObjcMsgSendSuper2TrampolineSwift)
