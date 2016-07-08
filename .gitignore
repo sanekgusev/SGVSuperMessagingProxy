@@ -29,3 +29,7 @@ DerivedData
 
 # fastlane
 test_output
+
+# Carthage
+Carthage
+*.framework.zip
