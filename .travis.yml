@@ -9,5 +9,9 @@ install:
 - pod install --project-directory=Example
 script:
 - set -o pipefail
-- scan -w Example/SuperMessagingProxyTests.xcworkspace -s ObjcSuperMessagingProxyTests -r true --destination "platform=OS X,arch=x86_64"
-- scan -w Example/SuperMessagingProxyTests.xcworkspace -s SwiftSuperMessagingProxyTests -r true --destination "platform=OS X,arch=x86_64"
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXObjcTests -r true --destination "platform=OS X,arch=x86_64"
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXSwiftTests -r true --destination "platform=OS X,arch=x86_64"
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSObjcTests -r true
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSSwiftTests -r true
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s tvOSObjcTests -r true
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s tvOSSwiftTests -r true
