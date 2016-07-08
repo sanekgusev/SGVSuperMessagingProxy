@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)
 [![License](https://img.shields.io/cocoapods/l/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)
 [![Platform](https://img.shields.io/cocoapods/p/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)  
-[![CI Status](http://img.shields.io/travis/sanekgusev/SGVSuperMessagingProx.svg?style=flat)](https://travis-ci.org/sanekgusev/SGVSuperMessagingProxy)
+[![CI Status](https://travis-ci.org/sanekgusev/SGVSuperMessagingProxy.svg?branch=master)](https://travis-ci.org/sanekgusev/SGVSuperMessagingProxy)
 
 > *“Some assembly required”*
 
