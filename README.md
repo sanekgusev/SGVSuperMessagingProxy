@@ -1,4 +1,5 @@
 [![Swift](https://img.shields.io/badge/swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)  
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  
 [![Version](https://img.shields.io/cocoapods/v/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)
 [![License](https://img.shields.io/cocoapods/l/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)
 [![Platform](https://img.shields.io/cocoapods/p/Anthology.svg?style=flat)](http://cocoapods.org/pods/SGVSuperMessagingProxy)  
