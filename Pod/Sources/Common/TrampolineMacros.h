@@ -22,6 +22,8 @@ _SGVDeclareTrampolineFuction(trampolineFunction)
 
 #define SGVSelfLocation x0
 #define SGVSelfLocationStret x1
+#define SGVIvarOffsetObjc 8
+#define SGVIvarOffsetSwift 16
 
 #define _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset) \
 __attribute__((__naked__)) \
@@ -35,6 +37,8 @@ asm volatile ("add " #selfLocation ", " #selfLocation ", #" #offset "\n\t" \
 
 #define SGVSelfLocation r0
 #define SGVSelfLocationStret r1
+#define SGVIvarOffsetObjc 4
+#define SGVIvarOffsetSwift 12
 
 #define _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset) \
 __attribute__((__naked__)) \
@@ -48,6 +52,8 @@ asm volatile ("add " #selfLocation ", #" #offset "\n\t" \
 
 #define SGVSelfLocation %%rdi
 #define SGVSelfLocationStret %%rsi
+#define SGVIvarOffsetObjc 8
+#define SGVIvarOffsetSwift 16
 
 #define _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset) \
 __attribute__((__naked__)) \
@@ -61,6 +67,8 @@ asm volatile ("addq $" #offset ", " #selfLocation "\n\t" \
 
 #define SGVSelfLocation 0x4(%%esp)
 #define SGVSelfLocationStret 0x8(%%esp)
+#define SGVIvarOffsetObjc 4
+#define SGVIvarOffsetSwift 12
 
 #define _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset) \
 __attribute__((__naked__)) \
@@ -76,3 +84,11 @@ asm volatile ("addl $" #offset ", " #selfLocation "\n\t" \
 
 #define SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset) \
 _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset)
+
+#define _SGVDefineAddressOfTrampolineFunctionFunction(addressOfFunction, trampolineFunction) \
+unsigned long addressOfFunction(void) { \
+return &trampolineFunction; \
+}
+
+#define SGVDefineAddressOfTrampolineFunctionFunction(addressOfFunction, trampolineFunction) \
+_SGVDefineAddressOfTrampolineFunctionFunction(addressOfFunction, trampolineFunction)

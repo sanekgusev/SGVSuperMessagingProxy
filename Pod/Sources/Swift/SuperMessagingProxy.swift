@@ -179,22 +179,17 @@ private func originalObjectClassAndSuperFunctionFrom(proxySubclass proxySubclass
     return (originalObjectSubclass, superFunction)
 }
 
-@_silgen_name("SGVObjcMsgSendSuperTrampolineSwift")
-private func SGVObjcMsgSendSuperTrampolineSwift() -> Void
+@_silgen_name("SGVAddressOfObjcMsgSendSuperTrampolineSwift")
+private func SGVAddressOfObjcMsgSendSuperTrampolineSwift() -> UInt
 
-@_silgen_name("SGVObjcMsgSendSuper2TrampolineSwift")
-private func SGVObjcMsgSendSuper2TrampolineSwift() -> Void
+@_silgen_name("SGVAddressOfObjcMsgSendSuper2TrampolineSwift")
+private func SGVAddressOfObjcMsgSendSuper2TrampolineSwift() -> UInt
 
-#if arch(arm64)
-    private func SGVObjcMsgSendSuperStretTrampolineSwift() -> Void {}
-    private func SGVObjcMsgSendSuper2StretTrampolineSwift() -> Void {}
-#else
-    @_silgen_name("SGVObjcMsgSendSuperStretTrampolineSwift")
-    private func SGVObjcMsgSendSuperStretTrampolineSwift() -> Void
+@_silgen_name("SGVAddressOfObjcMsgSendSuperStretTrampolineSwift")
+private func SGVAddressOfObjcMsgSendSuperStretTrampolineSwift() -> UInt
 
-    @_silgen_name("SGVObjcMsgSendSuper2StretTrampolineSwift")
-    private func SGVObjcMsgSendSuper2StretTrampolineSwift() -> Void
-#endif
+@_silgen_name("SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift")
+private func SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift() -> UInt
 
 private func addTo(proxySubclass proxySubclass: AnyClass,
                                  trampolineMethod method: Method,
@@ -204,25 +199,25 @@ private func addTo(proxySubclass proxySubclass: AnyClass,
     
     let selector = method_getName(method)
     
-    let function: @convention(c) () -> Void
+    let address: UInt
     switch mode {
     case .Normal:
         switch superFunction {
         case .MsgSendSuper:
-            function = SGVObjcMsgSendSuperTrampolineSwift
+            address = SGVAddressOfObjcMsgSendSuperTrampolineSwift()
         case .MsgSendSuper2:
-            function = SGVObjcMsgSendSuper2TrampolineSwift
+            address = SGVAddressOfObjcMsgSendSuper2TrampolineSwift()
         }
     case .Stret:
         switch superFunction {
         case .MsgSendSuper:
-            function = SGVObjcMsgSendSuperStretTrampolineSwift
+            address = SGVAddressOfObjcMsgSendSuperStretTrampolineSwift()
         case .MsgSendSuper2:
-            function = SGVObjcMsgSendSuper2StretTrampolineSwift
+            address = SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift()
         }
     }
     
-    let imp = IMP(bitPattern: unsafeBitCast(function, UInt.self))
+    let imp = IMP(bitPattern: address)
     
     guard class_addMethod(proxySubclass, selector, imp, typeEncoding) else {
         print("SuperMessagingProxy has failed to add method for selector \(selector) to class \(proxySubclass)")

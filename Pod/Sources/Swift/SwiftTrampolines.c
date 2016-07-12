@@ -6,12 +6,23 @@
 //
 //
 
-#include "SwiftTrampolines.h"
+#include "TrampolineMacros.h"
 
-SGVDefineTrampolineFuction(SGVObjcMsgSendSuperTrampolineSwift, _objc_msgSendSuper, SGVSelfLocation, 16)
-SGVDefineTrampolineFuction(SGVObjcMsgSendSuper2TrampolineSwift, _objc_msgSendSuper2, SGVSelfLocation, 16)
+SGVDefineTrampolineFuction(SGVObjcMsgSendSuperTrampolineSwift, _objc_msgSendSuper, SGVSelfLocation, SGVIvarOffsetSwift)
+SGVDefineTrampolineFuction(SGVObjcMsgSendSuper2TrampolineSwift, _objc_msgSendSuper2, SGVSelfLocation, SGVIvarOffsetSwift)
 
-#if !defined(__arm64__)
-SGVDefineTrampolineFuction(SGVObjcMsgSendSuperStretTrampolineSwift, _objc_msgSendSuper_stret, SGVSelfLocationStret, 16)
-SGVDefineTrampolineFuction(SGVObjcMsgSendSuper2StretTrampolineSwift, _objc_msgSendSuper2_stret, SGVSelfLocationStret, 16)
+#if defined(__arm64__)
+void SGVObjcMsgSendSuperStretTrampolineSwift(void) {};
+void SGVObjcMsgSendSuper2StretTrampolineSwift(void) {};
+#else
+SGVDefineTrampolineFuction(SGVObjcMsgSendSuperStretTrampolineSwift, _objc_msgSendSuper_stret, SGVSelfLocationStret, SGVIvarOffsetSwift)
+SGVDefineTrampolineFuction(SGVObjcMsgSendSuper2StretTrampolineSwift, _objc_msgSendSuper2_stret, SGVSelfLocationStret, SGVIvarOffsetSwift)
 #endif
+
+SGVDefineAddressOfTrampolineFunctionFunction(SGVAddressOfObjcMsgSendSuperTrampolineSwift, SGVObjcMsgSendSuperTrampolineSwift)
+
+SGVDefineAddressOfTrampolineFunctionFunction(SGVAddressOfObjcMsgSendSuper2TrampolineSwift, SGVObjcMsgSendSuper2TrampolineSwift)
+
+SGVDefineAddressOfTrampolineFunctionFunction(SGVAddressOfObjcMsgSendSuperStretTrampolineSwift, SGVObjcMsgSendSuperStretTrampolineSwift)
+
+SGVDefineAddressOfTrampolineFunctionFunction(SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift, SGVObjcMsgSendSuper2StretTrampolineSwift)

@@ -25,7 +25,6 @@
 		3EC2F8C75BF0581EE54D96DDC238F173 /* NSObject+SGVSuperMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = 4183C7A87F05C5E19BD6132CB196973A /* NSObject+SGVSuperMessaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40AFE4D9B39FE0F517343272231C8D59 /* SGVSuperMessagingProxy-Common-Objective-C-OSX-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13A6C40F5F757D72B24AD3C2FEAEC252 /* SGVSuperMessagingProxy-Common-Objective-C-OSX-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		452E0FF02E41485563093F957D4C64E4 /* Pods-SwiftTests-iOSSwiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 225B2707D8E88757D54D25C602CD24E8 /* Pods-SwiftTests-iOSSwiftTests-dummy.m */; };
-		4788717895AC213FDAA35CEE0D927799 /* SwiftTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC58289A077B6D58BDFADFCE3D525BF /* SwiftTrampolines.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4D2FA4188F29C947370FD6CDB8D1747F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134ACA24F885A89817EB997C8F1D6979 /* Foundation.framework */; };
 		4E9B86B6C3DA7474310D87371C5B5D93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75202BED1CAB5EEBB21F9BDB271FD3 /* Foundation.framework */; };
 		5318B83623DADE77B3AB60641865AC4D /* SGVSuperMessagingProxy-Common-Swift-OSX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFF89624B82B7953773D0D49A201A17 /* SGVSuperMessagingProxy-Common-Swift-OSX-dummy.m */; };
@@ -57,7 +56,6 @@
 		B362BCEB436B41B843FDC2053C627AB2 /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4F3BDD05BAC65D53B3E2C34EB5A21B /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m */; };
 		B69ABAC42C27D604348D5181F9656209 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB28E11B1BCC8599EDDF9B7121B5979 /* Cocoa.framework */; };
 		BE2DE4C1AF5C3C88394E6F47D0D93E8A /* Pods-SwiftTests-iOSSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A4E08B37D9F81FB5184C60B09E0EC1 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE385CCFB93096729FA8F13BC3BD3E99 /* SwiftTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC58289A077B6D58BDFADFCE3D525BF /* SwiftTrampolines.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BEEB473DD38655C60484183E6F5AD7B6 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3885B65E963E83D65A94ACCBC71E0C /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C03C24BAF4F8386A3EDD953D33660114 /* SGVSuperMessagingProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C50226511B0EF57C9E030F89C350D75A /* SGVSuperMessagingProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1AF578B3E0AB0176E905251C3B1EB75 /* ObjcTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F948E6446171F4791281EBB38BE58B3 /* ObjcTrampolines.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -69,7 +67,6 @@
 		CF15AE552A0559336BAA7EA33BC62F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134ACA24F885A89817EB997C8F1D6979 /* Foundation.framework */; };
 		D1DF4460603F2C3017DF7201A11ABBB0 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCE8591900DA29D563B69401793FC983 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D810C12B3E70F2FE5B8D57E366CBD642 /* NSObject+SGVSuperMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = 4183C7A87F05C5E19BD6132CB196973A /* NSObject+SGVSuperMessaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8617F6201A5071728802B64D9199436 /* SwiftTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC58289A077B6D58BDFADFCE3D525BF /* SwiftTrampolines.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DDA1C9DD9BA4DF597FCB4A845F2C9219 /* SuperMessagingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577473564437086BBEEA07B7E9DBC0FB /* SuperMessagingProxy.swift */; };
 		DE3F45E1580217A88CB996420F1C1A76 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3885B65E963E83D65A94ACCBC71E0C /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E0745DA691874CE57833186D227E7C69 /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D85CC618D6EAE4800190C6B455E8BB2 /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -180,7 +177,6 @@
 		63356267118F1C740777ACC4964B9BC8 /* Pods-ObjcTests-iOSObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ObjcTests-iOSObjcTests.modulemap"; sourceTree = "<group>"; };
 		6483EB2742DF33DFABC6A860E2E374C2 /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6CF041C205882D765014D91D33704D30 /* SGVSuperMessagingProxy-Common-Swift-OSX-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-OSX-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Swift-OSX/SGVSuperMessagingProxy-Common-Swift-OSX-prefix.pch"; sourceTree = "<group>"; };
-		6EC58289A077B6D58BDFADFCE3D525BF /* SwiftTrampolines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwiftTrampolines.h; sourceTree = "<group>"; };
 		7009C89A9E6C3DC5871A70FE7B85D61C /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		72CED923A9A2E04276B6B68C7AEDF543 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig"; sourceTree = "<group>"; };
 		73A4E08B37D9F81FB5184C60B09E0EC1 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftTests-iOSSwiftTests-umbrella.h"; sourceTree = "<group>"; };
@@ -531,7 +527,6 @@
 				236A3D4F52477DA0E8B60F343920A019 /* SuperMessageable.swift */,
 				577473564437086BBEEA07B7E9DBC0FB /* SuperMessagingProxy.swift */,
 				3A63C3E6F571E7CEA0779830FA209F23 /* SwiftTrampolines.c */,
-				6EC58289A077B6D58BDFADFCE3D525BF /* SwiftTrampolines.h */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -721,7 +716,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E52AFF3C189FD04EF45E0BFF1B1673 /* SGVSuperMessagingProxy-Common-Swift-OSX-umbrella.h in Headers */,
-				4788717895AC213FDAA35CEE0D927799 /* SwiftTrampolines.h in Headers */,
 				FFC5D11A0FDF5AD5AF3109454E0A33FC /* TrampolineMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,7 +769,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B7AE3E8DD6DD88A8689961902403BF /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h in Headers */,
-				BE385CCFB93096729FA8F13BC3BD3E99 /* SwiftTrampolines.h in Headers */,
 				DE3F45E1580217A88CB996420F1C1A76 /* TrampolineMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,7 +810,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				848CFBCF2672911576B08F805D18E733 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h in Headers */,
-				D8617F6201A5071728802B64D9199436 /* SwiftTrampolines.h in Headers */,
 				7AE2B22B7EB56BE1E71E47923F33D413 /* TrampolineMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

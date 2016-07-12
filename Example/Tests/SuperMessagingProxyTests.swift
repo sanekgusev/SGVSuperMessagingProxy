@@ -21,6 +21,7 @@ class SuperMessagingProxyTests: XCTestCase {
     override func setUp() {
         super.setUp()
         nyanNyanCat = NyanNyanCat()
+        objcNyanNyanCat = ObjcNyanNyanCat()
     }
     
     func testSuccessfulProxyCreationFromValidClass() {
@@ -35,7 +36,7 @@ class SuperMessagingProxyTests: XCTestCase {
     func testFailedProxyCreationFromNotAnAncestorClass() {
         XCTAssertNil(nyanNyanCat.superProxy(forAncestor: NyanNyanCat.self))
     }
-    
+
     func testImmediateSuperclass() {
         guard let proxy = nyanNyanCat.superProxy else {
             XCTFail()
@@ -51,9 +52,10 @@ class SuperMessagingProxyTests: XCTestCase {
             XCTFail()
             return
         }
-        XCTAssertEqual(proxy.says(), Cat().says())
-        XCTAssertEqual(proxy.exclamation, Cat().exclamation)
-        XCTAssertEqual(proxy.awesomenessLevel, Cat().awesomenessLevel)
+        let catProxy = unsafeBitCast(proxy, Cat.self)
+        XCTAssertEqual(catProxy.says(), Cat().says())
+        XCTAssertEqual(catProxy.exclamation, Cat().exclamation)
+        XCTAssertEqual(catProxy.awesomenessLevel, Cat().awesomenessLevel)
     }
     
     func testImmediateSuperclassObjc() {
