@@ -1,17 +1,12 @@
 language: objective-c
 osx_image: xcode7.3
-cache: cocoapods
 notifications:
   email: false
-rvm: 2.2
-install:
-- bundle install
-- pod install --project-directory=Example
+rvm: 2.3
 script:
-- set -o pipefail
-- bundle exec scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXObjcTests -r true --destination "platform=OS X,arch=x86_64"
-- bundle exec scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXSwiftTests -r true --destination "platform=OS X,arch=x86_64"
-- bundle exec scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSObjcTests -r true --devices 'iPhone 4s,iPhone 6s'
-- bundle exec scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSSwiftTests -r true --devices 'iPhone 4s,iPhone 6s'
-- bundle exec scan -w Example/SuperMessagingProxyTests.xcworkspace -s tvOSObjcTests -r true --destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=latest'
-- bundle exec scan -w Example/SuperMessagingProxyTests.xcworkspace -s tvOSSwiftTests -r true --destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=latest'
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXObjcTests -r true --destination "platform=OS X,arch=x86_64"
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXSwiftTests -r true --destination "platform=OS X,arch=x86_64"
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSObjcTests -r true --devices 'iPhone 4s,iPhone 6s'
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSSwiftTests -r true --devices 'iPhone 4s,iPhone 6s'
+- scan -w Examplne/SuperMessagingProxyTests.xcworkspace -s tvOSObjcTests -r true --destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=latest'
+- scan -w Example/SuperMessagingProxyTests.xcworkspace -s tvOSSwiftTests -r true --destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=latest'
