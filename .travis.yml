@@ -4,9 +4,10 @@ notifications:
   email: false
 rvm: 2.3
 script:
-- scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXObjcTests -r true --destination "platform=OS X,arch=x86_64"
-- scan -w Example/SuperMessagingProxyTests.xcworkspace -s OSXSwiftTests -r true --destination "platform=OS X,arch=x86_64"
-- scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSObjcTests -r true --devices 'iPhone 4s,iPhone 6s'
-- scan -w Example/SuperMessagingProxyTests.xcworkspace -s iOSSwiftTests -r true --devices 'iPhone 4s,iPhone 6s'
-- scan -w Examplne/SuperMessagingProxyTests.xcworkspace -s tvOSObjcTests -r true --destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=latest'
-- scan -w Example/SuperMessagingProxyTests.xcworkspace -s tvOSSwiftTests -r true --destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=latest'
+- set -o pipefail
+- xcodebuild -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme OSXObjcTests -destination "platform=OS X,arch=x86_64" test | xcpretty
+- xcodebuild -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme OSXSwiftTests -destination "platform=OS X,arch=x86_64" test | xcpretty
+- xcodebuild -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme iOSObjcTests -destination "platform=iOS Simulator,name=iPhone 4s,OS=latest" test | xcpretty
+- xcodebuild -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme iOSObjcTests -destination "platform=iOS Simulator,name=iPhone 6s,OS=latest" test | xcpretty
+- xcodebuild -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme iOSSwiftTests -destination "platform=iOS Simulator,name=iPhone 4s,OS=latest" test | xcpretty
+- xcodebuild -workspace Example/SuperMessagingProxyTests.xcworkspace -scheme iOSSwiftTests -destination "platform=iOS Simulator,name=iPhone 6s,OS=latest" test | xcpretty
