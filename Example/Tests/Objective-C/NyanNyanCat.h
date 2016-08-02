@@ -10,4 +10,6 @@
 
 @interface NyanNyanCat : NyanCat
 
+- (NSString *)methodFromALeafClass;
+
 @end

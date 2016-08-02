@@ -26,4 +26,8 @@ class Cat {
     dynamic class var awesomenessLevel: Int {
         return 5
     }
+    
+    dynamic func baseClassMethod() -> String {
+        return "I am a base cat"
+    }
 }

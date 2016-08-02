@@ -64,6 +64,24 @@ NS_ASSUME_NONNULL_BEGIN
     XCTAssert(strcmp(proxy.descriptor.name, [Cat new].descriptor.name) == 0);
 }
 
+- (void)testCallingMethodFromNotImmediateSuperclass {
+    NyanCat* proxy = self.nyanNyanCat.sgv_super;
+    if (proxy == nil) {
+        XCTFail();
+        return;
+    }
+    XCTAssertEqual([proxy baseClassMethod], [[Cat new] baseClassMethod]);
+}
+
+- (void)testCallingMethodNotInSuperclass {
+    NyanNyanCat *proxy = self.nyanNyanCat.sgv_super;
+    if (proxy == nil) {
+        XCTFail();
+        return;
+    }
+    XCTAssertThrows([proxy methodFromALeafClass]);
+}
+
 - (void)testClassMethodsOfImmediateSuperclass {
     Class proxy = [NyanNyanCat sgv_super];
     if (proxy == nil) {

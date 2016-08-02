@@ -36,6 +36,10 @@ NS_ASSUME_NONNULL_BEGIN
     return descriptor;
 }
 
+- (NSString *)methodFromALeafClass {
+    return @"I am a nyan-nyan-nyan cat!";
+}
+
 + (NSString *)says {
     return @"Nyan-nyan";
 }

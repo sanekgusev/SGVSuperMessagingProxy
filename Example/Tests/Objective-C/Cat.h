@@ -24,6 +24,8 @@ typedef struct CatDescriptor {
 + (NSString *)says;
 + (NSInteger)awesomenessLevel;
 
+- (NSString *)baseClassMethod;
+
 @end
 
 NS_ASSUME_NONNULL_END

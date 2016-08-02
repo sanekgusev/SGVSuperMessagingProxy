@@ -8,6 +8,8 @@
 
 #pragma once
 
+#import <sys/types.h>
+
 // Generate function declarations for header files
 
 #define _SGVDeclareTrampolineFuction(trampolineFunction) \
@@ -86,8 +88,8 @@ asm volatile ("addl $" #offset ", " #selfLocation "\n\t" \
 _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset)
 
 #define _SGVDefineAddressOfTrampolineFunctionFunction(addressOfFunction, trampolineFunction) \
-unsigned long addressOfFunction(void) { \
-return &trampolineFunction; \
+uintptr_t addressOfFunction(void) { \
+return (uintptr_t)&trampolineFunction; \
 }
 
 #define SGVDefineAddressOfTrampolineFunctionFunction(addressOfFunction, trampolineFunction) \

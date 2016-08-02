@@ -101,12 +101,19 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
                                                                     &superFunction)) {
         return NO;
     }
-    Method method = class_getInstanceMethod(originalClass, selector);
+    Class superClass = class_getSuperclass(originalClass);
+    if (superClass == nil) {
+        return NO;
+    }
+    Method method = class_getInstanceMethod(superClass, selector);
     if (method == NULL) {
+        [NSException raise:NSInternalInconsistencyException
+                    format:@"No dynamically dispatched method with selector %@ is available on any of the superclasses of %@",
+         NSStringFromSelector(selector), NSStringFromClass(originalClass)];
         return NO;
     }
     
-    return SGVAddTrampolineMethod(self, method, superFunction);
+    return SGVAddTrampolineMethod(self, selector, method_getTypeEncoding(method), superFunction);
 }
 
 #pragma mark - Private
@@ -169,10 +176,9 @@ static DispatchMode SGVGetDispatchMode(const char * typeEncoding) {
 }
 
 static BOOL SGVAddTrampolineMethod(Class proxySubclass,
-                                   Method method,
+                                   SEL selector,
+                                   const char *typeEncoding,
                                    MsgSendSuperFunction superFunction) {
-    const char *typeEncoding = method_getTypeEncoding(method);
-    
     DispatchMode dispatchMode = SGVGetDispatchMode(typeEncoding);
     
     IMP trampolineIMP = NULL;
@@ -189,8 +195,6 @@ static BOOL SGVAddTrampolineMethod(Class proxySubclass,
             NSCAssert(NO, @"invalid dispatch mode");
             return NO;
     }
-    
-    SEL selector = method_getName(method);
     
     BOOL methodAdded = class_addMethod(proxySubclass,
                                        selector,
@@ -246,13 +250,15 @@ static Class SGVUniqueProxySubclassForProxiedObjectClass(Class class,
         Method *methods = class_copyMethodList([NSProxy class], &outCount);
         for (int i = 0; i < outCount; i++) {
             Method method = methods[i];
-            NSString *selectorName = NSStringFromSelector(method_getName(method));
+            SEL selector = method_getName(method);
+            NSString *selectorName = NSStringFromSelector(selector);
             if ([selectorName rangeOfString:@"_"].location == 0 ||
                 [nonForwardedMethodNames containsObject:selectorName]) {
                 continue;
             }
             SGVAddTrampolineMethod(proxySubclass,
-                                   method,
+                                   selector,
+                                   method_getTypeEncoding(method),
                                    superFunction);
         }
         free(methods);

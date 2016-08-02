@@ -67,12 +67,20 @@ public final class SuperMessagingProxy {
     
     @objc
     public class func resolveInstanceMethod(sel: Selector) -> Bool {
-        guard let (originalClass, superFunction) = originalObjectClassAndSuperFunctionFrom(proxySubclass: self) else {
+        guard let (originalClass, superFunction) = originalObjectClassAndSuperFunctionFrom(proxySubclass: self),
+            superClass = class_getSuperclass(originalClass) else {
             return false
         }
-        let method = class_getInstanceMethod(originalClass, sel)
+        let method = class_getInstanceMethod(superClass, sel)
+        guard method != nil else {
+            NSException.raise(NSInternalInconsistencyException, format: "No dynamically dispatched method with selector \(sel) is available on any of the superclasses of \(originalClass)", arguments: CVaListPointer(_fromUnsafeMutablePointer: nil))
+            return false
+        }
         
-        return addTo(proxySubclass: self, trampolineMethod: method, usingSuperFunction: superFunction)
+        return addSuperForwardingMethodTo(proxySubclass: self,
+                                          forSelector: sel,
+                                          typeEncoding: method_getTypeEncoding(method),
+                                          usingSuperFunction: superFunction)
     }
     
     @objc
@@ -161,7 +169,11 @@ private func uniqueProxySubclassFor(proxiedObjectClass objectClass: AnyClass,
             nonForwardedMethodSelectors.contains(selector) {
             return
         }
-        addTo(proxySubclass: proxySubclass, trampolineMethod: method, usingSuperFunction: superFunction)
+        let typeEncoding = method_getTypeEncoding(method)
+        addSuperForwardingMethodTo(proxySubclass: proxySubclass,
+            forSelector: selector,
+            typeEncoding: typeEncoding,
+            usingSuperFunction: superFunction)
     }
     
     objc_registerClassPair(proxySubclass)
@@ -191,13 +203,11 @@ private func SGVAddressOfObjcMsgSendSuperStretTrampolineSwift() -> UInt
 @_silgen_name("SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift")
 private func SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift() -> UInt
 
-private func addTo(proxySubclass proxySubclass: AnyClass,
-                                 trampolineMethod method: Method,
+private func addSuperForwardingMethodTo(proxySubclass proxySubclass: AnyClass,
+                                                      forSelector selector: Selector,
+                                                                  typeEncoding: UnsafePointer<Int8>,
                                                   usingSuperFunction superFunction: MsgSendSuperFunction) -> Bool {
-    let typeEncoding = method_getTypeEncoding(method)
     let mode = dispatchMode(forTypeEncoding: typeEncoding)
-    
-    let selector = method_getName(method)
     
     let address: UInt
     switch mode {

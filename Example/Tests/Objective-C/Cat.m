@@ -27,6 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
     return [Cat says];
 }
 
+- (NSString *)baseClassMethod {
+    return @"I am a base cat";
+}
+
 - (CatDescriptor)descriptor {
     CatDescriptor descriptor;
     memset(&descriptor, 0, sizeof(descriptor));
