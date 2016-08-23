@@ -53,7 +53,7 @@ class SuperMessagingProxyTests: XCTestCase {
             XCTFail()
             return
         }
-        let castProxy = unsafeBitCast(proxy, Catw.self)
+        let castProxy = unsafeBitCast(proxy, Cat.self)
         XCTAssertEqual(castProxy.says(), Cat().says())
         XCTAssertEqual(castProxy.exclamation, Cat().exclamation)
         XCTAssertEqual(castProxy.awesomenessLevel, Cat().awesomenessLevel)

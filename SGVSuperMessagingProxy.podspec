@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SGVSuperMessagingProxy"
-  s.version          = "2.1.0"
+  s.version          = "2.1.1"
   s.cocoapods_version = '>= 1.0.0'
   s.summary          = "Invoke superclass method implementations of dynamically dispatched methods in Objective-C and Swift."
   s.description      = <<-DESC
