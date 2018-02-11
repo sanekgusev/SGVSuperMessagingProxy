@@ -8,8 +8,8 @@
 
 import Foundation
 
-@objc
 class ObjcCat: NSObject {
+
     @objc
     dynamic func says() -> String {
         return Cat.says()

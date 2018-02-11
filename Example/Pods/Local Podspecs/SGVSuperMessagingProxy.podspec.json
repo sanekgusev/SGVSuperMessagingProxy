@@ -1,6 +1,6 @@
 {
   "name": "SGVSuperMessagingProxy",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "cocoapods_version": ">= 1.0.0",
   "summary": "Invoke superclass method implementations of dynamically dispatched methods in Objective-C and Swift.",
   "description": "This NSProxy/SwiftObject proxy allows one to invoke method implementations from any class in the inheritance hierarchy for any Objective-C object or invoke dynamically-dispatched method implementations for any Swift object.\n\nOn creation, the proxy is passed the object and optionally a class in that object's inheritance hierarchy.\n\nAny message sent to the proxy will be executed as if it was invoked with the `super` keyword from within that object's class declaration.",
@@ -11,7 +11,7 @@
   },
   "source": {
     "git": "https://github.com/sanekgusev/SGVSuperMessagingProxy.git",
-    "tag": "2.0.0"
+    "tag": "3.0.0"
   },
   "social_media_url": "https://twitter.com/sanekgusev",
   "platforms": {

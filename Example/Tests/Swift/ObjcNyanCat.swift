@@ -6,24 +6,19 @@
 //  Copyright © 2016 Alexander Gusev. All rights reserved.
 //
 
-import Foundation
-
-@objc
 class ObjcNyanCat: ObjcCat {
-    @objc
-    dynamic override func says() -> String {
+
+    override func says() -> String {
         return "Nyan"
     }
     
-    @objc
-    dynamic override var exclamation: String {
+    override var exclamation: String {
         return "Nyan!"
     }
     
     private var _awesomenessLevel: Int = 10
     
-    @objc
-    dynamic override var awesomenessLevel: Int {
+    override var awesomenessLevel: Int {
         get {
             return _awesomenessLevel
         }
@@ -32,13 +27,11 @@ class ObjcNyanCat: ObjcCat {
         }
     }
     
-    @objc
-    dynamic override class func says() -> String {
+    override class func says() -> String {
         return "Nyan"
     }
     
-    @objc
-    dynamic override class var awesomenessLevel: Int {
+    override class var awesomenessLevel: Int {
         return 10
     }
 }

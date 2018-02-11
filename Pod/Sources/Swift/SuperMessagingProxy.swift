@@ -6,189 +6,256 @@
 //
 //
 
-import Foundation
 import ObjectiveC.runtime
 import ObjectiveC.message
 
-private enum MsgSendSuperDispatchMode {
-    case Normal
-    case Stret
-}
-
-private enum MsgSendSuperFunction: String {
-    case MsgSendSuper
-    case MsgSendSuper2
-}
-
 public final class SuperMessagingProxy {
-    
-    private let `super`: objc_super
+
+    /// These 2 properties mimic the layout of `objc_super` struct.
+    /// Trampoline functions will use the address of SuperMessagingProxy's `self` +
+    /// the offset of `_objectAddress` to calculate the address for the first
+    /// argument of the correspoding `objc_msgSendSuper` function.
+    private let _objectAddress: UInt
+    private let _superclass: AnyClass
+
     private let object: AnyObject?
+
+    // MARK: Init/deinit
     
-    public convenience init?(object: AnyObject, ancestorClass: AnyClass, retainsObject: Bool = true) {
-        guard let classOfObject = object_getClass(object) where
-            isClass(classOfObject, strictSubclassOf: ancestorClass),
-            let proxySubclass = uniqueProxySubclassFor(proxiedObjectClass: classOfObject, superFunction: .MsgSendSuper) else {
-                return nil
+    public convenience init?(object: AnyObject,
+                             ancestorClass: AnyClass,
+                             retainsObject: Bool = true) {
+        let classOfObject: AnyClass = type(of: object)
+        guard type(of: self).isClass(aClass: classOfObject, strictSubclassOf: ancestorClass),
+            let proxySubclass = type(of: self).uniqueProxySubclass(for: classOfObject,
+                                                                   superFunction: .msgSendSuper) else {
+                                                                    return nil
         }
-        
-        self.init(object: object, retainsObject: retainsObject, classForSuper: ancestorClass, proxySubclass: proxySubclass)
+
+        self.init(object: object,
+                  retainsObject: retainsObject,
+                  classForSuper: ancestorClass,
+                  proxySubclass: proxySubclass)
     }
-    
+
     public convenience init?(object: AnyObject, retainsObject: Bool = true) {
-        guard let classOfObject = object_getClass(object),
-            _ = class_getSuperclass(classOfObject),
-            let proxySubclass = uniqueProxySubclassFor(proxiedObjectClass: classOfObject, superFunction: .MsgSendSuper2) else {
-                return nil
+        let classOfObject: AnyClass = type(of: object)
+        guard class_getSuperclass(classOfObject) != nil,
+            let proxySubclass = type(of: self).uniqueProxySubclass(for: classOfObject,
+                                                                   superFunction: .msgSendSuper2) else {
+                                                                    return nil
         }
-        self.init(object: object, retainsObject: retainsObject, classForSuper: classOfObject, proxySubclass: proxySubclass)
+        self.init(object: object,
+                  retainsObject: retainsObject,
+                  classForSuper: classOfObject,
+                  proxySubclass: proxySubclass)
     }
-    
-    private init?(object: AnyObject, retainsObject: Bool, classForSuper: AnyClass, proxySubclass: AnyClass) {
-        `super` = {
-            var `super` = $0
-            `super`.receiver = .passUnretained(object)
-            `super`.super_class = classForSuper
-            return `super`
-        }(objc_super())
-        
+
+    private init(object: AnyObject,
+                 retainsObject: Bool,
+                 classForSuper: AnyClass,
+                 proxySubclass: AnyClass) {
+        _objectAddress = unsafeBitCast(object, to: UInt.self)
+        _superclass = classForSuper
         self.object = retainsObject ? object : nil
         object_setClass(self, proxySubclass)
     }
-    
+
     deinit {
         if let proxySubclass = object_getClass(self),
-            proxyClass = class_getSuperclass(proxySubclass),
-            rootClass = class_getSuperclass(proxyClass) {
+            let proxyClass = class_getSuperclass(proxySubclass),
+            let rootClass = class_getSuperclass(proxyClass) {
+            
             object_setClass(self, rootClass)
             objc_disposeClassPair(proxySubclass)
         }
     }
+
+    // MARK: Objective-C runtime
     
     @objc
-    public class func resolveInstanceMethod(sel: Selector) -> Bool {
-        guard let (originalClass, superFunction) = originalObjectClassAndSuperFunctionFrom(proxySubclass: self),
-            superClass = class_getSuperclass(originalClass) else {
-            return false
+    private class func resolveInstanceMethod(_ sel: Selector!) -> Bool {
+        guard let (proxiedObjectClass, superFunction) = proxiedObjectClassAndSuperFunction else {
+            fatalError("SuperMessagingProxy has failed to retrieve proxied object class and super function kind from proxy's class name — this should never happen")
         }
-        let method = class_getInstanceMethod(superClass, sel)
-        guard method != nil else {
-            NSException.raise(NSInternalInconsistencyException, format: "No dynamically dispatched method with selector \(sel) is available on any of the superclasses of \(originalClass)", arguments: CVaListPointer(_fromUnsafeMutablePointer: nil))
-            return false
+        guard let proxiedObjectSuperclass = class_getSuperclass(proxiedObjectClass) else {
+            fatalError("SuperMessagingProxy has failed to retrieve proxied object's superclass — this should never happen")
+        }
+        guard let method = class_getInstanceMethod(proxiedObjectSuperclass, sel),
+            let typeEncoding = method_getTypeEncoding(method) else {
+                fatalError("SuperMessagingProxy: No dynamically dispatched method with selector \(sel) is available on any of the superclasses of \(proxiedObjectClass)!")
         }
         
-        return addSuperForwardingMethodTo(proxySubclass: self,
-                                          forSelector: sel,
-                                          typeEncoding: method_getTypeEncoding(method),
-                                          usingSuperFunction: superFunction)
+        let result = addSuperForwardingMethod(to: self,
+                                              for: sel,
+                                              typeEncoding: typeEncoding,
+                                              using: superFunction)
+        if !result {
+            NSLog("SuperMessagingProxy has failed to add super forwarding method for selector \(sel), object class \(proxiedObjectClass)")
+        }
+        return result
     }
     
     @objc
-    public class func accessInstanceVariablesDirectly() -> Bool {
+    private class var accessInstanceVariablesDirectly: Bool {
         return false
     }
-}
 
-private func isClass(aClass: AnyClass, strictSubclassOf possibleSuperclass: AnyClass) -> Bool {
-    var superclass: AnyClass? = class_getSuperclass(aClass)
-    while superclass != nil {
-        if superclass == possibleSuperclass {
-            return true
+    // MARK: Private
+
+    private static func isClass(aClass: AnyClass, strictSubclassOf possibleSuperclass: AnyClass) -> Bool {
+        var superclass: AnyClass? = class_getSuperclass(aClass)
+        while superclass != nil {
+            if superclass == possibleSuperclass {
+                return true
+            }
+            superclass = class_getSuperclass(superclass)
         }
-        superclass = class_getSuperclass(superclass)
+        return false
     }
-    return false
-}
 
+    private enum MsgSendSuperDispatchMode {
+        case normal
+        case stret
+    }
 
-private func dispatchMode(forTypeEncoding typeEncoding: UnsafePointer<Int8>) -> MsgSendSuperDispatchMode {
-    let dispatchMode: MsgSendSuperDispatchMode
-    #if arch(arm64)
-         //arm64 doesn't use stret dispatch at all, yay!
-        dispatchMode = .Normal
-    #elseif arch(arm) || arch (x86_64) || arch(i386)
-        var returnTypeActualSize = 0
-        NSGetSizeAndAlignment(typeEncoding,
-                              &returnTypeActualSize,
-                              nil)
-        #if arch(arm)
-            // On arm, stret dispatch is used whenever the return type
-            // does not fit into a single register
-            dispatchMode = returnTypeActualSize > strideof(UInt) ? .Stret : .Normal
-        #elseif arch(x86_64) || arch(i386)
-            // On i386 and x86-64, stret dispatch is used whenever the return type
-            // doesn't fit into two registers
-            dispatchMode = returnTypeActualSize > (strideof(UInt) * 2) ? .Stret : .Normal
+    private static func dispatchMode(for typeEncoding: UnsafePointer<Int8>) -> MsgSendSuperDispatchMode {
+        let dispatchMode: MsgSendSuperDispatchMode
+        #if arch(arm64)
+            //arm64 doesn't use stret dispatch at all, yay!
+            dispatchMode = .normal
+        #elseif arch(arm) || arch (x86_64) || arch(i386)
+            var returnTypeActualSize = 0
+            NSGetSizeAndAlignment(typeEncoding,
+                                  &returnTypeActualSize,
+                                  nil)
+            #if arch(arm)
+                // On arm, stret dispatch is used whenever the return type
+                // does not fit into a single register
+                dispatchMode = returnTypeActualSize > strideof(UInt) ? .stret : .normal
+            #elseif arch(x86_64) || arch(i386)
+                // On i386 and x86-64, stret dispatch is used whenever the return type
+                // doesn't fit into two registers
+                dispatchMode = returnTypeActualSize > (MemoryLayout<UInt>.stride * 2) ? .stret : .normal
+            #endif
+        #else
+            //error - Unknown architecture
         #endif
-    #else
-        //error - Unknown architecture
-    #endif
-    
-    return dispatchMode
-}
 
-private let nonForwardedMethodSelectors = Set([
-    "zone",
-    "retain",
-    "release",
-    "autorelease",
-    "retainCount",
-    "dealloc",
-    "finalize",
-    "retainWeakReference",
-    "allowsWeakReference",
-    ].map({ Selector($0) }))
+        return dispatchMode
+    }
 
-private func uniqueProxySubclassFor(proxiedObjectClass objectClass: AnyClass,
-                                                       superFunction: MsgSendSuperFunction) -> AnyClass? {
-    let UUIDString = String(NSUUID().UUIDString.characters.filter({ $0 != "-" }))
-    let proxySubclassName = "\(NSStringFromClass(SuperMessagingProxy))\(UUIDString)_\(superFunction)_\(NSStringFromClass(objectClass))"
-    guard let proxySubclass = objc_allocateClassPair(SuperMessagingProxy.self, proxySubclassName, 0),
-        proxySuperclass = class_getSuperclass(SuperMessagingProxy.self) else {
-        return nil
+    private static let nonForwardedMethodSelectors = Set([
+        "zone",
+        "retain",
+        "release",
+        "autorelease",
+        "retainCount",
+        "dealloc",
+        "finalize",
+        "retainWeakReference",
+        "allowsWeakReference",
+        ].map({ Selector($0) }))
+
+    private enum MsgSendSuperFunction: String {
+        case msgSendSuper
+        case msgSendSuper2
     }
-    
-    // SwiftObject has some stuff already implemeted which we do not want.
-    // For every subclass of our proxy we will reimplement those methods
-    // to use our trampolines instead.
-    // Scary things starting with an underscore and memory-management related
-    // stuff are kept, though.
-    
-    var outCount: UInt32 = 0
-    
-    let methods = class_copyMethodList(proxySuperclass, &outCount)
-    let methodCount = Int(outCount)
-    defer {
-        methods.destroy(methodCount)
-    }
-    
-    (0..<methodCount).forEach { index in
-        let method = methods[index]
-        let selector = method_getName(method)
-        if String(selector).hasPrefix("_") ||
-            nonForwardedMethodSelectors.contains(selector) {
-            return
+
+    private static func uniqueProxySubclass(for proxiedObjectClass: AnyClass,
+                                            superFunction: MsgSendSuperFunction) -> AnyClass? {
+        let UUIDString = NSUUID().uuidString.filter({ $0 != "-" })
+        let proxySubclassName = NSStringFromClass(self) +
+        "\(UUIDString)_\(superFunction)_\(NSStringFromClass(proxiedObjectClass))"
+        guard let proxySubclass = objc_allocateClassPair(self, proxySubclassName, 0),
+            let rootClass = class_getSuperclass(self) else {
+                return nil
         }
-        let typeEncoding = method_getTypeEncoding(method)
-        addSuperForwardingMethodTo(proxySubclass: proxySubclass,
-            forSelector: selector,
-            typeEncoding: typeEncoding,
-            usingSuperFunction: superFunction)
-    }
-    
-    objc_registerClassPair(proxySubclass)
-    return proxySubclass
-}
 
-private func originalObjectClassAndSuperFunctionFrom(proxySubclass proxySubclass: AnyClass) -> (originalObjectSublcass: AnyClass, superFunction: MsgSendSuperFunction)? {
-    let components = NSStringFromClass(proxySubclass).characters.split("_").map(String.init)
-    guard components.count == 3,
-        let originalObjectClassName = components.last,
-        originalObjectSubclass = NSClassFromString(originalObjectClassName),
-        superFunction = MsgSendSuperFunction(rawValue: components[1]) else {
+        // SwiftObject has some stuff already implemeted which we do not want.
+        // For every subclass of our proxy we will reimplement those methods
+        // to use our trampolines instead.
+        // Scary things starting with an underscore and memory-management related
+        // stuff are kept, though.
+
+        var count: UInt32 = 0
+        guard let methodsPointer = class_copyMethodList(rootClass, &count) else {
+            NSLog("SuperMessagingProxy has failed to get the method list of the root class '\(rootClass)'")
             return nil
+        }
+        defer {
+            methodsPointer.deinitialize(count: numericCast(count))
+            methodsPointer.deallocate(capacity: numericCast(count))
+        }
+        let methods = UnsafeBufferPointer(start: methodsPointer,
+                                          count: numericCast(count))
+        methods.forEach { method in
+            let selector = method_getName(method)
+            let selectorString = selector.description
+            if selectorString.hasPrefix("_") ||
+                selectorString.hasSuffix("_") ||
+                nonForwardedMethodSelectors.contains(selector) {
+                return
+            }
+            if let typeEncoding = method_getTypeEncoding(method) {
+                addSuperForwardingMethod(to: proxySubclass,
+                                         for: selector,
+                                         typeEncoding: typeEncoding,
+                                         using: superFunction)
+            } else {
+                NSLog("SuperMessagingProxy has failed to get type encoding for root class' method with selector \(selector), not forwarding")
+            }
+        }
+
+        objc_registerClassPair(proxySubclass)
+
+        return proxySubclass
     }
-    return (originalObjectSubclass, superFunction)
+
+    private static var proxiedObjectClassAndSuperFunction: (originalObjectSublcass: AnyClass, superFunction: MsgSendSuperFunction)? {
+        let components = NSStringFromClass(self).split(separator: "_")
+        guard components.count == 3,
+            let originalObjectSubclass = NSClassFromString(String(components[2])),
+            let superFunction = MsgSendSuperFunction(rawValue: String(components[1])) else {
+                return nil
+        }
+        return (originalObjectSubclass, superFunction)
+    }
+
+    @discardableResult
+    private static func addSuperForwardingMethod(to proxySubclass: AnyClass,
+                                                 for selector: Selector,
+                                                 typeEncoding: UnsafePointer<Int8>,
+                                                 using superFunction: MsgSendSuperFunction) -> Bool {
+        let superForwaringImpAddress: UInt = {
+            switch dispatchMode(for: typeEncoding) {
+            case .normal:
+                switch superFunction {
+                case .msgSendSuper:
+                    return SGVAddressOfObjcMsgSendSuperTrampolineSwift()
+                case .msgSendSuper2:
+                    return SGVAddressOfObjcMsgSendSuper2TrampolineSwift()
+                }
+            case .stret:
+                switch superFunction {
+                case .msgSendSuper:
+                    return SGVAddressOfObjcMsgSendSuperStretTrampolineSwift()
+                case .msgSendSuper2:
+                    return SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift()
+                }
+            }
+        }()
+
+        guard let superForwardingImp = IMP(bitPattern: superForwaringImpAddress),
+            class_addMethod(proxySubclass,
+                            selector,
+                            superForwardingImp,
+                            typeEncoding) else {
+                                NSLog("SuperMessagingProxy has failed to add method for selector \(selector) to class \(proxySubclass)")
+                                return false
+        }
+        return true
+    }
 }
 
 @_silgen_name("SGVAddressOfObjcMsgSendSuperTrampolineSwift")
@@ -202,36 +269,3 @@ private func SGVAddressOfObjcMsgSendSuperStretTrampolineSwift() -> UInt
 
 @_silgen_name("SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift")
 private func SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift() -> UInt
-
-private func addSuperForwardingMethodTo(proxySubclass proxySubclass: AnyClass,
-                                                      forSelector selector: Selector,
-                                                                  typeEncoding: UnsafePointer<Int8>,
-                                                  usingSuperFunction superFunction: MsgSendSuperFunction) -> Bool {
-    let mode = dispatchMode(forTypeEncoding: typeEncoding)
-    
-    let address: UInt
-    switch mode {
-    case .Normal:
-        switch superFunction {
-        case .MsgSendSuper:
-            address = SGVAddressOfObjcMsgSendSuperTrampolineSwift()
-        case .MsgSendSuper2:
-            address = SGVAddressOfObjcMsgSendSuper2TrampolineSwift()
-        }
-    case .Stret:
-        switch superFunction {
-        case .MsgSendSuper:
-            address = SGVAddressOfObjcMsgSendSuperStretTrampolineSwift()
-        case .MsgSendSuper2:
-            address = SGVAddressOfObjcMsgSendSuper2StretTrampolineSwift()
-        }
-    }
-    
-    let imp = IMP(bitPattern: address)
-    
-    guard class_addMethod(proxySubclass, selector, imp, typeEncoding) else {
-        print("SuperMessagingProxy has failed to add method for selector \(selector) to class \(proxySubclass)")
-        return false
-    }
-    return true
-}

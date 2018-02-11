@@ -1,5 +1,5 @@
 framework module SGVSuperMessagingProxy {
-  umbrella header "SGVSuperMessagingProxy-Common-Swift-OSX-umbrella.h"
+  umbrella header "SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h"
 
   export *
   module * { export * }
