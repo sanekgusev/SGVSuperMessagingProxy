@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
     ss.ios.deployment_target = '7.0'
     ss.osx.deployment_target = '10.8'
-    ss.watchos.deployment_target = '1.0'
+    ss.watchos.deployment_target = '2.0'
     ss.tvos.deployment_target = '9.0'
   end
 
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
 
     ss.ios.deployment_target = '7.0'
     ss.osx.deployment_target = '10.8'
-    ss.watchos.deployment_target = '1.0'
+    ss.watchos.deployment_target = '2.0'
     ss.tvos.deployment_target = '9.0'
   end
 
