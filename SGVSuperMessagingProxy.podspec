@@ -46,7 +46,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Swift' do |ss|
     ss.source_files = 'Pod/Sources/Swift/**/*.{h,c,swift}'
-    ss.private_header_files = 'Pod/Sources/Swift/SwiftTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
 
     ss.ios.deployment_target = '8.0'
