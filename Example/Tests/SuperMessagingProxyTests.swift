@@ -28,11 +28,11 @@ class SuperMessagingProxyTests: XCTestCase {
         XCTAssertNotNil(nyanNyanCat.superProxy)
         XCTAssertNotNil(nyanNyanCat.superProxy(forAncestor: Cat.self))
     }
-    
+
     func testFailedProxyCreationFromRootClass() {
         XCTAssertNil(NSObject().superProxy)
     }
-    
+
     func testFailedProxyCreationFromNotAnAncestorClass() {
         XCTAssertNil(nyanNyanCat.superProxy(forAncestor: NyanNyanCat.self))
     }
@@ -47,7 +47,7 @@ class SuperMessagingProxyTests: XCTestCase {
         XCTAssertEqual(castProxy.exclamation, NyanCat().exclamation)
         XCTAssertEqual(castProxy.awesomenessLevel, NyanCat().awesomenessLevel)
     }
-    
+
     func testNonImmediateSuperclass() {
         guard let proxy = nyanNyanCat.superProxy(forAncestor: Cat.self) else {
             XCTFail()
@@ -57,7 +57,7 @@ class SuperMessagingProxyTests: XCTestCase {
         XCTAssertEqual(proxy.exclamation, Cat().exclamation)
         XCTAssertEqual(proxy.awesomenessLevel, Cat().awesomenessLevel)
     }
-    
+
     func testCallingMethodFromNotImmediateSuperclass() {
         guard let proxy = nyanNyanCat.superProxy else {
             XCTFail()
@@ -66,7 +66,7 @@ class SuperMessagingProxyTests: XCTestCase {
         let castProxy = unsafeBitCast(proxy, to: Cat.self)
         XCTAssertEqual(castProxy.baseClassMethod(), Cat().baseClassMethod())
     }
-    
+
     func testImmediateSuperclassObjc() {
         guard let proxy = objcNyanNyanCat.superProxy else {
             XCTFail()
@@ -77,7 +77,7 @@ class SuperMessagingProxyTests: XCTestCase {
         XCTAssertEqual(castProxy.exclamation, ObjcNyanCat().exclamation)
         XCTAssertEqual(castProxy.awesomenessLevel, ObjcNyanCat().awesomenessLevel)
     }
-    
+
     func testNonImmediateSuperclassObjc() {
         guard let proxy = objcNyanNyanCat.superProxy(forAncestor: ObjcCat.self) else {
             XCTFail()
@@ -88,13 +88,4 @@ class SuperMessagingProxyTests: XCTestCase {
         XCTAssertEqual(proxy.awesomenessLevel, ObjcCat().awesomenessLevel)
     }
 
-    func testClassMethodsOfImmediateSuperclass() {
-        guard let proxy = NyanNyanCat.superProxy else {
-            XCTFail()
-            return
-        }
-
-        XCTAssertEqual(proxy.says(), NyanCat.says())
-        XCTAssertEqual(proxy.awesomenessLevel, NyanCat.awesomenessLevel)
-    }
 }

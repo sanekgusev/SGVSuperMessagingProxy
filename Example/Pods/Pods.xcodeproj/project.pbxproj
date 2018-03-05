@@ -11,71 +11,71 @@
 		0A166D69AD1FF0F459D895A22200D301 /* SuperMessageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83484A4997B8C4EEF2D312D6C63086D /* SuperMessageable.swift */; };
 		0BEA62229ABA4AB7663639DF448FB3DF /* NSObject+SGVSuperMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = A411CA86C41058D5532BDBFB7529C117 /* NSObject+SGVSuperMessaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CD607644CD20C634012E43548579732 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */; };
-		0D21B53A5D586EB67D6D6D49317C0C96 /* Pods-ObjcTests-iOSObjcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F4EA7C274906FCE245EFA082A39F5C /* Pods-ObjcTests-iOSObjcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D21B53A5D586EB67D6D6D49317C0C96 /* Pods-ObjcTests-iOSObjcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CFD39528EEC62415284AAB4821AB366 /* Pods-ObjcTests-iOSObjcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D8058FF9DEA5ECD97895C52D254E4A9 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		10CE025A2775B9AAB0294AE122CC4667 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
 		10E876F870E6EFBCCDDFB10F7C250C8B /* SwiftTrampolines.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FDCE1A3A7FDAC17A9CFBF77F146850A /* SwiftTrampolines.c */; };
 		130B102F06CFFDA868A62A9D6969EF88 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1351A844CD2664CA02657FC85C93AF29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */; };
-		1848B5CAA206E48D26793D9C8823D09C /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589F5C396C3F1FBF42C1D822DA2B80C /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m */; };
+		1848B5CAA206E48D26793D9C8823D09C /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B0E3D8338C9EBABA8798FCFCC52B3 /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m */; };
+		19E2C9E9C7386AEAD57B36A09ED081A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
 		1B1455DFC46F7B5DD6856675E3A07EDE /* ObjcTrampolines.c in Sources */ = {isa = PBXBuildFile; fileRef = 531858C9AAD6D28CA248BCCE9AEE5CBE /* ObjcTrampolines.c */; };
-		1B4656067FFE3974A522D6785B192509 /* Pods-SwiftTests-tvOSSwiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37DF7F2AEEBC2F036C16127CFD0FB5 /* Pods-SwiftTests-tvOSSwiftTests-dummy.m */; };
-		1F2CF5534D77D09F8A6EFA68C2FF6D48 /* Pods-ObjcTests-tvOSObjcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F55D6FBC296BD4671688392DDE85C7 /* Pods-ObjcTests-tvOSObjcTests-dummy.m */; };
+		1B4656067FFE3974A522D6785B192509 /* Pods-SwiftTests-tvOSSwiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D714C8590670B3DFE2C49B5CD83E54B /* Pods-SwiftTests-tvOSSwiftTests-dummy.m */; };
+		1F2CF5534D77D09F8A6EFA68C2FF6D48 /* Pods-ObjcTests-tvOSObjcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455DF9B10FD9E1D9E7CDFBE2D198ADB /* Pods-ObjcTests-tvOSObjcTests-dummy.m */; };
 		2308FD150088D19C67C9BF0D2D9EF9B2 /* NSObject+SGVSuperMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = A411CA86C41058D5532BDBFB7529C117 /* NSObject+SGVSuperMessaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2663D3EC64A0C7A6CCCC75B08382DFD1 /* SGVSuperMessagingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D51F82DF5806F82B993F2A65C0053 /* SGVSuperMessagingProxy.m */; };
-		26F47963A80A8EB240BADA831DE3EEDA /* Pods-SwiftTests-OSXSwiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8C000490B8729A114E816B5F3504F8 /* Pods-SwiftTests-OSXSwiftTests-dummy.m */; };
-		275494F6AC233B0EED6B09D2BC34BD12 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CEB1971E3AA208CB299B8B939E7C0E7 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26F47963A80A8EB240BADA831DE3EEDA /* Pods-SwiftTests-OSXSwiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BD789A8D8D72FD121D547706DE8AE7 /* Pods-SwiftTests-OSXSwiftTests-dummy.m */; };
+		275494F6AC233B0EED6B09D2BC34BD12 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53555DC462202BF1B5562B677A71BAD8 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2844C3A366F8C1BE2137529D26E7E29F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */; };
-		30C6B4A3A83D562331ABD2AF761C1D50 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 366148665E8774C24C68F88738000206 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30C6B4A3A83D562331ABD2AF761C1D50 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC704B207CFBEF57320BD7F39A81F777 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34649828C6E5271168D751F0F2B56209 /* ObjcTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 194EEB475D61AA4348DA407AEEDE5F2C /* ObjcTrampolines.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		349BF906DE461712858C596537C7142B /* SGVSuperMessagingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D51F82DF5806F82B993F2A65C0053 /* SGVSuperMessagingProxy.m */; };
 		34BD4197BD8CC55870B8D3C2788E8060 /* SuperMessagingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE34A6BB63C5C19829B04F238DB295 /* SuperMessagingProxy.swift */; };
-		3CF63DE267F11AAE0694DEAB849485E7 /* Pods-ObjcTests-OSXObjcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EBA7AD0EBC590263A82673F432B36C /* Pods-ObjcTests-OSXObjcTests-dummy.m */; };
-		44E80E0557835D1F8EB166034F9F22C6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */; };
+		38E1300FA9407F5118CC09F1E0E20F88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
+		3CF63DE267F11AAE0694DEAB849485E7 /* Pods-ObjcTests-OSXObjcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B9599450577A196F8908059B5777 /* Pods-ObjcTests-OSXObjcTests-dummy.m */; };
 		4511DE734D06C71FA630B732B3B58CF7 /* SGVSuperMessagingProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 29512C4747DAFD030C5110867A5A26FC /* SGVSuperMessagingProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F005DCAB70DCEB35AEF2B4882394E8B /* Pods-ObjcTests-iOSObjcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E3F595F563D5B32F3D8798248246C0 /* Pods-ObjcTests-iOSObjcTests-dummy.m */; };
+		4F005DCAB70DCEB35AEF2B4882394E8B /* Pods-ObjcTests-iOSObjcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DC784E0CD2D73A81E485685B25925F /* Pods-ObjcTests-iOSObjcTests-dummy.m */; };
 		50181CA86DD926DD26011314834B6CED /* NSObject+SGVSuperMessaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 4283447D51F4C8340F8BECEA6C99B11B /* NSObject+SGVSuperMessaging.m */; };
 		53749FCE2DB3887323F111D45A14E6A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */; };
-		560F2BF445BC9967498F6AC4C9E06BAC /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 306D529DA14B6B1D248B885378A5F2DE /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m */; };
+		560F2BF445BC9967498F6AC4C9E06BAC /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D253AB54D13303F062C37315BC0FB6 /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m */; };
 		5846C69CDA2B92AF7DF48657378BEBA8 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5B194787CF261DAFDFD619EA1D289823 /* ObjcTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 194EEB475D61AA4348DA407AEEDE5F2C /* ObjcTrampolines.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5DEB9E82C71467A6431DED6805FC1BCF /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58A2B0764401D5957594CCF8F0A44290 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6232FCDF659B9BC38E22CE400DB24F56 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 053A6776C196467590F63C9C397F73B4 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m */; };
+		5DEB9E82C71467A6431DED6805FC1BCF /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E2F0DF29ED8FC37BF136CF33CEE315 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6232FCDF659B9BC38E22CE400DB24F56 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BAACC2C082B2587CC63EFD0B71D36 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m */; };
 		79161B5EC6C758F744795BE87C54E02F /* ObjcTrampolines.c in Sources */ = {isa = PBXBuildFile; fileRef = 531858C9AAD6D28CA248BCCE9AEE5CBE /* ObjcTrampolines.c */; };
-		7C0FBFE6A088363FC7CB3056350A3B32 /* Pods-ObjcTests-OSXObjcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9446BF192B3657084673EB97165E98C1 /* Pods-ObjcTests-OSXObjcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C0FBFE6A088363FC7CB3056350A3B32 /* Pods-ObjcTests-OSXObjcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA1EEEC150F92227F4134B2DB3507478 /* Pods-ObjcTests-OSXObjcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E220AC9A248623195113979F6931169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */; };
 		84E964E6FD4D693F72396374EB271019 /* NSObject+SGVSuperMessaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 4283447D51F4C8340F8BECEA6C99B11B /* NSObject+SGVSuperMessaging.m */; };
-		915134468E403CF898AD9D112C26B962 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DF37E01B3A70F45BAFFDB9E41DE7EE /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m */; };
+		915134468E403CF898AD9D112C26B962 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7B059500C2B9B1DBAAE4630C2FED84 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m */; };
 		94A8252EB3FD10F75E84FFDE64553A63 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		94C1060033E5F901CB69F745A32A67B2 /* NSObject+SGVSuperMessaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 4283447D51F4C8340F8BECEA6C99B11B /* NSObject+SGVSuperMessaging.m */; };
 		962AECAA511CF30BD02DAF41F3F80C00 /* ObjcTrampolines.c in Sources */ = {isa = PBXBuildFile; fileRef = 531858C9AAD6D28CA248BCCE9AEE5CBE /* ObjcTrampolines.c */; };
 		986B8355EE6B92DAD57F0EF3D546EB43 /* SuperMessageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83484A4997B8C4EEF2D312D6C63086D /* SuperMessageable.swift */; };
 		9CBB5010EEF270E24C56CA7D5F6178E5 /* SuperMessageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83484A4997B8C4EEF2D312D6C63086D /* SuperMessageable.swift */; };
-		A6FA610F1D8D7C4C8EE1620AF9A09958 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A4E08B37D9F81FB5184C60B09E0EC1 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6FA610F1D8D7C4C8EE1620AF9A09958 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5C329000670F722723409A92C8A6492 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABC28459D0C448B3F25DE86347C5F743 /* SuperMessagingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE34A6BB63C5C19829B04F238DB295 /* SuperMessagingProxy.swift */; };
-		AFCD1BA8A4E070BC516A4255D0F10995 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EBE1C2E71ADB50A5244CA4F5D0F549 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m */; };
-		B58A76BEE63BB8F338F6191A9FAC1A1B /* Pods-ObjcTests-tvOSObjcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E460F21C91F34755797B736F44BCF21D /* Pods-ObjcTests-tvOSObjcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFCD1BA8A4E070BC516A4255D0F10995 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C93F996063079CC920B68A3537D788 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m */; };
+		B58A76BEE63BB8F338F6191A9FAC1A1B /* Pods-ObjcTests-tvOSObjcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D96D88D2562ADB687FDCA129B1A67520 /* Pods-ObjcTests-tvOSObjcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6E7E7988D4CA82B54990DBB399902D9 /* ObjcTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 194EEB475D61AA4348DA407AEEDE5F2C /* ObjcTrampolines.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BC353A438DA54FE389345E0C2D09CB63 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		BD4D0E5DA5AF331D6E6EA0C4C348F917 /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D85CC618D6EAE4800190C6B455E8BB2 /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C258CC8747B27E687EA384026787E4B4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */; };
+		BD4D0E5DA5AF331D6E6EA0C4C348F917 /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5F40E1ACDFCDC32499C700D4ABF5EFF /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C48162CA691DBCF1582AF03B59CE4CCF /* SGVSuperMessagingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D51F82DF5806F82B993F2A65C0053 /* SGVSuperMessagingProxy.m */; };
 		C4964CB011417F6EC1C4FFDB8429005F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */; };
-		C7A3D21268E62EBE9DDDF7C1B42EC55F /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BE91A0CE02C6F1F78E8990B6A616 /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m */; };
-		C9E3224D3A578102D9919BB4A810B24B /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 159DA711D248166A68EECCCF282C53F0 /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE168B2562BA969EBF68E18DD9A33C7C /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D5DE3CDA38F2156504CE68537C60155 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7A3D21268E62EBE9DDDF7C1B42EC55F /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4785AB625A7288D2CABB15EC707882B0 /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m */; };
+		C9E3224D3A578102D9919BB4A810B24B /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CBD8FF31CF2EB38BCF7B304F9680643 /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE168B2562BA969EBF68E18DD9A33C7C /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6C16F3BB5DC542CD3BE7E3D86478AA /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF2C5C2C6DE4673C9CB16F411ADD4D51 /* SGVSuperMessagingProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 29512C4747DAFD030C5110867A5A26FC /* SGVSuperMessagingProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D8B664ADA8EAF8FE3D2D067A559906 /* SwiftTrampolines.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FDCE1A3A7FDAC17A9CFBF77F146850A /* SwiftTrampolines.c */; };
-		D6177331EACEF213652768BC11EADF38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */; };
-		DE1DBAA3B3525861349E1B532315DD79 /* Pods-SwiftTests-OSXSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A1A11C1F2CFD7C2FED6EC9970236C81 /* Pods-SwiftTests-OSXSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE5DA1D93D320131BAABE48D34D592DC /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35710BFB8F09F543AA593AFA5AF01ADB /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE1DBAA3B3525861349E1B532315DD79 /* Pods-SwiftTests-OSXSwiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2AEB342DE13433FC301C28FC31320D /* Pods-SwiftTests-OSXSwiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE5DA1D93D320131BAABE48D34D592DC /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EA0498E74DD758A0D4665BC998FDFCA /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401FD03E6EFF55759E31EF8449A1C3B /* NSObject+SGVSuperMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = A411CA86C41058D5532BDBFB7529C117 /* NSObject+SGVSuperMessaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8B88479F8B0D8D76790B25BC783887B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */; };
 		EE6BD1F0E1D9CC015BD84DB4E7812044 /* TrampolineMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EECFBDBD82D02E067C9EFEB537CB4FC8 /* SGVSuperMessagingProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 29512C4747DAFD030C5110867A5A26FC /* SGVSuperMessagingProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFA7A9B936FE5B2222F976B14EFD6603 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */; };
-		F4FFBE351A6056A32BE3C0889AF7949D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */; };
+		F4E3D84F3ECF39C922D85EA9EA488412 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
 		FB120DE0E591D1DD8388891B1D58A8E1 /* SwiftTrampolines.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FDCE1A3A7FDAC17A9CFBF77F146850A /* SwiftTrampolines.c */; };
-		FB28F3834FD63FC277CF354F3FB1077C /* Pods-SwiftTests-iOSSwiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 225B2707D8E88757D54D25C602CD24E8 /* Pods-SwiftTests-iOSSwiftTests-dummy.m */; };
+		FB28F3834FD63FC277CF354F3FB1077C /* Pods-SwiftTests-iOSSwiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9ECCFF5691A5E13CFF5FB166BC2E9D /* Pods-SwiftTests-iOSSwiftTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,131 +124,131 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02AFE3637C30ED336107F6421741D946 /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig"; sourceTree = "<group>"; };
-		03DDD6B972AD41BAB0349903443F7D57 /* Pods-SwiftTests-tvOSSwiftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-tvOSSwiftTests-resources.sh"; sourceTree = "<group>"; };
-		053A6776C196467590F63C9C397F73B4 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m"; sourceTree = "<group>"; };
-		0563ED43A1358DB703D2AA706E5D72BB /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig"; sourceTree = "<group>"; };
-		0589F5C396C3F1FBF42C1D822DA2B80C /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m"; sourceTree = "<group>"; };
-		09DFB9F443BE5E9B0C5EBC581A534AA1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09F2A0AAB9A5FF76FB5B0597EA6C9C06 /* Pods-SwiftTests-OSXSwiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-OSXSwiftTests-frameworks.sh"; sourceTree = "<group>"; };
-		13E5056947A624C20F8D922A09C8B959 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch"; sourceTree = "<group>"; };
-		159DA711D248166A68EECCCF282C53F0 /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h"; sourceTree = "<group>"; };
-		167BA73105257B2C2C8CC444EB5F953A /* Pods-ObjcTests-OSXObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-OSXObjcTests.release.xcconfig"; sourceTree = "<group>"; };
-		176AF76B6CA8ED043BE8C973C14509CF /* SGVSuperMessagingProxy-Common-Swift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "SGVSuperMessagingProxy-Common-Swift-iOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS.modulemap"; sourceTree = "<group>"; };
-		18240C48146F4769CE05F165CE425F55 /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftTests-OSXSwiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0455DF9B10FD9E1D9E7CDFBE2D198ADB /* Pods-ObjcTests-tvOSObjcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTests-tvOSObjcTests-dummy.m"; sourceTree = "<group>"; };
+		046D44E6C22ECBC914994F3841103FD5 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftTests-iOSSwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		04712377C319304B1208E928303E9CD4 /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftTests-OSXSwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		06D253AB54D13303F062C37315BC0FB6 /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m"; sourceTree = "<group>"; };
+		07C592E65B616EFE91CA98F23F5E3A00 /* Pods-SwiftTests-iOSSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-iOSSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		0D8756075AB1CE1ADC1D86F85808263C /* Pods-ObjcTests-iOSObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-iOSObjcTests.release.xcconfig"; sourceTree = "<group>"; };
+		0DF487E64FF197AE43BAD9274A70C97B /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftTests-OSXSwiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0F9ECCFF5691A5E13CFF5FB166BC2E9D /* Pods-SwiftTests-iOSSwiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftTests-iOSSwiftTests-dummy.m"; sourceTree = "<group>"; };
+		1598360D8F2EC777F06B3475201F90F0 /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTests-tvOSObjcTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		176E5A6CB58227B8EE89A04B386F5431 /* Pods-ObjcTests-tvOSObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-tvOSObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		181CFC6FE1969AFE155605921B0C10D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		194EEB475D61AA4348DA407AEEDE5F2C /* ObjcTrampolines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjcTrampolines.h; path = "Pod/Sources/Objective-C/ObjcTrampolines.h"; sourceTree = "<group>"; };
-		1BB99B9F4BBB84DE376E4B5E3BF8ADF2 /* Pods-SwiftTests-tvOSSwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftTests-tvOSSwiftTests.modulemap"; sourceTree = "<group>"; };
-		1CEB1971E3AA208CB299B8B939E7C0E7 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		1D76BB08CB3362D4A71722565903583E /* Pods-SwiftTests-iOSSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-iOSSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		1E9E5E1DE930F0682369188C2BC0C933 /* Pods-ObjcTests-OSXObjcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-OSXObjcTests-resources.sh"; sourceTree = "<group>"; };
-		225B2707D8E88757D54D25C602CD24E8 /* Pods-SwiftTests-iOSSwiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftTests-iOSSwiftTests-dummy.m"; sourceTree = "<group>"; };
-		24EDA9F4379210E9AAB99DB420E0BF41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19905676DF0F0E0A5651DCAA2D6391C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/Info.plist"; sourceTree = "<group>"; };
+		213BFFD8DDD5FBA8E6FD28D21EAE7B5E /* Pods-SwiftTests-OSXSwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftTests-OSXSwiftTests.modulemap"; sourceTree = "<group>"; };
 		2669329672994E7AE6E685D4701CF3D9 /* SGVSuperMessagingProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SGVSuperMessagingProxy.framework; path = "SGVSuperMessagingProxy-Common-Swift-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		276DC372D97A9ABB8E61048C098622A4 /* Pods-ObjcTests-tvOSObjcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-tvOSObjcTests-resources.sh"; sourceTree = "<group>"; };
-		287128D151B5CA8C38E746E817559583 /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftTests-tvOSSwiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		293BB7A264C7F8B53ADF02132F957C08 /* Pods-ObjcTests-OSXObjcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-OSXObjcTests-frameworks.sh"; sourceTree = "<group>"; };
+		28862587E68D0F0FAC7279CEFC13BD1A /* Pods-ObjcTests-iOSObjcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTests-iOSObjcTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		29512C4747DAFD030C5110867A5A26FC /* SGVSuperMessagingProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGVSuperMessagingProxy.h; path = "Pod/Sources/Objective-C/SGVSuperMessagingProxy.h"; sourceTree = "<group>"; };
-		2C44277C62A073B3CA2E7C214497F791 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/Info.plist"; sourceTree = "<group>"; };
-		2D5DE3CDA38F2156504CE68537C60155 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h"; sourceTree = "<group>"; };
-		2D85CC618D6EAE4800190C6B455E8BB2 /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftTests-tvOSSwiftTests-umbrella.h"; sourceTree = "<group>"; };
-		306D529DA14B6B1D248B885378A5F2DE /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m"; sourceTree = "<group>"; };
-		35710BFB8F09F543AA593AFA5AF01ADB /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h"; sourceTree = "<group>"; };
-		366148665E8774C24C68F88738000206 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		379BB04A39F70D0877182FBA54E943BC /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		2A26C1FEF85FBC7D9878C02AF8040A24 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D714C8590670B3DFE2C49B5CD83E54B /* Pods-SwiftTests-tvOSSwiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftTests-tvOSSwiftTests-dummy.m"; sourceTree = "<group>"; };
+		2EA0498E74DD758A0D4665BC998FDFCA /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h"; sourceTree = "<group>"; };
+		35EA4942DCC9DDF690AEE7ECDF8A619C /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig"; sourceTree = "<group>"; };
 		37E01F04F677A8629958B7F1DE6295F3 /* SGVSuperMessagingProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SGVSuperMessagingProxy.framework; path = "SGVSuperMessagingProxy-Common-Swift-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3939B9FB9A10DB47B2EE4BEC97A859E3 /* Pods-SwiftTests-tvOSSwiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-tvOSSwiftTests-frameworks.sh"; sourceTree = "<group>"; };
-		39AF23DD84007B0A362E6A809499857D /* Pods-ObjcTests-tvOSObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-tvOSObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
-		39EBA7AD0EBC590263A82673F432B36C /* Pods-ObjcTests-OSXObjcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTests-OSXObjcTests-dummy.m"; sourceTree = "<group>"; };
-		3E37DF7F2AEEBC2F036C16127CFD0FB5 /* Pods-SwiftTests-tvOSSwiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftTests-tvOSSwiftTests-dummy.m"; sourceTree = "<group>"; };
+		385E72E853E3D9C72C3367049ACCAF71 /* Pods-ObjcTests-iOSObjcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-iOSObjcTests-frameworks.sh"; sourceTree = "<group>"; };
+		3CBD8FF31CF2EB38BCF7B304F9680643 /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h"; sourceTree = "<group>"; };
+		3CFD39528EEC62415284AAB4821AB366 /* Pods-ObjcTests-iOSObjcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTests-iOSObjcTests-umbrella.h"; sourceTree = "<group>"; };
+		3D334582EC436C77968352E6709B0AD5 /* Pods-ObjcTests-OSXObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-OSXObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4283447D51F4C8340F8BECEA6C99B11B /* NSObject+SGVSuperMessaging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SGVSuperMessaging.m"; path = "Pod/Sources/Objective-C/NSObject+SGVSuperMessaging.m"; sourceTree = "<group>"; };
-		4314134DFCE4393AA6E69BF8FC3D9F70 /* Pods-ObjcTests-tvOSObjcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-tvOSObjcTests-frameworks.sh"; sourceTree = "<group>"; };
-		4B7A4975F6F008E103B5FDF01A839337 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap"; sourceTree = "<group>"; };
-		4DD60F90B34E5EDC3670E8CF54840FC9 /* Pods-SwiftTests-iOSSwiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-iOSSwiftTests-frameworks.sh"; sourceTree = "<group>"; };
+		471D47A2892E16334E215E9CC3DCD8F8 /* Pods-SwiftTests-tvOSSwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftTests-tvOSSwiftTests.modulemap"; sourceTree = "<group>"; };
+		4785AB625A7288D2CABB15EC707882B0 /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m"; sourceTree = "<group>"; };
+		48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		4AB2DD5187BA484F1BE389EA9CD0CC9B /* SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch"; sourceTree = "<group>"; };
+		4B0182543BA9134B42FE9E29ED63715C /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig"; sourceTree = "<group>"; };
+		4D742A06C2D1169A39544A5B20832816 /* Pods-ObjcTests-iOSObjcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTests-iOSObjcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4F094AF1EFA6A74067E9AEF51D2B008B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/Info.plist"; sourceTree = "<group>"; };
 		4F5FB9F50992F3B4351824845BAFFB98 /* SGVSuperMessagingProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SGVSuperMessagingProxy.framework; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		50D970C96D9C7D6341002BFAEBA05656 /* Pods-ObjcTests-iOSObjcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTests-iOSObjcTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4F9353AF58AB5F9708201B2AD75A6400 /* SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap"; sourceTree = "<group>"; };
+		503D5131D789ACD9468256C377BFD120 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		510BAACC2C082B2587CC63EFD0B71D36 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m"; sourceTree = "<group>"; };
 		531858C9AAD6D28CA248BCCE9AEE5CBE /* ObjcTrampolines.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ObjcTrampolines.c; path = "Pod/Sources/Objective-C/ObjcTrampolines.c"; sourceTree = "<group>"; };
-		5335F12475679F3A1458E45E37731785 /* Pods-ObjcTests-iOSObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-iOSObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
-		54E88F6D0C083565AE24C60D9ADDAE14 /* SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap"; sourceTree = "<group>"; };
-		58A2B0764401D5957594CCF8F0A44290 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h"; sourceTree = "<group>"; };
-		59EC29BD7DCA432A3B18125269D212E7 /* Pods-ObjcTests-iOSObjcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-iOSObjcTests-resources.sh"; sourceTree = "<group>"; };
-		61C91A9320E824778E94FAB2166F0DA6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/Info.plist"; sourceTree = "<group>"; };
-		62283F8958200FF094F4ADD62FFFFED7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/Info.plist"; sourceTree = "<group>"; };
-		63356267118F1C740777ACC4964B9BC8 /* Pods-ObjcTests-iOSObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ObjcTests-iOSObjcTests.modulemap"; sourceTree = "<group>"; };
-		6483EB2742DF33DFABC6A860E2E374C2 /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53555DC462202BF1B5562B677A71BAD8 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		55A93C0B57A6AEE8E000DDAD2949CF3F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		585F016226490E00E0BA68A397860ED1 /* Pods-SwiftTests-OSXSwiftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-OSXSwiftTests-resources.sh"; sourceTree = "<group>"; };
+		5D0BDC4409C4A7F46545709DEBBAC667 /* Pods-SwiftTests-tvOSSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-tvOSSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F27559E39C2658BC6CC40A3A6177131 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig"; sourceTree = "<group>"; };
+		61610292CC1F1446B6D7993BDDC73D6C /* Pods-ObjcTests-iOSObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ObjcTests-iOSObjcTests.modulemap"; sourceTree = "<group>"; };
+		66678D260015EFADBB4E1801D1185282 /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftTests-tvOSSwiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		666EB72BA122F7CD0C0EBCE54B5756C4 /* Pods_SwiftTests_tvOSSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftTests_tvOSSwiftTests.framework; path = "Pods-SwiftTests-tvOSSwiftTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67549022D01DF006559E8D6E9FC11035 /* SGVSuperMessagingProxy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SGVSuperMessagingProxy.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		677A576DE95A270645EC2DE8D1E6A4F6 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap"; sourceTree = "<group>"; };
-		6A8C5D0153322C6CBEDF079DA7C5DAA0 /* SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch"; sourceTree = "<group>"; };
+		705C7BBEF46923E6D3746593C63EB15F /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		70DBA7D74F206573C8F6D6B625A6CD6A /* SGVSuperMessagingProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SGVSuperMessagingProxy.framework; path = "SGVSuperMessagingProxy-Common-Swift-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		73A4E08B37D9F81FB5184C60B09E0EC1 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftTests-iOSSwiftTests-umbrella.h"; sourceTree = "<group>"; };
 		7461AAFB7A771BCEC6E4E09204991FB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		74D0F0B22676E389A40EB7081698CB78 /* Pods_SwiftTests_OSXSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftTests_OSXSwiftTests.framework; path = "Pods-SwiftTests-OSXSwiftTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74DF37E01B3A70F45BAFFDB9E41DE7EE /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m"; sourceTree = "<group>"; };
-		75B5AD6421C67B95CEA8ACB659837924 /* Pods-SwiftTests-OSXSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-OSXSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		7821C23A0F3A6ACF2E3948F4114BC452 /* Pods-SwiftTests-OSXSwiftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-OSXSwiftTests-resources.sh"; sourceTree = "<group>"; };
-		7832B5676E2E0C2197306034562198CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A1A11C1F2CFD7C2FED6EC9970236C81 /* Pods-SwiftTests-OSXSwiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftTests-OSXSwiftTests-umbrella.h"; sourceTree = "<group>"; };
-		7C6719243F6E47155B267673B1AA1D2A /* SGVSuperMessagingProxy-Common-Objective-C-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS-prefix.pch"; sourceTree = "<group>"; };
-		7C9B5088ABE3374B0593D4677D29168C /* Pods-ObjcTests-OSXObjcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTests-OSXObjcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7E38D2036A41422607495C03D3EED41F /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig"; sourceTree = "<group>"; };
-		7F6FD2D598C97DBC223DE4225EA4CC92 /* Pods-SwiftTests-tvOSSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-tvOSSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		7697CAEF7E16EED011CD5A2B07A3949B /* Pods-ObjcTests-iOSObjcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-iOSObjcTests-resources.sh"; sourceTree = "<group>"; };
+		77F3CF819FB29842828651365D38FA74 /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig"; sourceTree = "<group>"; };
+		78BD789A8D8D72FD121D547706DE8AE7 /* Pods-SwiftTests-OSXSwiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftTests-OSXSwiftTests-dummy.m"; sourceTree = "<group>"; };
+		7A0B0E3D8338C9EBABA8798FCFCC52B3 /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m"; sourceTree = "<group>"; };
+		7E4236D6902ED8F3B8669A37D8753A51 /* Pods-SwiftTests-iOSSwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftTests-iOSSwiftTests.modulemap"; sourceTree = "<group>"; };
+		8039E6AB0B729361B4677206E65E0B64 /* Pods-SwiftTests-iOSSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-iOSSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		811D51F82DF5806F82B993F2A65C0053 /* SGVSuperMessagingProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SGVSuperMessagingProxy.m; path = "Pod/Sources/Objective-C/SGVSuperMessagingProxy.m"; sourceTree = "<group>"; };
-		817818D9EC72DBCA4AF1C37A85F0A511 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftTests-iOSSwiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		82800D6130FF63E1B812DD709EC9B543 /* Pods-ObjcTests-OSXObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ObjcTests-OSXObjcTests.modulemap"; sourceTree = "<group>"; };
 		82CE34A6BB63C5C19829B04F238DB295 /* SuperMessagingProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuperMessagingProxy.swift; path = Pod/Sources/Swift/SuperMessagingProxy.swift; sourceTree = "<group>"; };
 		85B49914C098E9E60517948103C68A11 /* Pods_SwiftTests_iOSSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftTests_iOSSwiftTests.framework; path = "Pods-SwiftTests-iOSSwiftTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8772DD84C172DC15766AEEE5DDA60F33 /* Pods-ObjcTests-iOSObjcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTests-iOSObjcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		88C4BE91A0CE02C6F1F78E8990B6A616 /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m"; sourceTree = "<group>"; };
 		8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TrampolineMacros.h; path = Pod/Sources/Common/TrampolineMacros.h; sourceTree = "<group>"; };
 		8DB20E678B79D33D34AF4F6153405B27 /* Pods_ObjcTests_OSXObjcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ObjcTests_OSXObjcTests.framework; path = "Pods-ObjcTests-OSXObjcTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DC263D7F59A2A9215B7870A2B952B7B /* Pods-SwiftTests-iOSSwiftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-iOSSwiftTests-resources.sh"; sourceTree = "<group>"; };
 		8FDCE1A3A7FDAC17A9CFBF77F146850A /* SwiftTrampolines.c */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftTrampolines.c; path = Pod/Sources/Swift/SwiftTrampolines.c; sourceTree = "<group>"; };
-		9174811697EA9EDD88AC6C5F1B54BFC1 /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTests-tvOSObjcTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9227EC2451A6CEA276D47E592EACF22B /* Pods-SwiftTests-OSXSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-OSXSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		924A38A1BC8A4899A50B3902C6C019A3 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9446BF192B3657084673EB97165E98C1 /* Pods-ObjcTests-OSXObjcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTests-OSXObjcTests-umbrella.h"; sourceTree = "<group>"; };
-		9A98B000543CFA34EC3A0DFCFEA68BED /* Pods-ObjcTests-OSXObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-OSXObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9B03609B8619B5C00E20FE9042CA0731 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FD7A63DD5665F4AADD2A725B222159F /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig"; sourceTree = "<group>"; };
+		94C93F996063079CC920B68A3537D788 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m"; sourceTree = "<group>"; };
+		9D9A62471F496C52D595782B2E0B721F /* Pods-ObjcTests-OSXObjcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-OSXObjcTests-frameworks.sh"; sourceTree = "<group>"; };
+		9F61B9599450577A196F8908059B5777 /* Pods-ObjcTests-OSXObjcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTests-OSXObjcTests-dummy.m"; sourceTree = "<group>"; };
 		A149EC1E84674C2A688D3E8CB015A496 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		A2E3F595F563D5B32F3D8798248246C0 /* Pods-ObjcTests-iOSObjcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTests-iOSObjcTests-dummy.m"; sourceTree = "<group>"; };
+		A2333A92AD8B4D6AA85BE95D8E6CD1ED /* Pods-SwiftTests-OSXSwiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-OSXSwiftTests-frameworks.sh"; sourceTree = "<group>"; };
+		A2DC464A3074F89B70E9A43BCA5CCBA3 /* Pods-SwiftTests-tvOSSwiftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-tvOSSwiftTests-resources.sh"; sourceTree = "<group>"; };
 		A411CA86C41058D5532BDBFB7529C117 /* NSObject+SGVSuperMessaging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SGVSuperMessaging.h"; path = "Pod/Sources/Objective-C/NSObject+SGVSuperMessaging.h"; sourceTree = "<group>"; };
-		A5F55D6FBC296BD4671688392DDE85C7 /* Pods-ObjcTests-tvOSObjcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTests-tvOSObjcTests-dummy.m"; sourceTree = "<group>"; };
-		A72626949E9C2FAB76715515ABCA3F75 /* SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch"; sourceTree = "<group>"; };
-		A7F4EA7C274906FCE245EFA082A39F5C /* Pods-ObjcTests-iOSObjcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTests-iOSObjcTests-umbrella.h"; sourceTree = "<group>"; };
-		A81642BB80411E44ED179A26E9DA257E /* Pods-ObjcTests-tvOSObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-tvOSObjcTests.release.xcconfig"; sourceTree = "<group>"; };
 		A83484A4997B8C4EEF2D312D6C63086D /* SuperMessageable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuperMessageable.swift; path = Pod/Sources/Swift/SuperMessageable.swift; sourceTree = "<group>"; };
+		AB3CBD170CA6ABF635785D429DA09D7A /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap"; sourceTree = "<group>"; };
+		AC704B207CFBEF57320BD7F39A81F777 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		AD7C2D471B55AE3191026E88C6209DBE /* Pods-ObjcTests-tvOSObjcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-tvOSObjcTests-frameworks.sh"; sourceTree = "<group>"; };
+		ADAA08479247F29CCF99FF3BEEB06283 /* Pods-ObjcTests-OSXObjcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTests-OSXObjcTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B2E58D233AF2237971786403980DA909 /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig"; sourceTree = "<group>"; };
 		B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B3BBA2DF52B79082136D7784EA7CC34C /* Pods-SwiftTests-OSXSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-OSXSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4122D66FFF9081FC3839E248CF846CE /* SGVSuperMessagingProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SGVSuperMessagingProxy.framework; path = "SGVSuperMessagingProxy-Common-Objective-C-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B45EA034D542E28333BB0C4E2B27E84F /* Pods-SwiftTests-iOSSwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftTests-iOSSwiftTests.modulemap"; sourceTree = "<group>"; };
-		B6974BEAC9EFAA5EB552AE9C2DA5D913 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/Info.plist"; sourceTree = "<group>"; };
-		B7EBE1C2E71ADB50A5244CA4F5D0F549 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m"; sourceTree = "<group>"; };
+		B4B391BA6A52C71E82A6F19C31C516F1 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch"; sourceTree = "<group>"; };
+		B5F40E1ACDFCDC32499C700D4ABF5EFF /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftTests-tvOSSwiftTests-umbrella.h"; sourceTree = "<group>"; };
+		B658E30CF8C909BF443D2BAD19343999 /* Pods-SwiftTests-OSXSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-OSXSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6730B42275B837B35E28BFB34A5550A /* SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap"; sourceTree = "<group>"; };
 		B84E8575BCA08B691E1FD6C9F07D159E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		BA5AA6BC90EAE6B49E5AEDF2D2A07017 /* Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BAB564EFF6744DE053152FEE153628AB /* Pods-ObjcTests-iOSObjcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-iOSObjcTests-frameworks.sh"; sourceTree = "<group>"; };
-		BBFE0C793A185FEE70AD2F62B6E1B284 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS.modulemap"; sourceTree = "<group>"; };
-		BEF5C1037F9A992F941231197F696622 /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTests-tvOSObjcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C33CA11B71EB3CA650B6845E1A2A05A1 /* Pods-ObjcTests-tvOSObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ObjcTests-tvOSObjcTests.modulemap"; sourceTree = "<group>"; };
-		C36B539DA3CFDE1B881D9237CDC04164 /* SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch"; sourceTree = "<group>"; };
-		C621ADC94191BBDBD8B2C8CA1C67B497 /* SGVSuperMessagingProxy-Common-Swift-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "SGVSuperMessagingProxy-Common-Swift-macOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS.modulemap"; sourceTree = "<group>"; };
-		C85519530505C5B7BCFD6B260F874F59 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftTests-iOSSwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CC1A0CA16240B2C0F911F938D8988F6D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		B85097328B0A02466B500FA94F690C36 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/Info.plist"; sourceTree = "<group>"; };
+		BA1EEEC150F92227F4134B2DB3507478 /* Pods-ObjcTests-OSXObjcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTests-OSXObjcTests-umbrella.h"; sourceTree = "<group>"; };
+		BD0A2C832DD9CF9969B923BAF1B90EAC /* Pods-ObjcTests-OSXObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-OSXObjcTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE7B059500C2B9B1DBAAE4630C2FED84 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m"; sourceTree = "<group>"; };
+		C0CBAAD89281CE40591EEDB4C4F10001 /* Pods-ObjcTests-OSXObjcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-OSXObjcTests-resources.sh"; sourceTree = "<group>"; };
+		C36606E5EA1986D0696386F296437DE3 /* Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C455F68D0B7D515F2635F526A8446B66 /* Pods-ObjcTests-tvOSObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ObjcTests-tvOSObjcTests.modulemap"; sourceTree = "<group>"; };
+		C5114373A19E7EC62B3C9AAFC4104A87 /* SGVSuperMessagingProxy-Common-Swift-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SGVSuperMessagingProxy-Common-Swift-macOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS.modulemap"; sourceTree = "<group>"; };
+		C51D4022B56651F380989D8F83823630 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS-prefix.pch"; sourceTree = "<group>"; };
+		CD5DC817C00057CE238475CA10464D9B /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTests-tvOSObjcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CF87DE0EA08D01319B0CA0FBB81D1C5A /* Pods-SwiftTests-tvOSSwiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-tvOSSwiftTests-frameworks.sh"; sourceTree = "<group>"; };
+		D147EDFD9C88E830F3233D3F45A27CA2 /* Pods-SwiftTests-iOSSwiftTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-iOSSwiftTests-resources.sh"; sourceTree = "<group>"; };
 		D14B77D41DE309B48CA276ECD02E0678 /* SGVSuperMessagingProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SGVSuperMessagingProxy.framework; path = "SGVSuperMessagingProxy-Common-Objective-C-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D69A8FE42210FA3159A3F9DC1AD519D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D81CB30AA308B9C0D49A3163BEAC889A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C05AD246B30B290130A3A0F284423E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CE93F1E69AA5ED40A322E5FA770BF7 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftTests-iOSSwiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D580BC62C7A89C6F66040FEF28F6F259 /* Pods-ObjcTests-OSXObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ObjcTests-OSXObjcTests.modulemap"; sourceTree = "<group>"; };
+		D69DE45C79F247161DCCF40C510C054E /* SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		D6E2F0DF29ED8FC37BF136CF33CEE315 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h"; sourceTree = "<group>"; };
 		D8A6E0175128D27DC210EB8D34027C33 /* Pods_ObjcTests_tvOSObjcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ObjcTests_tvOSObjcTests.framework; path = "Pods-ObjcTests-tvOSObjcTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAA5BF873564AD0BB138C44ED8C4A528 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig"; sourceTree = "<group>"; };
-		E3995E5C4F3DA567051EACF25C5D19DC /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftTests-OSXSwiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E460F21C91F34755797B736F44BCF21D /* Pods-ObjcTests-tvOSObjcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTests-tvOSObjcTests-umbrella.h"; sourceTree = "<group>"; };
-		E59485D694CF99BB839211FD028F6976 /* Pods-ObjcTests-OSXObjcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ObjcTests-OSXObjcTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EBCE76B9908A2BFF05F9213155FD52AB /* Pods-SwiftTests-OSXSwiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftTests-OSXSwiftTests.modulemap"; sourceTree = "<group>"; };
-		EE3C8EF7E741E64D032142AB1D5B77DC /* Pods-SwiftTests-iOSSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftTests-iOSSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE8C000490B8729A114E816B5F3504F8 /* Pods-SwiftTests-OSXSwiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftTests-OSXSwiftTests-dummy.m"; sourceTree = "<group>"; };
-		F53137AACF9B1127A8F837EC22B4F8A9 /* Pods-ObjcTests-iOSObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-iOSObjcTests.release.xcconfig"; sourceTree = "<group>"; };
-		F7462E8B340CE3D131D9268F40555959 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Objective-C-macOS/SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig"; sourceTree = "<group>"; };
+		D96D88D2562ADB687FDCA129B1A67520 /* Pods-ObjcTests-tvOSObjcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ObjcTests-tvOSObjcTests-umbrella.h"; sourceTree = "<group>"; };
+		DC36A909FF3D5007148043CE67DD25D3 /* Pods-ObjcTests-OSXObjcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ObjcTests-OSXObjcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE6C16F3BB5DC542CD3BE7E3D86478AA /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h"; sourceTree = "<group>"; };
+		DF6FE8BFD37BCC4F6E5C89616DA594D3 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig"; sourceTree = "<group>"; };
+		E4DC784E0CD2D73A81E485685B25925F /* Pods-ObjcTests-iOSObjcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ObjcTests-iOSObjcTests-dummy.m"; sourceTree = "<group>"; };
+		E5C329000670F722723409A92C8A6492 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftTests-iOSSwiftTests-umbrella.h"; sourceTree = "<group>"; };
+		E729E80AD1FEC419240EEF5C8217152D /* Pods-SwiftTests-iOSSwiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftTests-iOSSwiftTests-frameworks.sh"; sourceTree = "<group>"; };
+		E9040B7D16440D1CB590CB13EABFC6D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E98ADFF7EF4D6079F518B2DB9E96BEED /* SGVSuperMessagingProxy-Common-Swift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SGVSuperMessagingProxy-Common-Swift-iOS.modulemap"; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/SGVSuperMessagingProxy-Common-Swift-iOS.modulemap"; sourceTree = "<group>"; };
+		EA2AEB342DE13433FC301C28FC31320D /* Pods-SwiftTests-OSXSwiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftTests-OSXSwiftTests-umbrella.h"; sourceTree = "<group>"; };
+		EBF7707A2240A28A58489FD07C4DFED6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/Info.plist"; sourceTree = "<group>"; };
+		ECA576D1C61A64D8D85B2D825ED11658 /* Pods-ObjcTests-iOSObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-iOSObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F130B8721E175421AB9AD6C18365C95F /* Pods-ObjcTests-tvOSObjcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ObjcTests-tvOSObjcTests-resources.sh"; sourceTree = "<group>"; };
+		F390F0A4E005C312930C68384D6B2A96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Swift-iOS/Info.plist"; sourceTree = "<group>"; };
+		F7BA1DBA0CEBF205F052ED28B2D3E354 /* SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Swift-macOS/SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch"; sourceTree = "<group>"; };
 		F903F97EAFF0F3C5AD493FFB0C7D1ED4 /* Pods_ObjcTests_iOSObjcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ObjcTests_iOSObjcTests.framework; path = "Pods-ObjcTests-iOSObjcTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9CDCF4844CB559AE64690D8FE2CDFB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SGVSuperMessagingProxy-Common-Swift-tvOS/Info.plist"; sourceTree = "<group>"; };
+		FA96F81A072B4D6603C736C06479CE69 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD6392310F8DEDF25FBAEC7CC058204F /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch"; path = "../SGVSuperMessagingProxy-Common-Objective-C-tvOS/SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		FF09365426CB6BD67B0A1E0CF803C85C /* Pods-ObjcTests-tvOSObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ObjcTests-tvOSObjcTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,7 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C258CC8747B27E687EA384026787E4B4 /* Cocoa.framework in Frameworks */,
+				19E2C9E9C7386AEAD57B36A09ED081A0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6177331EACEF213652768BC11EADF38 /* Cocoa.framework in Frameworks */,
+				F4E3D84F3ECF39C922D85EA9EA488412 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E80E0557835D1F8EB166034F9F22C6 /* Cocoa.framework in Frameworks */,
+				38E1300FA9407F5118CC09F1E0E20F88 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FFBE351A6056A32BE3C0889AF7949D /* Cocoa.framework in Frameworks */,
+				10CE025A2775B9AAB0294AE122CC4667 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,20 +351,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2667BC5BF0C5EC29CEDAA0659927B4 /* Pods-ObjcTests-iOSObjcTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA96F81A072B4D6603C736C06479CE69 /* Info.plist */,
+				61610292CC1F1446B6D7993BDDC73D6C /* Pods-ObjcTests-iOSObjcTests.modulemap */,
+				4D742A06C2D1169A39544A5B20832816 /* Pods-ObjcTests-iOSObjcTests-acknowledgements.markdown */,
+				28862587E68D0F0FAC7279CEFC13BD1A /* Pods-ObjcTests-iOSObjcTests-acknowledgements.plist */,
+				E4DC784E0CD2D73A81E485685B25925F /* Pods-ObjcTests-iOSObjcTests-dummy.m */,
+				385E72E853E3D9C72C3367049ACCAF71 /* Pods-ObjcTests-iOSObjcTests-frameworks.sh */,
+				7697CAEF7E16EED011CD5A2B07A3949B /* Pods-ObjcTests-iOSObjcTests-resources.sh */,
+				3CFD39528EEC62415284AAB4821AB366 /* Pods-ObjcTests-iOSObjcTests-umbrella.h */,
+				ECA576D1C61A64D8D85B2D825ED11658 /* Pods-ObjcTests-iOSObjcTests.debug.xcconfig */,
+				0D8756075AB1CE1ADC1D86F85808263C /* Pods-ObjcTests-iOSObjcTests.release.xcconfig */,
+			);
+			name = "Pods-ObjcTests-iOSObjcTests";
+			path = "Target Support Files/Pods-ObjcTests-iOSObjcTests";
+			sourceTree = "<group>";
+		};
 		55D5BB0B413244251723A5493F45EE4B /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				B38A88E0776EAF5001831CAEFF93C9A0 /* Foundation.framework */,
 			);
 			name = tvOS;
-			sourceTree = "<group>";
-		};
-		56FC8954006B1141111A205386DF06CA /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				CFB56E35108A1FCAA1F5604A02FFCDC5 /* Cocoa.framework */,
-			);
-			name = "OS X";
 			sourceTree = "<group>";
 		};
 		5FD860B793C7D4461784421EEB05819F /* Objective-C */ = {
@@ -380,15 +390,59 @@
 			name = "Objective-C";
 			sourceTree = "<group>";
 		};
+		6500DFD77813BB80B507670ECBEF4A1D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7707A2240A28A58489FD07C4DFED6 /* Info.plist */,
+				E9040B7D16440D1CB590CB13EABFC6D0 /* Info.plist */,
+				19905676DF0F0E0A5651DCAA2D6391C1 /* Info.plist */,
+				B85097328B0A02466B500FA94F690C36 /* Info.plist */,
+				F390F0A4E005C312930C68384D6B2A96 /* Info.plist */,
+				4F094AF1EFA6A74067E9AEF51D2B008B /* Info.plist */,
+				924A38A1BC8A4899A50B3902C6C019A3 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.modulemap */,
+				4B0182543BA9134B42FE9E29ED63715C /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */,
+				510BAACC2C082B2587CC63EFD0B71D36 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m */,
+				C51D4022B56651F380989D8F83823630 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-prefix.pch */,
+				DE6C16F3BB5DC542CD3BE7E3D86478AA /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h */,
+				B6730B42275B837B35E28BFB34A5550A /* SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap */,
+				5F27559E39C2658BC6CC40A3A6177131 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */,
+				94C93F996063079CC920B68A3537D788 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m */,
+				B4B391BA6A52C71E82A6F19C31C516F1 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch */,
+				D6E2F0DF29ED8FC37BF136CF33CEE315 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h */,
+				AB3CBD170CA6ABF635785D429DA09D7A /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap */,
+				DF6FE8BFD37BCC4F6E5C89616DA594D3 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */,
+				BE7B059500C2B9B1DBAAE4630C2FED84 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m */,
+				FD6392310F8DEDF25FBAEC7CC058204F /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch */,
+				AC704B207CFBEF57320BD7F39A81F777 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h */,
+				E98ADFF7EF4D6079F518B2DB9E96BEED /* SGVSuperMessagingProxy-Common-Swift-iOS.modulemap */,
+				B2E58D233AF2237971786403980DA909 /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */,
+				4785AB625A7288D2CABB15EC707882B0 /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m */,
+				4AB2DD5187BA484F1BE389EA9CD0CC9B /* SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch */,
+				3CBD8FF31CF2EB38BCF7B304F9680643 /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h */,
+				C5114373A19E7EC62B3C9AAFC4104A87 /* SGVSuperMessagingProxy-Common-Swift-macOS.modulemap */,
+				35EA4942DCC9DDF690AEE7ECDF8A619C /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */,
+				7A0B0E3D8338C9EBABA8798FCFCC52B3 /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m */,
+				F7BA1DBA0CEBF205F052ED28B2D3E354 /* SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch */,
+				2EA0498E74DD758A0D4665BC998FDFCA /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h */,
+				4F9353AF58AB5F9708201B2AD75A6400 /* SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap */,
+				77F3CF819FB29842828651365D38FA74 /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */,
+				06D253AB54D13303F062C37315BC0FB6 /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m */,
+				D69DE45C79F247161DCCF40C510C054E /* SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch */,
+				53555DC462202BF1B5562B677A71BAD8 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SGVSuperMessagingProxy-Common-Objective-C-iOS";
+			sourceTree = "<group>";
+		};
 		6BB3ABE57579CA67AC8AB2E8ABDF4971 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D689639F8E213120C55B82D3806C88AD /* Pods-ObjcTests-iOSObjcTests */,
-				825759960FB867E13E3B53CABFBB6DEF /* Pods-ObjcTests-OSXObjcTests */,
-				AF64F61285565492ECD222DBC6E8AE6E /* Pods-ObjcTests-tvOSObjcTests */,
-				BE39AD3BB5C22683E75687BB0B063901 /* Pods-SwiftTests-iOSSwiftTests */,
-				95337D039196AD2A7E2416D6617C7516 /* Pods-SwiftTests-OSXSwiftTests */,
-				7A16DD4AB406E72DD441CC081FFCCC52 /* Pods-SwiftTests-tvOSSwiftTests */,
+				3C2667BC5BF0C5EC29CEDAA0659927B4 /* Pods-ObjcTests-iOSObjcTests */,
+				D877341166E4404AA0D6CE20680652B7 /* Pods-ObjcTests-OSXObjcTests */,
+				F2FA5EE4A1DD84F423E28BD3702734E4 /* Pods-ObjcTests-tvOSObjcTests */,
+				DC395AE553307A3041AA87EA93CDD53D /* Pods-SwiftTests-iOSSwiftTests */,
+				ABC001504649FB3A5FA058CE65C869DB /* Pods-SwiftTests-OSXSwiftTests */,
+				98D3B45FACD94C26F74E59C585E3B146 /* Pods-SwiftTests-tvOSSwiftTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -407,29 +461,11 @@
 				96A08CEDAFD0D957C00427A927466E36 /* Common */,
 				5FD860B793C7D4461784421EEB05819F /* Objective-C */,
 				9F733FCC4508063DE5EA6AADE1234CE4 /* Pod */,
-				E9FE9E536FA34D12E688906718715DC5 /* Support Files */,
+				6500DFD77813BB80B507670ECBEF4A1D /* Support Files */,
 				EBB238437BC3649AC278D35AA205D8DF /* Swift */,
 			);
 			name = SGVSuperMessagingProxy;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		7A16DD4AB406E72DD441CC081FFCCC52 /* Pods-SwiftTests-tvOSSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				7832B5676E2E0C2197306034562198CD /* Info.plist */,
-				1BB99B9F4BBB84DE376E4B5E3BF8ADF2 /* Pods-SwiftTests-tvOSSwiftTests.modulemap */,
-				6483EB2742DF33DFABC6A860E2E374C2 /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown */,
-				287128D151B5CA8C38E746E817559583 /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.plist */,
-				3E37DF7F2AEEBC2F036C16127CFD0FB5 /* Pods-SwiftTests-tvOSSwiftTests-dummy.m */,
-				3939B9FB9A10DB47B2EE4BEC97A859E3 /* Pods-SwiftTests-tvOSSwiftTests-frameworks.sh */,
-				03DDD6B972AD41BAB0349903443F7D57 /* Pods-SwiftTests-tvOSSwiftTests-resources.sh */,
-				2D85CC618D6EAE4800190C6B455E8BB2 /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h */,
-				BA5AA6BC90EAE6B49E5AEDF2D2A07017 /* Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig */,
-				7F6FD2D598C97DBC223DE4225EA4CC92 /* Pods-SwiftTests-tvOSSwiftTests.release.xcconfig */,
-			);
-			name = "Pods-SwiftTests-tvOSSwiftTests";
-			path = "Target Support Files/Pods-SwiftTests-tvOSSwiftTests";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -443,48 +479,30 @@
 			);
 			sourceTree = "<group>";
 		};
-		825759960FB867E13E3B53CABFBB6DEF /* Pods-ObjcTests-OSXObjcTests */ = {
-			isa = PBXGroup;
-			children = (
-				D81CB30AA308B9C0D49A3163BEAC889A /* Info.plist */,
-				82800D6130FF63E1B812DD709EC9B543 /* Pods-ObjcTests-OSXObjcTests.modulemap */,
-				7C9B5088ABE3374B0593D4677D29168C /* Pods-ObjcTests-OSXObjcTests-acknowledgements.markdown */,
-				E59485D694CF99BB839211FD028F6976 /* Pods-ObjcTests-OSXObjcTests-acknowledgements.plist */,
-				39EBA7AD0EBC590263A82673F432B36C /* Pods-ObjcTests-OSXObjcTests-dummy.m */,
-				293BB7A264C7F8B53ADF02132F957C08 /* Pods-ObjcTests-OSXObjcTests-frameworks.sh */,
-				1E9E5E1DE930F0682369188C2BC0C933 /* Pods-ObjcTests-OSXObjcTests-resources.sh */,
-				9446BF192B3657084673EB97165E98C1 /* Pods-ObjcTests-OSXObjcTests-umbrella.h */,
-				9A98B000543CFA34EC3A0DFCFEA68BED /* Pods-ObjcTests-OSXObjcTests.debug.xcconfig */,
-				167BA73105257B2C2C8CC444EB5F953A /* Pods-ObjcTests-OSXObjcTests.release.xcconfig */,
-			);
-			name = "Pods-ObjcTests-OSXObjcTests";
-			path = "Target Support Files/Pods-ObjcTests-OSXObjcTests";
-			sourceTree = "<group>";
-		};
-		95337D039196AD2A7E2416D6617C7516 /* Pods-SwiftTests-OSXSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				D69A8FE42210FA3159A3F9DC1AD519D8 /* Info.plist */,
-				EBCE76B9908A2BFF05F9213155FD52AB /* Pods-SwiftTests-OSXSwiftTests.modulemap */,
-				E3995E5C4F3DA567051EACF25C5D19DC /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.markdown */,
-				18240C48146F4769CE05F165CE425F55 /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.plist */,
-				EE8C000490B8729A114E816B5F3504F8 /* Pods-SwiftTests-OSXSwiftTests-dummy.m */,
-				09F2A0AAB9A5FF76FB5B0597EA6C9C06 /* Pods-SwiftTests-OSXSwiftTests-frameworks.sh */,
-				7821C23A0F3A6ACF2E3948F4114BC452 /* Pods-SwiftTests-OSXSwiftTests-resources.sh */,
-				7A1A11C1F2CFD7C2FED6EC9970236C81 /* Pods-SwiftTests-OSXSwiftTests-umbrella.h */,
-				9227EC2451A6CEA276D47E592EACF22B /* Pods-SwiftTests-OSXSwiftTests.debug.xcconfig */,
-				75B5AD6421C67B95CEA8ACB659837924 /* Pods-SwiftTests-OSXSwiftTests.release.xcconfig */,
-			);
-			name = "Pods-SwiftTests-OSXSwiftTests";
-			path = "Target Support Files/Pods-SwiftTests-OSXSwiftTests";
-			sourceTree = "<group>";
-		};
 		96A08CEDAFD0D957C00427A927466E36 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				8B24255B60D382DDCE5F635F5806C088 /* TrampolineMacros.h */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		98D3B45FACD94C26F74E59C585E3B146 /* Pods-SwiftTests-tvOSSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				55A93C0B57A6AEE8E000DDAD2949CF3F /* Info.plist */,
+				471D47A2892E16334E215E9CC3DCD8F8 /* Pods-SwiftTests-tvOSSwiftTests.modulemap */,
+				705C7BBEF46923E6D3746593C63EB15F /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.markdown */,
+				66678D260015EFADBB4E1801D1185282 /* Pods-SwiftTests-tvOSSwiftTests-acknowledgements.plist */,
+				2D714C8590670B3DFE2C49B5CD83E54B /* Pods-SwiftTests-tvOSSwiftTests-dummy.m */,
+				CF87DE0EA08D01319B0CA0FBB81D1C5A /* Pods-SwiftTests-tvOSSwiftTests-frameworks.sh */,
+				A2DC464A3074F89B70E9A43BCA5CCBA3 /* Pods-SwiftTests-tvOSSwiftTests-resources.sh */,
+				B5F40E1ACDFCDC32499C700D4ABF5EFF /* Pods-SwiftTests-tvOSSwiftTests-umbrella.h */,
+				C36606E5EA1986D0696386F296437DE3 /* Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig */,
+				5D0BDC4409C4A7F46545709DEBBAC667 /* Pods-SwiftTests-tvOSSwiftTests.release.xcconfig */,
+			);
+			name = "Pods-SwiftTests-tvOSSwiftTests";
+			path = "Target Support Files/Pods-SwiftTests-tvOSSwiftTests";
 			sourceTree = "<group>";
 		};
 		9F733FCC4508063DE5EA6AADE1234CE4 /* Pod */ = {
@@ -495,6 +513,32 @@
 				67549022D01DF006559E8D6E9FC11035 /* SGVSuperMessagingProxy.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		A92424381BD60E468F098B2B23A5EECB /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		ABC001504649FB3A5FA058CE65C869DB /* Pods-SwiftTests-OSXSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				181CFC6FE1969AFE155605921B0C10D8 /* Info.plist */,
+				213BFFD8DDD5FBA8E6FD28D21EAE7B5E /* Pods-SwiftTests-OSXSwiftTests.modulemap */,
+				04712377C319304B1208E928303E9CD4 /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.markdown */,
+				0DF487E64FF197AE43BAD9274A70C97B /* Pods-SwiftTests-OSXSwiftTests-acknowledgements.plist */,
+				78BD789A8D8D72FD121D547706DE8AE7 /* Pods-SwiftTests-OSXSwiftTests-dummy.m */,
+				A2333A92AD8B4D6AA85BE95D8E6CD1ED /* Pods-SwiftTests-OSXSwiftTests-frameworks.sh */,
+				585F016226490E00E0BA68A397860ED1 /* Pods-SwiftTests-OSXSwiftTests-resources.sh */,
+				EA2AEB342DE13433FC301C28FC31320D /* Pods-SwiftTests-OSXSwiftTests-umbrella.h */,
+				B658E30CF8C909BF443D2BAD19343999 /* Pods-SwiftTests-OSXSwiftTests.debug.xcconfig */,
+				B3BBA2DF52B79082136D7784EA7CC34C /* Pods-SwiftTests-OSXSwiftTests.release.xcconfig */,
+			);
+			name = "Pods-SwiftTests-OSXSwiftTests";
+			path = "Target Support Files/Pods-SwiftTests-OSXSwiftTests";
 			sourceTree = "<group>";
 		};
 		AC6BE09E28469FD213FF56AC05A6AA8F /* Products */ = {
@@ -516,112 +560,50 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF64F61285565492ECD222DBC6E8AE6E /* Pods-ObjcTests-tvOSObjcTests */ = {
+		D877341166E4404AA0D6CE20680652B7 /* Pods-ObjcTests-OSXObjcTests */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A0CA16240B2C0F911F938D8988F6D /* Info.plist */,
-				C33CA11B71EB3CA650B6845E1A2A05A1 /* Pods-ObjcTests-tvOSObjcTests.modulemap */,
-				BEF5C1037F9A992F941231197F696622 /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.markdown */,
-				9174811697EA9EDD88AC6C5F1B54BFC1 /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.plist */,
-				A5F55D6FBC296BD4671688392DDE85C7 /* Pods-ObjcTests-tvOSObjcTests-dummy.m */,
-				4314134DFCE4393AA6E69BF8FC3D9F70 /* Pods-ObjcTests-tvOSObjcTests-frameworks.sh */,
-				276DC372D97A9ABB8E61048C098622A4 /* Pods-ObjcTests-tvOSObjcTests-resources.sh */,
-				E460F21C91F34755797B736F44BCF21D /* Pods-ObjcTests-tvOSObjcTests-umbrella.h */,
-				39AF23DD84007B0A362E6A809499857D /* Pods-ObjcTests-tvOSObjcTests.debug.xcconfig */,
-				A81642BB80411E44ED179A26E9DA257E /* Pods-ObjcTests-tvOSObjcTests.release.xcconfig */,
+				503D5131D789ACD9468256C377BFD120 /* Info.plist */,
+				D580BC62C7A89C6F66040FEF28F6F259 /* Pods-ObjcTests-OSXObjcTests.modulemap */,
+				DC36A909FF3D5007148043CE67DD25D3 /* Pods-ObjcTests-OSXObjcTests-acknowledgements.markdown */,
+				ADAA08479247F29CCF99FF3BEEB06283 /* Pods-ObjcTests-OSXObjcTests-acknowledgements.plist */,
+				9F61B9599450577A196F8908059B5777 /* Pods-ObjcTests-OSXObjcTests-dummy.m */,
+				9D9A62471F496C52D595782B2E0B721F /* Pods-ObjcTests-OSXObjcTests-frameworks.sh */,
+				C0CBAAD89281CE40591EEDB4C4F10001 /* Pods-ObjcTests-OSXObjcTests-resources.sh */,
+				BA1EEEC150F92227F4134B2DB3507478 /* Pods-ObjcTests-OSXObjcTests-umbrella.h */,
+				3D334582EC436C77968352E6709B0AD5 /* Pods-ObjcTests-OSXObjcTests.debug.xcconfig */,
+				BD0A2C832DD9CF9969B923BAF1B90EAC /* Pods-ObjcTests-OSXObjcTests.release.xcconfig */,
 			);
-			name = "Pods-ObjcTests-tvOSObjcTests";
-			path = "Target Support Files/Pods-ObjcTests-tvOSObjcTests";
+			name = "Pods-ObjcTests-OSXObjcTests";
+			path = "Target Support Files/Pods-ObjcTests-OSXObjcTests";
 			sourceTree = "<group>";
 		};
-		BE39AD3BB5C22683E75687BB0B063901 /* Pods-SwiftTests-iOSSwiftTests */ = {
+		DC395AE553307A3041AA87EA93CDD53D /* Pods-SwiftTests-iOSSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B03609B8619B5C00E20FE9042CA0731 /* Info.plist */,
-				B45EA034D542E28333BB0C4E2B27E84F /* Pods-SwiftTests-iOSSwiftTests.modulemap */,
-				C85519530505C5B7BCFD6B260F874F59 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.markdown */,
-				817818D9EC72DBCA4AF1C37A85F0A511 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.plist */,
-				225B2707D8E88757D54D25C602CD24E8 /* Pods-SwiftTests-iOSSwiftTests-dummy.m */,
-				4DD60F90B34E5EDC3670E8CF54840FC9 /* Pods-SwiftTests-iOSSwiftTests-frameworks.sh */,
-				8DC263D7F59A2A9215B7870A2B952B7B /* Pods-SwiftTests-iOSSwiftTests-resources.sh */,
-				73A4E08B37D9F81FB5184C60B09E0EC1 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */,
-				EE3C8EF7E741E64D032142AB1D5B77DC /* Pods-SwiftTests-iOSSwiftTests.debug.xcconfig */,
-				1D76BB08CB3362D4A71722565903583E /* Pods-SwiftTests-iOSSwiftTests.release.xcconfig */,
+				D3C05AD246B30B290130A3A0F284423E /* Info.plist */,
+				7E4236D6902ED8F3B8669A37D8753A51 /* Pods-SwiftTests-iOSSwiftTests.modulemap */,
+				046D44E6C22ECBC914994F3841103FD5 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.markdown */,
+				D3CE93F1E69AA5ED40A322E5FA770BF7 /* Pods-SwiftTests-iOSSwiftTests-acknowledgements.plist */,
+				0F9ECCFF5691A5E13CFF5FB166BC2E9D /* Pods-SwiftTests-iOSSwiftTests-dummy.m */,
+				E729E80AD1FEC419240EEF5C8217152D /* Pods-SwiftTests-iOSSwiftTests-frameworks.sh */,
+				D147EDFD9C88E830F3233D3F45A27CA2 /* Pods-SwiftTests-iOSSwiftTests-resources.sh */,
+				E5C329000670F722723409A92C8A6492 /* Pods-SwiftTests-iOSSwiftTests-umbrella.h */,
+				8039E6AB0B729361B4677206E65E0B64 /* Pods-SwiftTests-iOSSwiftTests.debug.xcconfig */,
+				07C592E65B616EFE91CA98F23F5E3A00 /* Pods-SwiftTests-iOSSwiftTests.release.xcconfig */,
 			);
 			name = "Pods-SwiftTests-iOSSwiftTests";
 			path = "Target Support Files/Pods-SwiftTests-iOSSwiftTests";
-			sourceTree = "<group>";
-		};
-		D689639F8E213120C55B82D3806C88AD /* Pods-ObjcTests-iOSObjcTests */ = {
-			isa = PBXGroup;
-			children = (
-				09DFB9F443BE5E9B0C5EBC581A534AA1 /* Info.plist */,
-				63356267118F1C740777ACC4964B9BC8 /* Pods-ObjcTests-iOSObjcTests.modulemap */,
-				8772DD84C172DC15766AEEE5DDA60F33 /* Pods-ObjcTests-iOSObjcTests-acknowledgements.markdown */,
-				50D970C96D9C7D6341002BFAEBA05656 /* Pods-ObjcTests-iOSObjcTests-acknowledgements.plist */,
-				A2E3F595F563D5B32F3D8798248246C0 /* Pods-ObjcTests-iOSObjcTests-dummy.m */,
-				BAB564EFF6744DE053152FEE153628AB /* Pods-ObjcTests-iOSObjcTests-frameworks.sh */,
-				59EC29BD7DCA432A3B18125269D212E7 /* Pods-ObjcTests-iOSObjcTests-resources.sh */,
-				A7F4EA7C274906FCE245EFA082A39F5C /* Pods-ObjcTests-iOSObjcTests-umbrella.h */,
-				5335F12475679F3A1458E45E37731785 /* Pods-ObjcTests-iOSObjcTests.debug.xcconfig */,
-				F53137AACF9B1127A8F837EC22B4F8A9 /* Pods-ObjcTests-iOSObjcTests.release.xcconfig */,
-			);
-			name = "Pods-ObjcTests-iOSObjcTests";
-			path = "Target Support Files/Pods-ObjcTests-iOSObjcTests";
 			sourceTree = "<group>";
 		};
 		E9474CE87C6AA9A851AEC24006206CAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F436BBC45CEF494D3C1224DC7D294486 /* iOS */,
-				56FC8954006B1141111A205386DF06CA /* OS X */,
+				A92424381BD60E468F098B2B23A5EECB /* OS X */,
 				55D5BB0B413244251723A5493F45EE4B /* tvOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E9FE9E536FA34D12E688906718715DC5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2C44277C62A073B3CA2E7C214497F791 /* Info.plist */,
-				24EDA9F4379210E9AAB99DB420E0BF41 /* Info.plist */,
-				61C91A9320E824778E94FAB2166F0DA6 /* Info.plist */,
-				62283F8958200FF094F4ADD62FFFFED7 /* Info.plist */,
-				B6974BEAC9EFAA5EB552AE9C2DA5D913 /* Info.plist */,
-				F9CDCF4844CB559AE64690D8FE2CDFB0 /* Info.plist */,
-				BBFE0C793A185FEE70AD2F62B6E1B284 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.modulemap */,
-				DAA5BF873564AD0BB138C44ED8C4A528 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */,
-				053A6776C196467590F63C9C397F73B4 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-dummy.m */,
-				7C6719243F6E47155B267673B1AA1D2A /* SGVSuperMessagingProxy-Common-Objective-C-iOS-prefix.pch */,
-				2D5DE3CDA38F2156504CE68537C60155 /* SGVSuperMessagingProxy-Common-Objective-C-iOS-umbrella.h */,
-				4B7A4975F6F008E103B5FDF01A839337 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.modulemap */,
-				F7462E8B340CE3D131D9268F40555959 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */,
-				B7EBE1C2E71ADB50A5244CA4F5D0F549 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-dummy.m */,
-				13E5056947A624C20F8D922A09C8B959 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-prefix.pch */,
-				58A2B0764401D5957594CCF8F0A44290 /* SGVSuperMessagingProxy-Common-Objective-C-macOS-umbrella.h */,
-				677A576DE95A270645EC2DE8D1E6A4F6 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.modulemap */,
-				9FD7A63DD5665F4AADD2A725B222159F /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */,
-				74DF37E01B3A70F45BAFFDB9E41DE7EE /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-dummy.m */,
-				379BB04A39F70D0877182FBA54E943BC /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-prefix.pch */,
-				366148665E8774C24C68F88738000206 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS-umbrella.h */,
-				176AF76B6CA8ED043BE8C973C14509CF /* SGVSuperMessagingProxy-Common-Swift-iOS.modulemap */,
-				0563ED43A1358DB703D2AA706E5D72BB /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */,
-				88C4BE91A0CE02C6F1F78E8990B6A616 /* SGVSuperMessagingProxy-Common-Swift-iOS-dummy.m */,
-				6A8C5D0153322C6CBEDF079DA7C5DAA0 /* SGVSuperMessagingProxy-Common-Swift-iOS-prefix.pch */,
-				159DA711D248166A68EECCCF282C53F0 /* SGVSuperMessagingProxy-Common-Swift-iOS-umbrella.h */,
-				C621ADC94191BBDBD8B2C8CA1C67B497 /* SGVSuperMessagingProxy-Common-Swift-macOS.modulemap */,
-				02AFE3637C30ED336107F6421741D946 /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */,
-				0589F5C396C3F1FBF42C1D822DA2B80C /* SGVSuperMessagingProxy-Common-Swift-macOS-dummy.m */,
-				A72626949E9C2FAB76715515ABCA3F75 /* SGVSuperMessagingProxy-Common-Swift-macOS-prefix.pch */,
-				35710BFB8F09F543AA593AFA5AF01ADB /* SGVSuperMessagingProxy-Common-Swift-macOS-umbrella.h */,
-				54E88F6D0C083565AE24C60D9ADDAE14 /* SGVSuperMessagingProxy-Common-Swift-tvOS.modulemap */,
-				7E38D2036A41422607495C03D3EED41F /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */,
-				306D529DA14B6B1D248B885378A5F2DE /* SGVSuperMessagingProxy-Common-Swift-tvOS-dummy.m */,
-				C36B539DA3CFDE1B881D9237CDC04164 /* SGVSuperMessagingProxy-Common-Swift-tvOS-prefix.pch */,
-				1CEB1971E3AA208CB299B8B939E7C0E7 /* SGVSuperMessagingProxy-Common-Swift-tvOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SGVSuperMessagingProxy-Common-Objective-C-iOS";
 			sourceTree = "<group>";
 		};
 		EBB238437BC3649AC278D35AA205D8DF /* Swift */ = {
@@ -632,6 +614,24 @@
 				8FDCE1A3A7FDAC17A9CFBF77F146850A /* SwiftTrampolines.c */,
 			);
 			name = Swift;
+			sourceTree = "<group>";
+		};
+		F2FA5EE4A1DD84F423E28BD3702734E4 /* Pods-ObjcTests-tvOSObjcTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A26C1FEF85FBC7D9878C02AF8040A24 /* Info.plist */,
+				C455F68D0B7D515F2635F526A8446B66 /* Pods-ObjcTests-tvOSObjcTests.modulemap */,
+				CD5DC817C00057CE238475CA10464D9B /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.markdown */,
+				1598360D8F2EC777F06B3475201F90F0 /* Pods-ObjcTests-tvOSObjcTests-acknowledgements.plist */,
+				0455DF9B10FD9E1D9E7CDFBE2D198ADB /* Pods-ObjcTests-tvOSObjcTests-dummy.m */,
+				AD7C2D471B55AE3191026E88C6209DBE /* Pods-ObjcTests-tvOSObjcTests-frameworks.sh */,
+				F130B8721E175421AB9AD6C18365C95F /* Pods-ObjcTests-tvOSObjcTests-resources.sh */,
+				D96D88D2562ADB687FDCA129B1A67520 /* Pods-ObjcTests-tvOSObjcTests-umbrella.h */,
+				176E5A6CB58227B8EE89A04B386F5431 /* Pods-ObjcTests-tvOSObjcTests.debug.xcconfig */,
+				FF09365426CB6BD67B0A1E0CF803C85C /* Pods-ObjcTests-tvOSObjcTests.release.xcconfig */,
+			);
+			name = "Pods-ObjcTests-tvOSObjcTests";
+			path = "Target Support Files/Pods-ObjcTests-tvOSObjcTests";
 			sourceTree = "<group>";
 		};
 		F436BBC45CEF494D3C1224DC7D294486 /* iOS */ = {
@@ -975,8 +975,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1165,7 +1165,7 @@
 /* Begin XCBuildConfiguration section */
 		01CA2FA9A203CBC45798162BAF4F0DE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02AFE3637C30ED336107F6421741D946 /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */;
+			baseConfigurationReference = 35EA4942DCC9DDF690AEE7ECDF8A619C /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1197,7 +1197,7 @@
 		};
 		0D35D6B0B76621C55B993CD915D8F0C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0563ED43A1358DB703D2AA706E5D72BB /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */;
+			baseConfigurationReference = B2E58D233AF2237971786403980DA909 /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1228,7 +1228,7 @@
 		};
 		12B830E7D06781D5A8E17AE3D3A7C170 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02AFE3637C30ED336107F6421741D946 /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */;
+			baseConfigurationReference = 35EA4942DCC9DDF690AEE7ECDF8A619C /* SGVSuperMessagingProxy-Common-Swift-macOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1260,7 +1260,7 @@
 		};
 		2B46A34579ACDEAF52D744259C42D99A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0563ED43A1358DB703D2AA706E5D72BB /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */;
+			baseConfigurationReference = B2E58D233AF2237971786403980DA909 /* SGVSuperMessagingProxy-Common-Swift-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1292,7 +1292,7 @@
 		};
 		3EAA0C9AA3090B6C358C4E5775696E82 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7462E8B340CE3D131D9268F40555959 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */;
+			baseConfigurationReference = 5F27559E39C2658BC6CC40A3A6177131 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1321,41 +1321,9 @@
 			};
 			name = Release;
 		};
-		49E9EE027213CA4DB3073DBB4042C5C1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5335F12475679F3A1458E45E37731785 /* Pods-ObjcTests-iOSObjcTests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ObjcTests-iOSObjcTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ObjcTests-iOSObjcTests/Pods-ObjcTests-iOSObjcTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ObjcTests_iOSObjcTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4A3E2C4BA16D8FEDBB2C558048D482C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE3C8EF7E741E64D032142AB1D5B77DC /* Pods-SwiftTests-iOSSwiftTests.debug.xcconfig */;
+			baseConfigurationReference = 8039E6AB0B729361B4677206E65E0B64 /* Pods-SwiftTests-iOSSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1389,7 +1357,7 @@
 		};
 		4AAA8D56407079CFE9C8DBFDC4219316 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 167BA73105257B2C2C8CC444EB5F953A /* Pods-ObjcTests-OSXObjcTests.release.xcconfig */;
+			baseConfigurationReference = BD0A2C832DD9CF9969B923BAF1B90EAC /* Pods-ObjcTests-OSXObjcTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1420,71 +1388,41 @@
 			};
 			name = Release;
 		};
-		51E4E3C81E71D73AA06965FFA9F8A362 /* Debug */ = {
+		52CFAF28FDE876921DB8924CDF580123 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA576D1C61A64D8D85B2D825ED11658 /* Pods-ObjcTests-iOSObjcTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ObjcTests-iOSObjcTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ObjcTests-iOSObjcTests/Pods-ObjcTests-iOSObjcTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ObjcTests_iOSObjcTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 		553A336CFD6E143064B9562B6CD20A11 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A98B000543CFA34EC3A0DFCFEA68BED /* Pods-ObjcTests-OSXObjcTests.debug.xcconfig */;
+			baseConfigurationReference = 3D334582EC436C77968352E6709B0AD5 /* Pods-ObjcTests-OSXObjcTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1517,7 +1455,7 @@
 		};
 		5B4FFDDE541C50521F9969B4B1D2580B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAA5BF873564AD0BB138C44ED8C4A528 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */;
+			baseConfigurationReference = 4B0182543BA9134B42FE9E29ED63715C /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1547,7 +1485,7 @@
 		};
 		64B51637B60ED375FC92378124FC933A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FD7A63DD5665F4AADD2A725B222159F /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */;
+			baseConfigurationReference = DF6FE8BFD37BCC4F6E5C89616DA594D3 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1575,9 +1513,69 @@
 			};
 			name = Debug;
 		};
-		710FDF6E7E05B72E5CB65888B0B985EA /* Release */ = {
+		68502BA6DD242E1345AD5F58E3996DE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F53137AACF9B1127A8F837EC22B4F8A9 /* Pods-ObjcTests-iOSObjcTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		6BDE1A4FDAAC82FE7D80FAD4607AE2D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D8756075AB1CE1ADC1D86F85808263C /* Pods-ObjcTests-iOSObjcTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1590,7 +1588,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ObjcTests-iOSObjcTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ObjcTests-iOSObjcTests/Pods-ObjcTests-iOSObjcTests.modulemap";
@@ -1610,7 +1608,7 @@
 		};
 		8486C521F5F4681BC3373EC1C96444A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E38D2036A41422607495C03D3EED41F /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */;
+			baseConfigurationReference = 77F3CF819FB29842828651365D38FA74 /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1642,7 +1640,7 @@
 		};
 		85D84866BE64D77A2D0E697DBFF26F8C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E38D2036A41422607495C03D3EED41F /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */;
+			baseConfigurationReference = 77F3CF819FB29842828651365D38FA74 /* SGVSuperMessagingProxy-Common-Swift-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1673,7 +1671,7 @@
 		};
 		8C45FDFA8D58E9CDEA46CD27D4307AC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75B5AD6421C67B95CEA8ACB659837924 /* Pods-SwiftTests-OSXSwiftTests.release.xcconfig */;
+			baseConfigurationReference = B3BBA2DF52B79082136D7784EA7CC34C /* Pods-SwiftTests-OSXSwiftTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1707,7 +1705,7 @@
 		};
 		98ABDAB6960E3038583B4500074BA57D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A81642BB80411E44ED179A26E9DA257E /* Pods-ObjcTests-tvOSObjcTests.release.xcconfig */;
+			baseConfigurationReference = FF09365426CB6BD67B0A1E0CF803C85C /* Pods-ObjcTests-tvOSObjcTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1740,7 +1738,7 @@
 		};
 		A0BD93F78E5FFADCAEE93A8ED14664A8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F6FD2D598C97DBC223DE4225EA4CC92 /* Pods-SwiftTests-tvOSSwiftTests.release.xcconfig */;
+			baseConfigurationReference = 5D0BDC4409C4A7F46545709DEBBAC667 /* Pods-SwiftTests-tvOSSwiftTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1774,7 +1772,7 @@
 		};
 		A29155E09773D6319C465D9A66F1051E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FD7A63DD5665F4AADD2A725B222159F /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */;
+			baseConfigurationReference = DF6FE8BFD37BCC4F6E5C89616DA594D3 /* SGVSuperMessagingProxy-Common-Objective-C-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1805,7 +1803,7 @@
 		};
 		A55766466C57F18DECAAAF0405E28F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9227EC2451A6CEA276D47E592EACF22B /* Pods-SwiftTests-OSXSwiftTests.debug.xcconfig */;
+			baseConfigurationReference = B658E30CF8C909BF443D2BAD19343999 /* Pods-SwiftTests-OSXSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1840,7 +1838,7 @@
 		};
 		A6B4F6823AE628AFA1C7E223B04E61D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7462E8B340CE3D131D9268F40555959 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */;
+			baseConfigurationReference = 5F27559E39C2658BC6CC40A3A6177131 /* SGVSuperMessagingProxy-Common-Objective-C-macOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1871,7 +1869,7 @@
 		};
 		AF0ADD388009448A5430263C715AD60E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39AF23DD84007B0A362E6A809499857D /* Pods-ObjcTests-tvOSObjcTests.debug.xcconfig */;
+			baseConfigurationReference = 176E5A6CB58227B8EE89A04B386F5431 /* Pods-ObjcTests-tvOSObjcTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1901,9 +1899,74 @@
 			};
 			name = Debug;
 		};
+		C76E89AA6ED85D79CD81FA618EC64B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
 		D963056E4E3D4C5BB740502AC32B31AF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAA5BF873564AD0BB138C44ED8C4A528 /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */;
+			baseConfigurationReference = 4B0182543BA9134B42FE9E29ED63715C /* SGVSuperMessagingProxy-Common-Objective-C-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1934,7 +1997,7 @@
 		};
 		E636AB323D6EB6CA7A85F56BF13A45A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D76BB08CB3362D4A71722565903583E /* Pods-SwiftTests-iOSSwiftTests.release.xcconfig */;
+			baseConfigurationReference = 07C592E65B616EFE91CA98F23F5E3A00 /* Pods-SwiftTests-iOSSwiftTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1966,66 +2029,9 @@
 			};
 			name = Release;
 		};
-		F614C13088D3BFB4D45FCAEFAF8E497B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
 		FDF9453F1303F1CF73922364E27BE826 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA5AA6BC90EAE6B49E5AEDF2D2A07017 /* Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig */;
+			baseConfigurationReference = C36606E5EA1986D0696386F296437DE3 /* Pods-SwiftTests-tvOSSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2063,8 +2069,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51E4E3C81E71D73AA06965FFA9F8A362 /* Debug */,
-				F614C13088D3BFB4D45FCAEFAF8E497B /* Release */,
+				C76E89AA6ED85D79CD81FA618EC64B0B /* Debug */,
+				68502BA6DD242E1345AD5F58E3996DE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2126,8 +2132,8 @@
 		ACC62AC273071074EBB6818543490887 /* Build configuration list for PBXNativeTarget "Pods-ObjcTests-iOSObjcTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				49E9EE027213CA4DB3073DBB4042C5C1 /* Debug */,
-				710FDF6E7E05B72E5CB65888B0B985EA /* Release */,
+				52CFAF28FDE876921DB8924CDF580123 /* Debug */,
+				6BDE1A4FDAAC82FE7D80FAD4607AE2D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

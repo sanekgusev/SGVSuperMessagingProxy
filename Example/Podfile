@@ -1,27 +1,27 @@
 use_frameworks!
 
 abstract_target 'ObjcTests' do
-  pod 'SGVSuperMessagingProxy/Objective-C', :path => "../"
-  target 'OSXObjcTests' do
-      platform :osx, '10.8'
-  end
-  target 'iOSObjcTests' do
-      platform :ios, '7.0'
-  end
-  target 'tvOSObjcTests' do
-      platform :tvos, '9.0'
-  end
+	pod 'SGVSuperMessagingProxy/Objective-C', :path => "../"
+	target 'OSXObjcTests' do
+		platform :osx, '10.8'
+	end
+	target 'iOSObjcTests' do
+		platform :ios, '8.0'
+	end
+	target 'tvOSObjcTests' do
+		platform :tvos, '9.0'
+	end
 end
 
 abstract_target 'SwiftTests' do
-    pod 'SGVSuperMessagingProxy/Swift', :path => "../"
-    target 'OSXSwiftTests' do
-        platform :osx, '10.9'
-    end
-    target 'iOSSwiftTests' do
-        platform :ios, '8.0'
-    end
-    target 'tvOSSwiftTests' do
-        platform :tvos, '9.0'
-    end
+	pod 'SGVSuperMessagingProxy/Swift', :path => "../"
+	target 'OSXSwiftTests' do
+		platform :osx, '10.9'
+	end
+	target 'iOSSwiftTests' do
+		platform :ios, '8.0'
+	end
+	target 'tvOSSwiftTests' do
+		platform :tvos, '9.0'
+	end
 end

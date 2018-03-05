@@ -27,11 +27,11 @@ class ObjcNyanCat: ObjcCat {
         }
     }
     
-    override class func says() -> String {
-        return "Nyan"
+    override class func classSays() -> String {
+        return "Class Nyan"
     }
     
-    override class var awesomenessLevel: Int {
-        return 10
+    override class var classAwesomenessLevel: Int {
+        return 9
     }
 }

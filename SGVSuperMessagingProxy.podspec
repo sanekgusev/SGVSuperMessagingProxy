@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SGVSuperMessagingProxy"
-  s.version          = "3.0.0"
+  s.version          = "4.0.0"
   s.cocoapods_version = '>= 1.0.0'
   s.summary          = "Invoke superclass method implementations of dynamically dispatched methods in Objective-C and Swift."
   s.description      = <<-DESC
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   	ss.source_files = 'Pod/Sources/Common/TrampolineMacros.h'
     ss.private_header_files = 'Pod/Sources/Common/TrampolineMacros.h'
 
-    ss.ios.deployment_target = '7.0'
+    ss.ios.deployment_target = '8.0'
     ss.osx.deployment_target = '10.8'
     ss.watchos.deployment_target = '2.0'
     ss.tvos.deployment_target = '9.0'
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
     ss.private_header_files = 'Pod/Sources/Objective-C/ObjcTrampolines.h'
     ss.dependency 'SGVSuperMessagingProxy/Common'
 
-    ss.ios.deployment_target = '7.0'
+    ss.ios.deployment_target = '8.0'
     ss.osx.deployment_target = '10.8'
     ss.watchos.deployment_target = '2.0'
     ss.tvos.deployment_target = '9.0'

@@ -16,7 +16,7 @@ public final class SuperMessagingProxy {
     /// the offset of `_objectAddress` to calculate the address for the first
     /// argument of the correspoding `objc_msgSendSuper` function.
     private let _objectAddress: UInt
-    private let _superclass: AnyClass
+    private let _superclassAddress: UInt
 
     private let object: AnyObject?
 
@@ -56,17 +56,16 @@ public final class SuperMessagingProxy {
                  classForSuper: AnyClass,
                  proxySubclass: AnyClass) {
         _objectAddress = unsafeBitCast(object, to: UInt.self)
-        _superclass = classForSuper
+        _superclassAddress = unsafeBitCast(classForSuper, to: UInt.self)
         self.object = retainsObject ? object : nil
         object_setClass(self, proxySubclass)
     }
 
     deinit {
         if let proxySubclass = object_getClass(self),
-            let proxyClass = class_getSuperclass(proxySubclass),
-            let rootClass = class_getSuperclass(proxyClass) {
+            let proxyClass = class_getSuperclass(proxySubclass) {
             
-            object_setClass(self, rootClass)
+            object_setClass(self, proxyClass)
             objc_disposeClassPair(proxySubclass)
         }
     }
@@ -165,8 +164,9 @@ public final class SuperMessagingProxy {
     private static func uniqueProxySubclass(for proxiedObjectClass: AnyClass,
                                             superFunction: MsgSendSuperFunction) -> AnyClass? {
         let UUIDString = NSUUID().uuidString.filter({ $0 != "-" })
+        let proxiedObjectClassAddress = unsafeBitCast(proxiedObjectClass, to: UInt.self)
         let proxySubclassName = NSStringFromClass(self) +
-        "\(UUIDString)_\(superFunction)_\(NSStringFromClass(proxiedObjectClass))"
+        "\(UUIDString)_\(superFunction)_\(String(proxiedObjectClassAddress, radix: 16))"
         guard let proxySubclass = objc_allocateClassPair(self, proxySubclassName, 0),
             let rootClass = class_getSuperclass(self) else {
                 return nil
@@ -185,7 +185,7 @@ public final class SuperMessagingProxy {
         }
         defer {
             methodsPointer.deinitialize(count: numericCast(count))
-            methodsPointer.deallocate(capacity: numericCast(count))
+            methodsPointer.deallocate()
         }
         let methods = UnsafeBufferPointer(start: methodsPointer,
                                           count: numericCast(count))
@@ -215,9 +215,14 @@ public final class SuperMessagingProxy {
     private static var proxiedObjectClassAndSuperFunction: (originalObjectSublcass: AnyClass, superFunction: MsgSendSuperFunction)? {
         let components = NSStringFromClass(self).split(separator: "_")
         guard components.count == 3,
-            let originalObjectSubclass = NSClassFromString(String(components[2])),
-            let superFunction = MsgSendSuperFunction(rawValue: String(components[1])) else {
+            let originalObjectSubclassAddress = UInt(String(components[2]), radix: 16) else {
                 return nil
+        }
+
+        let originalObjectSubclass: AnyClass = unsafeBitCast(originalObjectSubclassAddress, to: AnyClass.self)
+
+        guard let superFunction = MsgSendSuperFunction(rawValue: String(components[1])) else {
+            return nil
         }
         return (originalObjectSubclass, superFunction)
     }

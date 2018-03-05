@@ -1,8 +1,8 @@
 PODS:
-  - SGVSuperMessagingProxy/Common (3.0.0)
-  - SGVSuperMessagingProxy/Objective-C (3.0.0):
+  - SGVSuperMessagingProxy/Common (4.0.0)
+  - SGVSuperMessagingProxy/Objective-C (4.0.0):
     - SGVSuperMessagingProxy/Common
-  - SGVSuperMessagingProxy/Swift (3.0.0):
+  - SGVSuperMessagingProxy/Swift (4.0.0):
     - SGVSuperMessagingProxy/Common
 
 DEPENDENCIES:
@@ -14,8 +14,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SGVSuperMessagingProxy: 230fcb93fa2e791181bb52e9de6e039a3cca0f35
+  SGVSuperMessagingProxy: beb3250ffc5011b26dafa7b1c585b424c6886dfd
 
-PODFILE CHECKSUM: 37736939585d2d4f7de7f9e733270550c1490429
+PODFILE CHECKSUM: fff22d0b026b924fed37b6976f8a825532762bd6
 
 COCOAPODS: 1.4.0

@@ -26,11 +26,11 @@ class NyanCat: Cat {
         }
     }
     
-    override class func says() -> String {
-        return "Nyan"
+    override class func classSays() -> String {
+        return "Class Nyan"
     }
     
-    override class var awesomenessLevel: Int {
+    override class var classAwesomenessLevel: Int {
         return 10
     }
 }

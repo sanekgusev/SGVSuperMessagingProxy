@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init {
     if (self = [super init]) {
-        _awesomenessLevel = [Cat awesomenessLevel];
+        _awesomenessLevel = [Cat classAwesomenessLevel];
     }
     return self;
 }
@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)says {
-    return [Cat says];
+    return [Cat classSays];
 }
 
 - (NSString *)baseClassMethod {
@@ -38,11 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
     return descriptor;
 }
 
-+ (NSString *)says {
++ (NSString *)classSays {
     return @"Purr";
 }
 
-+ (NSInteger)awesomenessLevel {
++ (NSInteger)classAwesomenessLevel {
     return 5;
 }
 

@@ -12,7 +12,7 @@ class ObjcCat: NSObject {
 
     @objc
     dynamic func says() -> String {
-        return Cat.says()
+        return Cat.classSays()
     }
     
     @objc
@@ -24,12 +24,12 @@ class ObjcCat: NSObject {
     dynamic var awesomenessLevel = 5
     
     @objc
-    dynamic class func says() -> String {
+    dynamic class func classSays() -> String {
         return "Purr"
     }
     
     @objc
-    dynamic class var awesomenessLevel: Int {
-        return 5
+    dynamic class var classAwesomenessLevel: Int {
+        return 4
     }
 }

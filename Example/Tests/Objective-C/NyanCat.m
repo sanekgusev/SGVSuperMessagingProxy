@@ -36,12 +36,12 @@ NS_ASSUME_NONNULL_BEGIN
     return descriptor;
 }
 
-+ (NSString *)says {
-    return @"Nyan";
++ (NSString *)classSays {
+    return @"Class Nyan";
 }
 
-+ (NSInteger)awesomenessLevel {
-    return 10;
++ (NSInteger)classAwesomenessLevel {
+    return 9;
 }
 
 @end

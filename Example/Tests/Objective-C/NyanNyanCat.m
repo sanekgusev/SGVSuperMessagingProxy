@@ -40,12 +40,12 @@ NS_ASSUME_NONNULL_BEGIN
     return @"I am a nyan-nyan-nyan cat!";
 }
 
-+ (NSString *)says {
-    return @"Nyan-nyan";
++ (NSString *)classSays {
+    return @"Class nyan-nyan";
 }
 
-+ (NSInteger)awesomenessLevel {
-    return NSIntegerMax;
++ (NSInteger)classAwesomenessLevel {
+    return NSIntegerMax - 1;
 }
 
 @end

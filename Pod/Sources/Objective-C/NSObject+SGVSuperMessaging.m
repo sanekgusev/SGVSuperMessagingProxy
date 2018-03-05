@@ -9,12 +9,16 @@
 #import "NSObject+SGVSuperMessaging.h"
 #import "SGVSuperMessagingProxy.h"
 
+@import ObjectiveC.runtime;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSObject (SGVSuperMessaging)
 
 - (nullable instancetype)sgv_super {
-    return [SGVSuperMessagingProxy proxyWithObject:self retainsObject:YES];
+    return [SGVSuperMessagingProxy proxyWithObject:self
+                                     ancestorClass:class_getSuperclass(object_getClass(self))
+                                     retainsObject:YES];
 }
 
 - (nullable instancetype)sgv_superForAncestorClass:(Class)ancestorClass {

@@ -8,8 +8,9 @@
 
 #import "SGVSuperMessagingProxy.h"
 #import "ObjcTrampolines.h"
-#import <objc/message.h>
-#import <objc/runtime.h>
+
+@import ObjectiveC.message;
+@import ObjectiveC.runtime;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -45,8 +46,9 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
     if (!isStrictSubclass) {
         return nil;
     }
-    SGVSuperMessagingProxy *proxy = [SGVUniqueProxySubclassForProxiedObjectClass(classOfObject,
-                                                                           MsgSendSuperFunction_MsgSendSuper) alloc];
+    SGVSuperMessagingProxy *proxy =
+    [SGVUniqueProxySubclassForProxiedObjectClass(classOfObject,
+                                                 MsgSendSuperFunction_MsgSendSuper) alloc];
     proxy->_super.receiver = object;
     proxy->_super.super_class = ancestorClass;
     if (retainsObject) {
@@ -66,8 +68,9 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
         return nil;
     }
     
-    SGVSuperMessagingProxy *proxy = [SGVUniqueProxySubclassForProxiedObjectClass(classOfObject,
-                                                                           MsgSendSuperFunction_MsgSendSuper2) alloc];
+    SGVSuperMessagingProxy *proxy =
+    [SGVUniqueProxySubclassForProxiedObjectClass(classOfObject,
+                                                 MsgSendSuperFunction_MsgSendSuper2) alloc];
     proxy->_super.receiver = object;
     proxy->_super.super_class = classOfObject;
     if (retainsObject) {
@@ -80,8 +83,8 @@ typedef NS_ENUM(NSInteger, DispatchMode) {
 
 - (void)dealloc {
     Class proxySubclass = object_getClass(self);
-    Class rootClass = class_getSuperclass(class_getSuperclass(proxySubclass));
-    object_setClass(self, rootClass);
+    Class proxyClass = class_getSuperclass(proxySubclass);
+    object_setClass(self, proxyClass);
     objc_disposeClassPair(proxySubclass);
 }
 
@@ -140,7 +143,8 @@ static BOOL SGVGetOriginalObjectClassAndSuperFunctionFromProxySubclass(Class cla
     }
     NSString *originalObjectClassName = [components lastObject];
     if (originalObjectClass) {
-        *originalObjectClass = NSClassFromString(originalObjectClassName);
+        void *originalObjectClassAddress = (void *)strtoul(originalObjectClassName.UTF8String, NULL, 16);
+        *originalObjectClass = (__bridge Class)originalObjectClassAddress;
     }
     NSString *superFunctionString = components[1];
     if (superFunction) {
@@ -216,8 +220,8 @@ static Class SGVUniqueProxySubclassForProxiedObjectClass(Class class,
         return nil;
     }
     NSString *UUIDString = [[NSUUID new].UUIDString stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    NSString *proxySubclassName = [NSStringFromClass([SGVSuperMessagingProxy class]) stringByAppendingFormat:@"%@_%ld_%@",
-                                   UUIDString, (long)superFunction, NSStringFromClass(class)];
+    NSString *proxySubclassName = [NSStringFromClass([SGVSuperMessagingProxy class]) stringByAppendingFormat:@"%@_%ld_%lx",
+                                   UUIDString, (long)superFunction, (unsigned long)(__bridge void *)class];
     Class proxySubclass = objc_allocateClassPair([SGVSuperMessagingProxy class],
                                                  [proxySubclassName UTF8String],
                                                  0);
@@ -252,7 +256,8 @@ static Class SGVUniqueProxySubclassForProxiedObjectClass(Class class,
             Method method = methods[i];
             SEL selector = method_getName(method);
             NSString *selectorName = NSStringFromSelector(selector);
-            if ([selectorName rangeOfString:@"_"].location == 0 ||
+            if ([selectorName hasPrefix:@"_"] ||
+                [selectorName hasSuffix:@"_"] ||
                 [nonForwardedMethodNames containsObject:selectorName]) {
                 continue;
             }

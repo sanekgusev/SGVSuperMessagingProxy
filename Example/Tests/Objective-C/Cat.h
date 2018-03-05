@@ -6,7 +6,7 @@
 //  Copyright © 2016 Alexander Gusev. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,8 +21,8 @@ typedef struct CatDescriptor {
 @property (nonatomic, readonly) CatDescriptor descriptor;
 
 - (NSString *)says;
-+ (NSString *)says;
-+ (NSInteger)awesomenessLevel;
++ (NSString *)classSays;
++ (NSInteger)classAwesomenessLevel;
 
 - (NSString *)baseClassMethod;
 

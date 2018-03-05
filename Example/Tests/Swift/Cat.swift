@@ -10,7 +10,7 @@ import Foundation
 
 class Cat {
     @objc dynamic func says() -> String {
-        return Cat.says()
+        return Cat.classSays()
     }
     
     @objc dynamic var exclamation: String {
@@ -19,12 +19,12 @@ class Cat {
     
     @objc dynamic var awesomenessLevel = 5
     
-    @objc dynamic class func says() -> String {
+    @objc dynamic class func classSays() -> String {
         return "Purr"
     }
     
-    @objc dynamic class var awesomenessLevel: Int {
-        return 5
+    @objc dynamic class var classAwesomenessLevel: Int {
+        return 4
     }
     
     @objc dynamic func baseClassMethod() -> String {

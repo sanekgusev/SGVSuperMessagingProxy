@@ -8,9 +8,9 @@
 
 @import XCTest;
 @import SGVSuperMessagingProxy;
+@import ObjectiveC.runtime;
 
 #import "NyanNyanCat.h"
-#import <objc/runtime.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -88,8 +88,8 @@ NS_ASSUME_NONNULL_BEGIN
         XCTFail();
         return;
     }
-    XCTAssertEqualObjects([proxy says], [NyanCat says]);
-    XCTAssertEqual([proxy awesomenessLevel], [NyanCat awesomenessLevel]);
+    XCTAssertEqualObjects([proxy classSays], [NyanCat classSays]);
+    XCTAssertEqual([proxy classAwesomenessLevel], [NyanCat classAwesomenessLevel]);
 }
 
 - (void)testClassMethodsOfNonImmediateSuperclass {
@@ -98,8 +98,8 @@ NS_ASSUME_NONNULL_BEGIN
         XCTFail();
         return;
     }
-    XCTAssertEqualObjects([proxy says], [Cat says]);
-    XCTAssertEqual([proxy awesomenessLevel], [Cat awesomenessLevel]);
+    XCTAssertEqualObjects([proxy classSays], [Cat classSays]);
+    XCTAssertEqual([proxy classAwesomenessLevel], [Cat classAwesomenessLevel]);
 }
 
 @end

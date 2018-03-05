@@ -40,7 +40,7 @@ asm volatile ("add " #selfLocation ", " #selfLocation ", #" #offset "\n\t" \
 #define SGVSelfLocation r0
 #define SGVSelfLocationStret r1
 #define SGVIvarOffsetObjc 4
-#define SGVIvarOffsetSwift 12
+#define SGVIvarOffsetSwift 8
 
 #define _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset) \
 __attribute__((__naked__)) \
@@ -70,7 +70,7 @@ asm volatile ("addq $" #offset ", " #selfLocation "\n\t" \
 #define SGVSelfLocation 0x4(%%esp)
 #define SGVSelfLocationStret 0x8(%%esp)
 #define SGVIvarOffsetObjc 4
-#define SGVIvarOffsetSwift 12
+#define SGVIvarOffsetSwift 8
 
 #define _SGVDefineTrampolineFuction(trampolineFunction, msgSendSuperFunction, selfLocation, offset) \
 __attribute__((__naked__)) \

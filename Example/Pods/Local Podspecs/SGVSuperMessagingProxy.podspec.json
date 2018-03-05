@@ -1,6 +1,6 @@
 {
   "name": "SGVSuperMessagingProxy",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "cocoapods_version": ">= 1.0.0",
   "summary": "Invoke superclass method implementations of dynamically dispatched methods in Objective-C and Swift.",
   "description": "This NSProxy/SwiftObject proxy allows one to invoke method implementations from any class in the inheritance hierarchy for any Objective-C object or invoke dynamically-dispatched method implementations for any Swift object.\n\nOn creation, the proxy is passed the object and optionally a class in that object's inheritance hierarchy.\n\nAny message sent to the proxy will be executed as if it was invoked with the `super` keyword from within that object's class declaration.",
@@ -11,9 +11,10 @@
   },
   "source": {
     "git": "https://github.com/sanekgusev/SGVSuperMessagingProxy.git",
-    "tag": "3.0.0"
+    "tag": "4.0.0"
   },
   "social_media_url": "https://twitter.com/sanekgusev",
+  "swift_version": "4.0",
   "platforms": {
     "ios": "8.0",
     "osx": "10.9",
@@ -26,9 +27,9 @@
       "source_files": "Pod/Sources/Common/TrampolineMacros.h",
       "private_header_files": "Pod/Sources/Common/TrampolineMacros.h",
       "platforms": {
-        "ios": "7.0",
+        "ios": "8.0",
         "osx": "10.8",
-        "watchos": "1.0",
+        "watchos": "2.0",
         "tvos": "9.0"
       }
     },
@@ -42,16 +43,15 @@
         ]
       },
       "platforms": {
-        "ios": "7.0",
+        "ios": "8.0",
         "osx": "10.8",
-        "watchos": "1.0",
+        "watchos": "2.0",
         "tvos": "9.0"
       }
     },
     {
       "name": "Swift",
       "source_files": "Pod/Sources/Swift/**/*.{h,c,swift}",
-      "private_header_files": "Pod/Sources/Swift/SwiftTrampolines.h",
       "dependencies": {
         "SGVSuperMessagingProxy/Common": [
 
