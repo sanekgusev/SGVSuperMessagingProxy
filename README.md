@@ -134,8 +134,7 @@ For Objective-C-only projects, use the Objective-C subspec:
 ## Author
 
 Aleksandr Gusev  
-[@sanekgusev](https://twitter.com/sanekgusev)  
-[sanekgusev@gmail.com](mailto:sanekgusev@gmail.com)
+[@sanekgusev](https://x.com/sanekgusev)
 
 ## License
 
